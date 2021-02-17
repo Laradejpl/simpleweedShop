@@ -50,8 +50,8 @@ class MainActivity : AppCompatActivity() {
         val closetxt =findViewById<TextView>(R.id.close_btn_side_menu)
 
 
-        toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        //toolbar = findViewById(R.id.toolbar)
+        //setSupportActionBar(toolbar)
 
         mpager = findViewById(R.id.pager) as ViewPager
         adapter  = PageView(this,path)
