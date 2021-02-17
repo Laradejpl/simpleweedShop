@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
 
 
         //variables de menu
+        val hamenu = findViewById<ImageView>(R.id.hamburger)
         val menuSide = findViewById<NavigationView>(R.id.side_menu)
         val loginImg  = findViewById<ImageView>(R.id.login_iv)
-        val homeImg  = findViewById<ImageView>(R.id.home_iv)
         val closetxt =findViewById<TextView>(R.id.close_btn_side_menu)
 
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-        homeImg.setOnClickListener {
+        hamenu.setOnClickListener {
             menuSide.visibility = View.VISIBLE
 
         }
