@@ -9,5 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="whitehemp">#FAF8E7</color>
     <color name="whitetransparent">#E6FAF8E7</color>
+    <color name="limegreen">#E6D0EAB9</color>
+    <color name="lime">#E6B7B8B6</color>
+    <color name="yellowgreen">#E6BECA16</color>
+
+
 
 </resources>

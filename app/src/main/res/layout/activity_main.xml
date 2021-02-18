@@ -230,6 +230,8 @@
                         />
 
 
+
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -255,6 +257,27 @@
 
             </HorizontalScrollView>
 
+
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="5dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:maxLines="4"
+                android:lines="4"
+                android:text="Just Cbd  policy is to never sell what we don't use marijuana is not our habit and our customer want the best."
+                android:clickable="false" />
+
+
+
+
+
+
+
             <ImageView
                 android:layout_width="250dp"
                 android:layout_height="100dp"
@@ -266,6 +289,45 @@
 
                 />
 
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="50dp"
+           android:layout_gravity="center"
+           android:layout_marginTop="40dp"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:id="@+id/insta"
+               android:layout_width="50dp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="30dp"
+               android:background="@drawable/instagramlittle"
+
+               />
+
+           <ImageView
+               android:id="@+id/facbook"
+               android:layout_width="50dp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="30dp"
+               android:background="@drawable/faceboo"
+               />
+
+           <ImageView
+               android:id="@+id/whatapp"
+               android:layout_width="50dp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="30dp"
+               android:background="@drawable/whatap"
+               />
+
+           <ImageView
+               android:id="@+id/phone"
+               android:layout_width="50dp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="30dp"
+               android:background="@drawable/phon"
+               />
 
 
 
@@ -275,15 +337,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
+       </LinearLayout>
 
 
 

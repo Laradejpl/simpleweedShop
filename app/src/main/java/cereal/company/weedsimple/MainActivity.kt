@@ -1,6 +1,7 @@
 package cereal.company.weedsimple
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -48,6 +49,12 @@ class MainActivity : AppCompatActivity() {
         val menuSide = findViewById<NavigationView>(R.id.side_menu)
         val loginImg  = findViewById<ImageView>(R.id.login_iv)
         val closetxt =findViewById<TextView>(R.id.close_btn_side_menu)
+        val instalink = findViewById<ImageView>(R.id.insta)
+        val facebooklink = findViewById<ImageView>(R.id.facbook)
+        val whatsapplink = findViewById<ImageView>(R.id.whatapp)
+        val telephonelink = findViewById<ImageView>(R.id.phone)
+        val phoneNumber = "0769754123"
+
 
 
         //toolbar = findViewById(R.id.toolbar)
@@ -85,14 +92,33 @@ class MainActivity : AppCompatActivity() {
         })
 
 
+        instalink.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://www.instagram.com/uwallandroidapps/")
+            startActivity(openURL)
+        }
+        facebooklink.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://www.facebook.com/")
+            startActivity(openURL)
+        }
+
+        whatsapplink.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://www.whatsapp.com/")
+            startActivity(openURL)
+        }
 
 
-            loginImg.setOnClickListener {
+
+        loginImg.setOnClickListener {
 
                 val intent = Intent(this@MainActivity, LoginActivity::class.java)
                 startActivity(intent)
 
             }
+
+
 
 
         hamenu.setOnClickListener {
@@ -104,6 +130,11 @@ class MainActivity : AppCompatActivity() {
 
             menuSide.visibility = View.GONE
 
+        }
+
+        telephonelink.setOnClickListener {
+
+            dialPhoneNumber()
         }
 
 
@@ -167,6 +198,15 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    fun dialPhoneNumber(phoneNumber: String ="0769754123") {
+        val intent = Intent(Intent.ACTION_DIAL).apply {
+            data = Uri.parse("tel:$phoneNumber")
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
 
 }
