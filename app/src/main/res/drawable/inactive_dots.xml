@@ -12,7 +12,7 @@
         android:height="3dp" />
 
     <solid
-        android:color="@color/whitehemp"
+        android:color="@color/black"
         />
 
 </shape>
