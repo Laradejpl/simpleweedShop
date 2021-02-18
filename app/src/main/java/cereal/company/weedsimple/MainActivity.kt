@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var dotsLayout: LinearLayout
     lateinit var mpager: ViewPager
     lateinit var toolbar : androidx.appcompat.widget.Toolbar
-    var path:IntArray = intArrayOf(R.drawable.teat,R.drawable.bocalcbd,R.drawable.marleybeer,R.drawable.blondehair)
+    var path:IntArray = intArrayOf(R.drawable.teat,R.drawable.bocalcbd,R.drawable.fruitcbd,R.drawable.blondehair)
     lateinit var dots:Array<ImageView>
     lateinit var adapter: PageView
     var currentPage: Int = 0

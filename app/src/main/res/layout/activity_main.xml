@@ -51,6 +51,7 @@
         android:layout_width="408dp"
         android:layout_height="1dp"
         android:layout_marginTop="70dp"
+        android:background="@color/whitehemp"
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,21 +75,222 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our CBD selection"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="10dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/coldteaa" />
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/greenpowa" />
+
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/flowerpink" />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/popolen" />
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/lolipops" />
+
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/healthbody" />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/marijuana"
-                />
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/macaronbestselli" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Best selection"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_marginLeft="30dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+
+                        android:background="@drawable/marleybeer"
+
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:background="@drawable/tetecbd"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:background="@drawable/teacolor"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:background="@drawable/oil"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:background="@drawable/strawberry"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:background="@drawable/cookie"
+
+                        />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:background="@drawable/cookies2"
+
+                        />
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+            </HorizontalScrollView>
+
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/joint"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:background="@drawable/paypalogo"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+
+
+
                 />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
         </LinearLayout>
+
+
+
     </ScrollView>
 
 
