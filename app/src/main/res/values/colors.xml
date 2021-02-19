@@ -11,7 +11,11 @@
     <color name="whitetransparent">#E6FAF8E7</color>
     <color name="limegreen">#E6D0EAB9</color>
     <color name="lime">#E6B7B8B6</color>
-    <color name="yellowgreen">#E6BECA16</color>
+    <color name="yellowgreen">#4CAF50</color>
+    <color name="colorLightGrey">#F1F1F1</color>
+    <color name="colorgris">#e8f6f9</color>
+    <color name="color_red">#DC1252</color>
+
 
 
 
