@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
 
                 response ->
 
-                if (response.equals("The user does exist ")){
+                if (response.equals("Bienvenue au Just CBD Shop")){
                     // pour garder une trace de la personne qui s'est logger ou enregistrer.
                     Person.email = activity_main_edtEmail.text.toString()
 
