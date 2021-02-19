@@ -62,7 +62,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/login_tv"
+                    android:id="@+id/login_tv_side_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Login |"
@@ -70,7 +70,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/sign_up_tv"
+                    android:id="@+id/sign_up_tv_side_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign up"

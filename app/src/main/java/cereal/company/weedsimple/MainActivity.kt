@@ -15,6 +15,7 @@ import android.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.side_menu_nav.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -107,6 +108,19 @@ class MainActivity : AppCompatActivity() {
             val openURL = Intent(android.content.Intent.ACTION_VIEW)
             openURL.data = Uri.parse("https://www.whatsapp.com/")
             startActivity(openURL)
+        }
+
+        login_tv_side_menu.setOnClickListener {
+
+            val intentLog = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(intentLog)
+        }
+
+
+        sign_up_tv_side_menu.setOnClickListener {
+
+            val intentSign = Intent(this@MainActivity, SignUpLayout::class.java)
+            startActivity(intentSign)
         }
 
 
