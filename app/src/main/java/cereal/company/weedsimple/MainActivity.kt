@@ -8,12 +8,14 @@ import android.os.Handler
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toolbar
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.Volley
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.side_menu_nav.*
 import java.util.*
@@ -56,7 +58,52 @@ class MainActivity : AppCompatActivity() {
         val telephonelink = findViewById<ImageView>(R.id.phone)
         val phoneNumber = "0769754123"
 
+        // volley
 
+        var brandsUrl = "https://reggaerencontre.com/fetch_brands.php"
+        var brandsList = ArrayList<String>()
+        val requestQ: RequestQueue = Volley.newRequestQueue(this)
+
+        var jsonAR = JsonArrayRequest(Request.Method.GET, brandsUrl,null, {
+            response ->
+
+            for (jsonObject in 0.until(response.length())){
+
+                brandsList.add(response.getJSONObject(jsonObject).getString("brand"))
+
+            }
+
+
+            var brandsListAdapter = ArrayAdapter(this@MainActivity,R.layout.brand_item_text_view, brandsList)
+            brandsListView.adapter = brandsListAdapter
+
+
+
+
+        }, { error ->
+
+
+            val dialogBuilder = AlertDialog.Builder(this)
+            dialogBuilder.setTitle("Message")
+            dialogBuilder.setMessage(error.message)
+            dialogBuilder.create().show()
+
+
+
+
+        })
+
+        requestQ.add(jsonAR)
+
+        brandsListView.setOnItemClickListener { adapterView, view, i, l ->
+
+            val  tappedBrand = brandsList.get(i)
+            val intent = Intent(this@MainActivity, FetchEproductsActivity::class.java )
+
+            intent.putExtra("BRAND" , tappedBrand)
+            startActivity(intent)
+
+        }
 
         //toolbar = findViewById(R.id.toolbar)
         //setSupportActionBar(toolbar)

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeedSimple">
-        <activity android:name=".SignUpLayout"></activity>
+        <activity android:name=".FetchEproductsActivity"></activity>
+        <activity android:name=".SignUpLayout" />
         <activity
             android:name=".SplashscreenActivity"
             android:screenOrientation="portrait">
@@ -27,7 +28,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
