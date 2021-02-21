@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeedSimple">
-        <activity android:name=".CartProductsActivity"></activity>
+        <activity android:name=".FetchOneProductActivity"></activity>
+        <activity android:name=".CartProductsActivity" />
         <activity android:name=".FetchEproductsActivity" />
         <activity android:name=".SignUpLayout" />
         <activity

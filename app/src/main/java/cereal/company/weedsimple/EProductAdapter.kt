@@ -2,9 +2,11 @@ package cereal.company.weedsimple
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.e_product_row.view.*
@@ -40,6 +42,8 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
 
     }
 
+
+
     inner class ProductViewHolder(pView: View) : RecyclerView.ViewHolder(pView){
 
         fun initializeRowUIComponents(id: Int ,name: String, price:Int, picName:String){
@@ -61,6 +65,20 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
 
 
             }
+
+            itemView.imgProduct.setOnClickListener {
+
+
+                val intentpro = Intent(itemView.context as Activity, FetchOneProductActivity::class.java)
+
+                intentpro.putExtra("id",id.toString())
+                context.startActivity(intentpro)
+
+
+            }
+
+
+
 
 
         }
