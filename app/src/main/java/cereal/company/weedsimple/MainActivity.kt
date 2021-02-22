@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val telephonelink = findViewById<ImageView>(R.id.phone)
         val phoneNumber = "0769754123"
 
-        // volley
+        // volley pour les categorie du sidemenu
 
         var brandsUrl = "https://reggaerencontre.com/fetch_brands.php"
         var brandsList = ArrayList<String>()
@@ -157,6 +157,12 @@ class MainActivity : AppCompatActivity() {
             openURL.data = Uri.parse("https://www.whatsapp.com/")
             startActivity(openURL)
         }
+
+
+        var emailConnected = Person.email
+        email_tv_side_menu.text = emailConnected
+
+
 
         login_tv_side_menu.setOnClickListener {
 
