@@ -9,8 +9,5 @@ class Person {
         var addToCartProductID = 0
 
 
-
-
-
     }
 }

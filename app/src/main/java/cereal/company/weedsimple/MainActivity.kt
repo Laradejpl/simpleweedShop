@@ -17,6 +17,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.bar_bottom.*
 import kotlinx.android.synthetic.main.side_menu_nav.*
 import java.util.*
 
@@ -180,7 +181,12 @@ class MainActivity : AppCompatActivity() {
             }
 
 
+        cart_iv.setOnClickListener {
 
+            val intentcart = Intent(this@MainActivity, CartProductsActivity::class.java)
+            startActivity(intentcart)
+
+        }
 
         hamenu.setOnClickListener {
             menuSide.visibility = View.VISIBLE
