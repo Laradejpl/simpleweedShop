@@ -12,46 +12,51 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeedSimple">
+        <activity android:name=".TestVolley">
 
-        <activity android:name=".ThankYouActivity"
+
+        </activity>
+
+        <activity
+            android:name=".ThankYouActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FinalizeShoppingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FetchOneProductActivity"
             android:screenOrientation="portrait"
-            />
-        <activity android:name=".FinalizeShoppingActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".CartProductsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FetchEproductsActivity"
             android:screenOrientation="portrait"
-            />
-        <activity android:name=".FetchOneProductActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".CartProductsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".FetchEproductsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            />
-        <activity android:name=".SignUpLayout"
-            android:screenOrientation="portrait"
-            />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".SignUpLayout"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SplashscreenActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            >
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".LoginActivity"
-
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
     </application>
 
 </manifest>

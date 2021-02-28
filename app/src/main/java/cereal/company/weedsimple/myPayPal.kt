@@ -4,7 +4,7 @@ class MyPayPal {
 
     companion object {
 
-        var clientID = "AcM8yxzVSKPgmX50Ch4i1Rr91E9o76wHmI0EsoPNLmeB1zzpeMcoy_T1lwn9npZFo3qU8kdfdXesJgp_"
+        var clientID = "AWC_vEX56RzDK_QNmdsHUzT2_S6kRwbdL1QXjVJpt0YEeMCSt_7CN3kjFvFHhVpjdRHCBSyVm5EkZW8i"
     }
 
 }

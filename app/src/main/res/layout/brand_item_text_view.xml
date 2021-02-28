@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     android:background="#ffffff"
     android:textColor="@color/black"
-    android:textSize="30sp"
-    android:padding="10dp"
-
+    android:textSize="20sp"
+    android:gravity="center"
     />

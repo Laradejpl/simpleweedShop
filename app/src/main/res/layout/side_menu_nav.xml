@@ -47,10 +47,7 @@
                 android:text=""
                 android:textColor="@color/white"
                 android:layout_gravity="center"
-                android:textSize="20dp"
-
-
-                />
+                android:textSize="20dp" />
 
 
             <LinearLayout
@@ -72,12 +69,25 @@
                     android:id="@+id/sign_up_tv_side_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sign up"
+                    android:text=" Sign up"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/adresses"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="vos adresses"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@color/whitehemp"
+                
+                />
 
             <ListView
                 android:id="@+id/brandsListView"

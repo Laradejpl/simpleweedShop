@@ -39,7 +39,7 @@ class FinalizeShoppingActivity : AppCompatActivity() {
 
         requestQ.add(stringRequest)
 
-        var paypalConfig: PayPalConfiguration = PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_SANDBOX).clientId(MyPayPal.clientID)
+        var paypalConfig: PayPalConfiguration = PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_PRODUCTION).clientId(MyPayPal.clientID)
         var ppService = Intent(this@FinalizeShoppingActivity, PayPalService::class.java)
         ppService.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, paypalConfig)
         startService(ppService)

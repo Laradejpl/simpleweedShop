@@ -158,9 +158,27 @@ class MainActivity : AppCompatActivity() {
             startActivity(openURL)
         }
 
-
-        var emailConnected = Person.email
+         //ont affiche l'email du user connecter
+        val emailConnected = Person.email
         email_tv_side_menu.text = emailConnected
+
+       // ont verifie si il ya un email ou une connection pour afficher les addresses
+      if (emailConnected !=  "" ){
+
+
+         adresses.visibility = View.VISIBLE
+
+
+
+
+      }
+
+        adresses.setOnClickListener {
+
+            val intentAdrss = Intent(this@MainActivity, TestVolley::class.java)
+            startActivity(intentAdrss)
+        }
+
 
 
 
