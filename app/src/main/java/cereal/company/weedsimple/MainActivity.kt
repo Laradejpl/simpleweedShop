@@ -18,6 +18,8 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.bar_bottom.*
+import kotlinx.android.synthetic.main.header_menu.*
+import kotlinx.android.synthetic.main.search_bar_layout.*
 import kotlinx.android.synthetic.main.side_menu_nav.*
 import java.util.*
 
@@ -173,6 +175,8 @@ class MainActivity : AppCompatActivity() {
 
 
       }
+
+
         profil_tv.setOnClickListener {
 
             val intentProfil = Intent(this@MainActivity, LocationActivity::class.java)
@@ -221,6 +225,23 @@ class MainActivity : AppCompatActivity() {
 
         hamenu.setOnClickListener {
             menuSide.visibility = View.VISIBLE
+
+        }
+
+        settings_imgv.setOnClickListener {
+            header_nav_layout.visibility= View.GONE
+            searching_bar.visibility = View.VISIBLE
+
+        }
+
+        //serch button
+        submit_search.setOnClickListener {
+
+           //var searchWord = edt_searching.text
+            var i = Intent(this,SearchActivity::class.java)
+            i.putExtra("motclef",edt_searching.text.toString())//comment faire passer une variable dans une autres activity
+            startActivity(i)
+
 
         }
 

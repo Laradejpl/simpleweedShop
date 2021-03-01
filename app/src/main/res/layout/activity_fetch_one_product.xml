@@ -32,7 +32,7 @@
             app:srcCompat="@drawable/marijuana" />
 
         <ImageView
-            android:id="@+id/backhome"
+            android:id="@+id/backhome_search"
             android:layout_width="101dp"
             android:layout_height="30dp"
             android:layout_marginRight="20dp"

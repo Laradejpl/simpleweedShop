@@ -6,15 +6,13 @@ import android.os.Bundle
 
 import com.android.volley.Request
 import com.android.volley.RequestQueue
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
-import com.squareup.picasso.RequestCreator
 import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
 import kotlinx.android.synthetic.main.activity_fetch_one_product.*
 import kotlinx.android.synthetic.main.activity_fetch_one_product.backarrow_fetch_product
-import kotlinx.android.synthetic.main.activity_fetch_one_product.backhome
+import kotlinx.android.synthetic.main.activity_fetch_one_product.backhome_search
 import kotlinx.android.synthetic.main.activity_sign_up_layout.*
 
 class FetchOneProductActivity : AppCompatActivity() {
@@ -28,7 +26,7 @@ class FetchOneProductActivity : AppCompatActivity() {
             finish()
         }
 
-        backhome.setOnClickListener {
+        backhome_search.setOnClickListener {
 
             val intent = Intent(this@FetchOneProductActivity, MainActivity::class.java)
             startActivity(intent)

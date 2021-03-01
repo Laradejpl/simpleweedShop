@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/searching_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+
+
+
+    >
+
+    <EditText
+        android:id="@+id/edt_searching"
+        android:background="@color/white"
+        android:layout_width="344dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Search"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/submit_search"
+        android:layout_width="156dp"
+        android:layout_height="60dp"
+        android:background="@color/lime"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/search" />
+
+</LinearLayout>

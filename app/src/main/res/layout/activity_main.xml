@@ -7,10 +7,12 @@
 
     >
 
-
+    <include layout="@layout/search_bar_layout" />
     <include
         android:id="@+id/include"
         layout="@layout/header_menu" />
+
+
 
 
     <androidx.viewpager.widget.ViewPager
