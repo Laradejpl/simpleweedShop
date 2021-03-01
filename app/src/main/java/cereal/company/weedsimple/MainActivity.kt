@@ -166,12 +166,19 @@ class MainActivity : AppCompatActivity() {
       if (emailConnected !=  "" ){
 
 
-         adresses.visibility = View.VISIBLE
+          adresses.visibility = View.VISIBLE
+          profil_tv.visibility = View.VISIBLE
 
 
 
 
       }
+        profil_tv.setOnClickListener {
+
+            val intentProfil = Intent(this@MainActivity, LocationActivity::class.java)
+            startActivity(intentProfil)
+        }
+
 
         adresses.setOnClickListener {
 
