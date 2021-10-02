@@ -17,6 +17,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.bar_bottom.*
 import kotlinx.android.synthetic.main.header_menu.*
 import kotlinx.android.synthetic.main.search_bar_layout.*
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var timer: Timer
     val DELAY_MS: Long = 5000
     val PERIOD_MS: Long = 5000
+    lateinit var bransName:String;
+
 
 
 
@@ -62,6 +65,8 @@ class MainActivity : AppCompatActivity() {
         val phoneNumber = "0769754123"
 
         // volley pour les categorie du sidemenu
+
+
 
         var brandsUrl = "https://reggaerencontre.com/fetch_brands.php"
         var brandsList = ArrayList<String>()
@@ -141,6 +146,37 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+
+        //LES CATEORIES
+        tea_brand.setOnClickListener {
+            StartCategory("TEA")
+
+        }
+
+        vap_brand.setOnClickListener {
+
+            StartCategory("VAP")
+        }
+
+       flowers_brand.setOnClickListener {
+
+           StartCategory("FLOWERS")
+        }
+
+        hash_brand.setOnClickListener {
+
+            StartCategory("HASH")
+        }
+
+        food_brand.setOnClickListener {
+
+            StartCategory("FOOD")
+        }
+
+        bodyheath_brand.setOnClickListener {
+
+            StartCategory("BODY")
+        }
 
 
         instalink.setOnClickListener {
@@ -258,6 +294,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
+
     }
 
 
@@ -327,5 +366,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    fun StartCategory(laCategori:String){
+
+        val intent = Intent(this@MainActivity, FetchEproductsActivity::class.java )
+        intent.putExtra("BRAND" , laCategori)
+        startActivity(intent)
+    }
+
 
 }

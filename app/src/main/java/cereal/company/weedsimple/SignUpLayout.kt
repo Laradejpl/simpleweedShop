@@ -44,6 +44,8 @@ class SignUpLayout : AppCompatActivity() {
 
 
                 //registration
+                //@TODO envoyer un mail apres inscrption
+                //@TODO ajouter un sms apres inscription
 
                 var  signUpUrl = "https://reggaerencontre.com/join_new_user.php?email=" +
                         sign_up_layout_edtEmail.text.toString() +

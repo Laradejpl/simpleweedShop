@@ -28,7 +28,7 @@
             android:layout_width="358dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/marijuana" />
+            app:srcCompat="@drawable/logoshocbd" />
 
         <ImageView
             android:id="@+id/settings_imgv"

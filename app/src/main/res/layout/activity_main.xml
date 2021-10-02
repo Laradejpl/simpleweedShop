@@ -103,12 +103,14 @@
                     android:background="@drawable/coldteaa" />
 
                 <ImageView
+                    android:id="@+id/vap_brand"
                     android:layout_width="110dp"
                     android:layout_height="90dp"
                     android:background="@drawable/greenpowa" />
 
 
                 <ImageView
+                    android:id="@+id/flowers_brand"
                     android:layout_width="110dp"
                     android:layout_height="90dp"
                     android:background="@drawable/flowerpink" />
@@ -126,18 +128,21 @@
 
 
                 <ImageView
+                    android:id="@+id/hash_brand"
                     android:layout_width="110dp"
                     android:layout_height="90dp"
                     android:layout_marginLeft="40dp"
                     android:background="@drawable/popolen" />
 
                 <ImageView
+                    android:id="@+id/food_brand"
                     android:layout_width="110dp"
                     android:layout_height="90dp"
                     android:background="@drawable/lolipops" />
 
 
                 <ImageView
+                    android:id="@+id/bodyheath_brand"
                     android:layout_width="110dp"
                     android:layout_height="90dp"
                     android:background="@drawable/healthbody" />

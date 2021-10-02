@@ -62,6 +62,8 @@ class LoginActivity : AppCompatActivity() {
 
                 if (response.equals("Bienvenue au Just CBD Shop")){
                     // pour garder une trace de la personne qui s'est logger ou enregistrer.
+
+
                     Person.email = activity_main_edtEmail.text.toString()
 
                     Toast.makeText(this@LoginActivity, response, Toast.LENGTH_SHORT).show()
