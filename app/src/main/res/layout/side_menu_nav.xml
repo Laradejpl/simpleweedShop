@@ -12,8 +12,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:visibility="gone"
 
-
-
         >
 
 
@@ -36,6 +34,7 @@
 
 
             <ImageView
+                android:id="@+id/open_uploader_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"

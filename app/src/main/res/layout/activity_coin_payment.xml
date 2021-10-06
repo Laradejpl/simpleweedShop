@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FinalizeShoppingActivity">
-
-
+    tools:context=".CoinPaymentActivity">
     <LinearLayout
-        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@color/white"
         android:orientation="horizontal"
+        android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent">
 
 
@@ -41,44 +38,21 @@
             android:background="@drawable/ic_home" />
     </LinearLayout>
 
-
-    <ImageView
-        android:id="@+id/btnPaymentProcessing"
-        android:layout_width="354dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/paypal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
-
-    <ImageView
-        android:id="@+id/paiment_bouton"
-        android:layout_width="362dp"
-        android:layout_height="203dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626"
-        app:srcCompat="@drawable/coinpaymentic" />
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="623dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="66dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        >
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
 
 
         <LinearLayout
@@ -183,60 +157,4 @@
 
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/Btc_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:padding="15dp"
-        android:text="btc"
-        android:textColor="@color/color_red"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/payment_tv"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
-        android:id="@+id/payment_tv"
-        android:layout_width="358dp"
-        android:layout_height="77dp"
-        android:text="Vous pouvez payez en bitcoin via la plateform CoinPayment,par carte visa ,ou Paypal. aprés avoir recu votre paiement nous procéderont a l'envoie de votre commande."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244" />
-
-    <TextView
-        android:id="@+id/paiment_reel"
-        android:layout_width="313dp"
-        android:layout_height="34dp"
-        android:text="TextView"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.766" />
-
-    <TextView
-        android:id="@+id/test_tv"
-        android:layout_width="271dp"
-        android:layout_height="39dp"
-        android:text="TextView"
-        android:textSize="25sp"
-        android:textColor="@color/color_red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

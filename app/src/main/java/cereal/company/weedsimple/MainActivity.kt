@@ -22,6 +22,14 @@ import kotlinx.android.synthetic.main.bar_bottom.*
 import kotlinx.android.synthetic.main.header_menu.*
 import kotlinx.android.synthetic.main.search_bar_layout.*
 import kotlinx.android.synthetic.main.side_menu_nav.*
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.OkHttpClient
+import okhttp3.Response
+import org.json.JSONObject
+import java.io.IOException
+import java.math.BigDecimal
+
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +45,8 @@ class MainActivity : AppCompatActivity() {
     val DELAY_MS: Long = 5000
     val PERIOD_MS: Long = 5000
     lateinit var bransName:String;
+    val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
+    var okHttpClient: OkHttpClient = OkHttpClient()
 
 
 
@@ -47,6 +57,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
 
 
 
@@ -66,8 +79,8 @@ class MainActivity : AppCompatActivity() {
 
         // volley pour les categorie du sidemenu
 
-
-
+        // AFFICHE LE COURS DU BTC ET EURO ,DOLLAR
+        loadBitcoinPrice()
         var brandsUrl = "https://reggaerencontre.com/fetch_brands.php"
         var brandsList = ArrayList<String>()
         val requestQ: RequestQueue = Volley.newRequestQueue(this)
@@ -211,6 +224,8 @@ class MainActivity : AppCompatActivity() {
 
 
       }
+
+       
 
 
         profil_tv.setOnClickListener {
@@ -372,6 +387,41 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this@MainActivity, FetchEproductsActivity::class.java )
         intent.putExtra("BRAND" , laCategori)
         startActivity(intent)
+    }
+
+
+    private fun loadBitcoinPrice(){
+
+        val request:okhttp3.Request = okhttp3.Request.Builder().url(URL).build()
+        okHttpClient.newCall(request).enqueue(object : Callback{
+            override fun onFailure(call: Call, e: IOException) {
+
+                bitcoinValues.text ="le cours du bitcoin est indisponible"
+
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+               val json = response?.body?.string()
+                val usRate = (JSONObject(json).getJSONObject("bpi").getJSONObject("USD")
+                        ["rate"] as String).split(",")[0]
+
+                val euroRate = (JSONObject(json).getJSONObject("bpi").getJSONObject("EUR")
+                        ["rate"] as String).split(",")[0]
+
+                Person.euroR = euroRate
+
+
+
+
+                runOnUiThread{
+
+                    bitcoinValues.text = "  1 BITCOIN vaut : $ $usRate\n\n  1 BITCOIN vaut :  $euroRate €"
+                    Person.euroR = euroRate
+                }
+            }
+
+
+        })
     }
 
 

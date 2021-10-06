@@ -3,6 +3,7 @@ package cereal.company.weedsimple
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
@@ -21,7 +22,11 @@ class FetchEproductsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fetch_eproducts)
 
 
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        //println(Person.euroR)
 
 
         backarrow_fetch_product.setOnClickListener {

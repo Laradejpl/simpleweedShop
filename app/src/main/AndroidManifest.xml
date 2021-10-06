@@ -12,8 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeedSimple">
-        <activity android:name=".SearchActivity"></activity>
-        <activity android:name=".LocationActivity"></activity>
+        <activity
+            android:name=".CoinPaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UploaderActivity"
+            android:exported="true" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".LocationActivity" />
         <activity android:name=".TestVolley" />
         <activity
             android:name=".ThankYouActivity"
