@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import cereal.company.weedsimple.Person.Companion.prixApayerEnBtc
 import kotlinx.android.synthetic.main.activity_coin_payment.*
 
 
@@ -23,9 +24,12 @@ class CoinPaymentActivity : AppCompatActivity() {
 
 
 
+
+
         // ONT RECUPERE LE PRIX TOTAL A PAYER
         var prixApayer = intent.getLongExtra("prixtotal",0)
 
+        println(Person.prixApayerEnBtc)
 
       //GENERER UN NOM DE TRANSACTION ALEATOIRE
         val baseNonDeTransaction = "CoinPaymentWEEDSIMPLE"
@@ -39,7 +43,7 @@ class CoinPaymentActivity : AppCompatActivity() {
         webview.setWebViewClient( WebViewClient())
          val ws =webview.settings
         ws.javaScriptEnabled=true
-        webview.loadUrl("https://www.coinpayments.net/index.php?cmd=_pos&reset=1&merchant=09d8a53121db9fdfaf0a7926d41c9b34&item_name=$nameT&currency=BTC&amountf=$prixApayer&allow_currency=0&")
+        webview.loadUrl("https://www.coinpayments.net/index.php?cmd=_pos&reset=1&merchant=09d8a53121db9fdfaf0a7926d41c9b34&item_name=$nameT&currency=BTC&amountf=$prixApayerEnBtc&allow_currency=0&")
 
 
     }

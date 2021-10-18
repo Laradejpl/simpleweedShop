@@ -12,7 +12,7 @@ class Person {
         var transactionName =0
         //cours du bitcoin en euro
         var euroR = ""
-        //var prixApayerEnBtc:Any =0
+        lateinit var prixApayerEnBtc:BigDecimal
 
 
 

@@ -62,8 +62,8 @@ class FinalizeShoppingActivity : AppCompatActivity() {
             var convertionCoin = (prixEnD/rateOfEuro/1000).toFloat()
             var convStr = convertionCoin.toString()
             val btcPrice =BigDecimal(convStr)
-            test_tv.text = "$btcPrice Bitcoin"
-            //Person.prixApayerEnBtc = btcPrice
+            test_tv.text = "$btcPrice BTC"
+            Person.prixApayerEnBtc = btcPrice
 
         }, { error ->
 

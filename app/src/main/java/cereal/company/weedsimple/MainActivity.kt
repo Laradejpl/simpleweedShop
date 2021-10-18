@@ -2,14 +2,15 @@ package cereal.company.weedsimple
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
 import com.android.volley.Request
@@ -28,8 +29,6 @@ import okhttp3.OkHttpClient
 import okhttp3.Response
 import org.json.JSONObject
 import java.io.IOException
-import java.math.BigDecimal
-
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -47,9 +46,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var bransName:String;
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
-
-
-
 
 
 
