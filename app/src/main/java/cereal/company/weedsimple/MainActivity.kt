@@ -13,6 +13,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
+import cereal.company.weedsimple.ui.RobotActivity
+import com.airbnb.lottie.LottieAnimationView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
@@ -46,6 +48,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var bransName:String;
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
+
+
 
 
 
@@ -221,6 +225,14 @@ class MainActivity : AppCompatActivity() {
 
       }
 
+        // BOT
+        botbtn.setOnClickListener {
+            val intentBot = Intent(this@MainActivity, RobotActivity::class.java)
+
+            startActivity(intentBot)
+
+        }
+
        
 
 
@@ -386,6 +398,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     private fun loadBitcoinPrice(){
 
         val request:okhttp3.Request = okhttp3.Request.Builder().url(URL).build()
@@ -419,6 +432,8 @@ class MainActivity : AppCompatActivity() {
 
         })
     }
+
+
 
 
 }

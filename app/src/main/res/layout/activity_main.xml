@@ -371,5 +371,19 @@
 
     <include layout="@layout/side_menu_nav" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/botbtn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:translationZ="2dp"
+        android:background="@drawable/bg_bot_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9900"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/icbot" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
