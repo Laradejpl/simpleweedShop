@@ -7,6 +7,37 @@
     android:background="@color/teal_200"
     tools:context=".CartProductsActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:translationZ="2dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/backarrow_fetch_product"
+            android:layout_width="99dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/backarrowblack" />
+
+        <ImageView
+            android:id="@+id/backhome_search"
+            android:layout_width="101dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/ic_home" />
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/title_cart_tv"
@@ -38,6 +69,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_cart_tv"
-        tools:visibility="visible" />
+        tools:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="358dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/logoshocbd" />
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

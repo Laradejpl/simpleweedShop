@@ -69,7 +69,7 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
             itemView.imgProduct.setOnClickListener {
 
 
-                val intentpro = Intent(itemView.context as Activity, FetchOneProductActivity::class.java)
+                val intentpro = Intent(itemView.context as Activity, VersionDetail::class.java)
 
                 intentpro.putExtra("id",id.toString())
                 context.startActivity(intentpro)
