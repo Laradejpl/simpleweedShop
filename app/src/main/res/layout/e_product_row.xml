@@ -44,13 +44,15 @@
 
         <TextView
             android:id="@+id/txtPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textStyle="bold"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@color/limegreen"
+            android:background="@drawable/bg_black_round"
             android:text="Price: "
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
 
     </LinearLayout>

@@ -48,9 +48,9 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
 
         fun initializeRowUIComponents(id: Int ,name: String, price:Int, picName:String){
 
-            itemView.txtId.text = id.toString()
+            itemView.txtId.text = " Ref: ${id.toString()}"
             itemView.txtName.text = name
-            itemView.txtPrice.text = price.toString()
+            itemView.txtPrice.text = "${price.toString()} €"
             var picURL = "https://reggaerencontre.com/"
             //picURL = picURL.replace("", "%20")
 

@@ -1,6 +1,7 @@
 package cereal.company.weedsimple
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
@@ -11,6 +12,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_sign_up_layout.*
+import java.lang.Exception
 
 class SignUpLayout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,12 +85,6 @@ class SignUpLayout : AppCompatActivity() {
                         //val homeIntent = Intent(this, MainActivity::class.java)
                         //startActivity(homeIntent)
 
-
-
-
-
-
-
                     }
 
 
@@ -130,4 +126,6 @@ class SignUpLayout : AppCompatActivity() {
 
 
     }
+
+
 }
