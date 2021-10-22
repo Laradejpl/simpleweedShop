@@ -32,14 +32,14 @@ class CartProductsActivity : AppCompatActivity() {
             val deleteUrl = "https://reggaerencontre.com/decline_order.php?email=${Person.email}"
             val requestQ = Volley.newRequestQueue(this@CartProductsActivity)
             val stringRequest = StringRequest(Request.Method.GET, deleteUrl, {
-                response ->
+                    response ->
 
 
                 var intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
 
             }, {
-                error ->
+                    error ->
 
 
 
@@ -52,7 +52,7 @@ class CartProductsActivity : AppCompatActivity() {
             var verifyOrderUrl = "https://reggaerencontre.com/verify_order.php?email=${Person.email}"
             var requestQ = Volley.newRequestQueue(this@CartProductsActivity)
             var stringRequest = StringRequest(Request.Method.GET, verifyOrderUrl, {
-                response ->
+                    response ->
 
 
                 val intent = Intent(this@CartProductsActivity, FinalizeShoppingActivity::class.java)
@@ -77,6 +77,17 @@ class CartProductsActivity : AppCompatActivity() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
         var cartProductsUrl = "https://reggaerencontre.com/fetch_temporary_order.php?email=${Person.email}"
         var cartProductsList = ArrayList<String>()
         var requestQ = Volley.newRequestQueue(this@CartProductsActivity)
@@ -86,19 +97,19 @@ class CartProductsActivity : AppCompatActivity() {
             for (joIndex in 0.until(response.length())) { // id, name, price, email, amount
 
                 cartProductsList.add(
-                        " Id: ${response.getJSONObject(joIndex).getInt("id")}" +
-                                " \n Name: ${response.getJSONObject(joIndex).getString("name")}" +
-                                " \n Price: ${response.getJSONObject(joIndex).getInt("price")} €" +
-                                " \n Email: ${response.getJSONObject(joIndex).getString("email")}" +
-                                " \n Amount:  ${response.getJSONObject(joIndex).getInt("amount")}"
+                    " Id: ${response.getJSONObject(joIndex).getInt("id")}" +
+                            " \n Name: ${response.getJSONObject(joIndex).getString("name")}" +
+                            " \n Price: ${response.getJSONObject(joIndex).getInt("price")} €" +
+                            " \n Email: ${response.getJSONObject(joIndex).getString("email")}" +
+                            " \n Amount:  ${response.getJSONObject(joIndex).getInt("amount")}"
                 )
 
             }
 
             var cartProductsAdapter = ArrayAdapter(
-                    this@CartProductsActivity,
-                    android.R.layout.simple_list_item_1,
-                    cartProductsList
+                this@CartProductsActivity,
+                android.R.layout.simple_list_item_1,
+                cartProductsList
             )
             cartProductsListView.adapter = cartProductsAdapter
 
