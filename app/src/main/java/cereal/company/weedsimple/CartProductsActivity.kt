@@ -16,18 +16,13 @@ import kotlinx.android.synthetic.main.activity_cart_products.*
 
 class CartProductsActivity : AppCompatActivity() {
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
-        menuInflater.inflate(R.menu.cart_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item?.itemId == R.id.continueShoppingItem){
-            var intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_cart_products)
 
-        }else if (item?.itemId == R.id.declineOrderItem){
+        disCarte.setOnClickListener {
 
             val deleteUrl = "https://reggaerencontre.com/decline_order.php?email=${Person.email}"
             val requestQ = Volley.newRequestQueue(this@CartProductsActivity)
@@ -46,8 +41,9 @@ class CartProductsActivity : AppCompatActivity() {
             })
 
             requestQ.add(stringRequest)
-        }else if (item?.itemId == R.id.verifyOrderItem){
+        }
 
+        acceptCarte.setOnClickListener {
 
             var verifyOrderUrl = "https://reggaerencontre.com/verify_order.php?email=${Person.email}"
             var requestQ = Volley.newRequestQueue(this@CartProductsActivity)
@@ -66,14 +62,13 @@ class CartProductsActivity : AppCompatActivity() {
 
 
             requestQ.add(stringRequest)
-
         }
-        return super.onOptionsItemSelected(item)
-    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cart_products)
+        backarrow_fetch_product_V.setOnClickListener {
+
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
@@ -110,13 +105,6 @@ class CartProductsActivity : AppCompatActivity() {
 
 
         requestQ.add(jsonAR)
-
-
-
-
-
-
-
 
     }
 
