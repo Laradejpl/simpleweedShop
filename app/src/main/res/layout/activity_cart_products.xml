@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="@color/white"
+
     tools:context=".CartProductsActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:background="@color/white"
         android:orientation="horizontal"
         android:translationZ="2dp"
@@ -22,21 +23,39 @@
 
         <ImageView
             android:id="@+id/backarrow_fetch_product"
-            android:layout_width="99dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/backarrowblack" />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/shop" />
 
         <ImageView
-            android:id="@+id/backhome_search"
-            android:layout_width="101dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="20dp"
+            android:id="@+id/disCarte"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
 
-            android:layout_weight="1"
-            android:background="@drawable/ic_home" />
-    </LinearLayout>
+
+            android:layout_marginEnd="131dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/retirerlepanier" />
+
+        <ImageView
+            android:id="@+id/acceptCarte"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+
+
+            android:layout_marginEnd="143dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/backarrow_fetch_product"
+            android:background="@drawable/jaccepte" />
+
+
+    </RelativeLayout>
 
 
     <TextView
@@ -47,10 +66,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/ic_mywaveblue"
+        android:background="@color/black"
         android:gravity="center"
-        android:text="Termporary Orders"
-        android:textColor="#00A2EC"
+        android:text="@string/votre_panier"
+        android:textColor="#B6F693"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +82,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#82000000"
+        android:background="#60000000"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,12 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/title_cart_tv"
         tools:visibility="visible" >
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="358dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/logoshocbd" />
+
     </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

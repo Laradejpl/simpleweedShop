@@ -78,16 +78,6 @@ class CartProductsActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
-
-
         var cartProductsUrl = "https://reggaerencontre.com/fetch_temporary_order.php?email=${Person.email}"
         var cartProductsList = ArrayList<String>()
         var requestQ = Volley.newRequestQueue(this@CartProductsActivity)
