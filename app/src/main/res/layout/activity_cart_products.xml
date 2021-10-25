@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/white"
+
         android:orientation="horizontal"
         android:translationZ="2dp"
 
@@ -23,36 +23,37 @@
 
         <ImageView
             android:id="@+id/backarrow_fetch_product_V"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="6dp"
-            android:src="@drawable/shop" />
+            android:src="@drawable/decline" />
 
         <ImageView
             android:id="@+id/disCarte"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentBottom="true"
 
 
-            android:layout_marginEnd="131dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/retirerlepanier" />
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="9dp"
+            android:layout_toStartOf="@+id/acceptCarte"
+            android:background="@drawable/ic_shopping_cart" />
 
         <ImageView
             android:id="@+id/acceptCarte"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentBottom="true"
 
 
-            android:layout_marginEnd="143dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="127dp"
+            android:layout_marginBottom="7dp"
             android:layout_toStartOf="@+id/backarrow_fetch_product_V"
-            android:background="@drawable/jaccepte" />
+            android:background="@drawable/verify" />
 
 
     </RelativeLayout>
@@ -63,15 +64,14 @@
         android:layout_width="424dp"
         android:layout_height="125dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:background="@color/black"
         android:gravity="center"
         android:text="@string/votre_panier"
         android:textColor="#B6F693"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

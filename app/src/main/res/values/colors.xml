@@ -20,6 +20,11 @@
     <color name="color_orange">#ED844C</color>
     <color name="color_blueclair">#FF03DAC5</color>
     <color name="blackie">#201E1E</color>
+    <color name="transparentecolor">#00000000</color>
+    <color name="colorSnackBarSuccess">#8BC34A</color>
+    <color name="colorSnackBarError">#F72400</color>
+
+
 
 
 

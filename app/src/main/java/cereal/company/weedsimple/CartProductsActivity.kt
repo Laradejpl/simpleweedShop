@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.android.volley.Request
@@ -21,6 +22,10 @@ class CartProductsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart_products)
+
+        getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         disCarte.setOnClickListener {
 
@@ -107,8 +112,6 @@ class CartProductsActivity : AppCompatActivity() {
         requestQ.add(jsonAR)
 
     }
-
-
 
 
 }

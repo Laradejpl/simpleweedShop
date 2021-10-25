@@ -32,7 +32,7 @@
         android:contentDescription="@string/app_name"
         android:fitsSystemWindows="false"
         android:scaleType="centerCrop"
-        android:src="@drawable/blondehair"
+        android:src="@drawable/logoshocbd"
         app:layout_collapseMode="parallax"
         />
 

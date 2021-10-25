@@ -23,7 +23,9 @@ class VersionDetail : AppCompatActivity() {
         setContentView(R.layout.activity_version_detail)
 
         var toolbarC :Toolbar = findViewById(R.id.toobarlayoutv)
+
         setSupportActionBar(toolbarC)
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -49,6 +51,11 @@ class VersionDetail : AppCompatActivity() {
             var amountFragment = AmountFragment()
             var fragmentManager = (this@VersionDetail).fragmentManager
             amountFragment.show(fragmentManager, "TAG")
+        }
+
+        toolbarC.setNavigationOnClickListener {
+
+            finish()
         }
 
 
