@@ -28,7 +28,9 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
         (holder as ProductViewHolder).initializeRowUIComponents(arrayList.get(position).id,
             arrayList.get(position).name,
             arrayList.get(position).price,
-            arrayList.get(position).pictureName
+            arrayList.get(position).pictureName,
+            arrayList.get(position).stock
+
         )
 
 
@@ -46,11 +48,12 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
 
     inner class ProductViewHolder(pView: View) : RecyclerView.ViewHolder(pView){
 
-        fun initializeRowUIComponents(id: Int ,name: String, price:Int, picName:String){
+        fun initializeRowUIComponents(id: Int ,name: String, price:Int, picName:String, stock: Int){
 
             itemView.txtId.text = " Ref: ${id.toString()}"
             itemView.txtName.text = name
             itemView.txtPrice.text = "${price.toString()} €"
+            itemView.stokeQuantitytv.text = "${stock.toString()} en stock"
             var picURL = "https://reggaerencontre.com/"
             //picURL = picURL.replace("", "%20")
 

@@ -6,6 +6,8 @@ import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.RatingBar
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.palette.graphics.Palette
 import com.android.volley.Request
@@ -18,18 +20,34 @@ import kotlinx.android.synthetic.main.activity_fetch_one_product.*
 import kotlinx.android.synthetic.main.activity_version_detail.*
 
 class VersionDetail : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_version_detail)
 
-        var toolbarC :Toolbar = findViewById(R.id.toobarlayoutv)
-
-        setSupportActionBar(toolbarC)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        var toolbarC :Toolbar = findViewById(R.id.toobarlayoutv)
+
+
+        /*toolbarC.setNavigationOnClickListener {
+
+            finish()
+        }*/
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
+        rtgstar.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
+            override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
+                Toast.makeText(this@VersionDetail, "Given rating is: $p1", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+
+
         val selectedId = intent.getStringExtra("id").toString()
 
         val bitmap:Bitmap = BitmapFactory.decodeResource(resources,R.drawable.blondehair)
@@ -53,10 +71,7 @@ class VersionDetail : AppCompatActivity() {
             amountFragment.show(fragmentManager, "TAG")
         }
 
-        toolbarC.setNavigationOnClickListener {
 
-            finish()
-        }
 
 
         var picURL = "https://reggaerencontre.com/"
@@ -72,14 +87,27 @@ class VersionDetail : AppCompatActivity() {
 
                 val prixDuProduit =response.getInt("price").toString()
                 val referenceProduit = response.getString("id")
+
                 id_product_fetchone_tv_V.text=" ref: ${ referenceProduit }"
                 name_product_fetchone_tv_V.text=response.getString("name")
                 description_product_tv_V.text=response.getString("description")
+
+                supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                var toolbarC :Toolbar = findViewById(R.id.toobarlayoutv)
+                setSupportActionBar(toolbarC)
+                toolbarC.setTitle(response.getString("name"))
+
+
+
 
                 price_product_fetchone_tv_V.text="${ prixDuProduit } €"
                 Picasso.with(this).load(picURL + response.getString("picture")).into(image_film_detail_v_V)
 
                 Picasso.with(this).load(picURL + response.getString("picture1")).into(miniatureImage)
+
+                Picasso.with(this).load(picURL + response.getString("picture2")).into(miniature1)
+
+                Picasso.with(this).load(picURL + response.getString("picture3")).into(miniature2)
 
 
 

@@ -37,7 +37,7 @@
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+
             android:layout_weight="1"
             android:text="Name:"
             android:textColor="@color/black" />
@@ -46,26 +46,53 @@
             android:id="@+id/txtPrice"
             android:layout_width="60dp"
             android:layout_height="30dp"
-            android:gravity="center"
-            android:textStyle="bold"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/bg_black_round"
-            android:text="Price: "
-            android:textColor="@color/white" />
+            android:gravity="center"
+            android:text="Price:"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stokeQuantitytv"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:text="100 en stock"
+            android:textSize="17sp"
+            android:background="@drawable/bgrougetriangle"
+            android:textColor="@color/white"
+            />
 
 
     </LinearLayout>
 
-
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+      android:layout_gravity="center"
+       >
 
     <ImageView
         android:id="@+id/imgAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/plus"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="18dp"
+        />
+    <ImageView
+        android:id="@+id/favorit_star"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/favorite"
+        />
 
+   </LinearLayout>
 
 
 </LinearLayout>

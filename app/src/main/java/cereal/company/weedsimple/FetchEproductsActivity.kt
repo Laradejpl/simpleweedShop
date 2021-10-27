@@ -56,7 +56,9 @@ class FetchEproductsActivity : AppCompatActivity() {
 
 
                 productsList.add(EProduct(response.getJSONObject(productJOIndex).getInt("id") , response.getJSONObject(productJOIndex).getString("name"),
-                    response.getJSONObject(productJOIndex).getInt("price"),response.getJSONObject(productJOIndex).getString("picture") ))
+                    response.getJSONObject(productJOIndex).getInt("price"),response.getJSONObject(productJOIndex).getString("picture"),
+                    response.getJSONObject(productJOIndex).getInt("stock")
+                ))
 
             }
 
