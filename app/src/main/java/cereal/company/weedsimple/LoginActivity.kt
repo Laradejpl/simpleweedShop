@@ -110,7 +110,7 @@ class LoginActivity : AppCompatActivity() {
             val dialog =builder.create()
             dialog.show()
            // dialog.setIcon(R.drawable.registration)
-            //dialog.window?.setBackgroundDrawableResource(R.drawable.bobinevert)
+            dialog.window?.setBackgroundDrawableResource(R.drawable.bg_transparent)
             var layout : ConstraintLayout = view.findViewById(R.id.registerbtn_oublie)
 
 

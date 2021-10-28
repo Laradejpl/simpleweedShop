@@ -98,6 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="about"
+                android:textIsSelectable="true"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="20sp"
@@ -119,8 +120,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
+                android:textIsSelectable="true"
                 android:text="descriptif"
                 android:textSize="18sp" />
+
+
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -153,9 +157,27 @@
 
                 </LinearLayout>
 
+
+
             </HorizontalScrollView>
+           <ListView
+               android:id="@+id/Avis_list"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               />
+
+
+            <Button
+                android:id="@+id/avis_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="votre avis"
+                />
 
         </LinearLayout>
+
 
     </androidx.core.widget.NestedScrollView>
 

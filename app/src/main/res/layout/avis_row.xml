@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/backgroundgrey"
+    android:paddingEnd="5dp"
+    android:paddingStart="5dp"
+    android:layout_marginBottom="1dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/pseudo_avis_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pseudo"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        />
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/Avis_rtgstar"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/colorSnackBarSuccess"
+        android:progressBackgroundTintMode="@color/limegreen"
+        android:numStars="5"
+        android:rating="4"
+        android:stepSize="0.5"
+        android:isIndicator="false" />
+    <TextView
+        android:id="@+id/avis_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:lines="4"
+        android:maxLines="4"
+        android:text="avis"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/traie"
+        android:layerType="software" />
+
+
+</LinearLayout>

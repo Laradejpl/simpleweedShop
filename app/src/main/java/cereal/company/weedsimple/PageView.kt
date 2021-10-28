@@ -20,10 +20,7 @@ class PageView: PagerAdapter {
         this.path = path
     }
 
-
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
-
-
 
         return view == `object` as RelativeLayout
 
@@ -31,9 +28,6 @@ class PageView: PagerAdapter {
     override fun getCount(): Int {
 
         return path.size
-
-
-
 
     }
 

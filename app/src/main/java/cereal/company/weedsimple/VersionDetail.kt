@@ -5,10 +5,13 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.widget.RatingBar
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.palette.graphics.Palette
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -121,6 +124,22 @@ class VersionDetail : AppCompatActivity() {
         rq.add(jsonFile)
 
 
+
+
+        avis_btn.setOnClickListener {
+
+            val view = View.inflate(this@VersionDetail,R.layout.layout_avis_alert,null)
+            var builder = AlertDialog.Builder(this@VersionDetail)
+            builder.setView(view)
+            val dialog =builder.create()
+            dialog.show()
+            // dialog.setIcon(R.drawable.registration)
+            dialog.window?.setBackgroundDrawableResource(R.drawable.bg_transparent)
+            var layout : ConstraintLayout = view.findViewById(R.id.registerConstraint_Avis)
+
+
+
+        }
 
     }
 

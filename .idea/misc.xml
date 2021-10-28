@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../Library/Android/sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/drawable/account_box.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/backgroundgrey.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_black_round.xml" value="0.205" />
         <entry key="app/src/main/res/drawable/bg_bot_red.xml" value="0.1145" />
         <entry key="app/src/main/res/drawable/dialog_background.xml" value="0.139" />
@@ -11,6 +13,7 @@
         <entry key="app/src/main/res/drawable/ic_upload.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/receive_round_box.xml" value="0.274" />
         <entry key="app/src/main/res/drawable/title_oublie_background.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/traie.xml" value="0.151" />
         <entry key="app/src/main/res/layout/activity_bot.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_cart_products.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_coin_payment.xml" value="0.25" />
@@ -20,12 +23,14 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2402698495070057" />
         <entry key="app/src/main/res/layout/activity_robot.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_uploader.xml" value="0.2777777777777778" />
-        <entry key="app/src/main/res/layout/activity_version_detail.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_version_detail.xml" value="0.30864197530864196" />
+        <entry key="app/src/main/res/layout/avis_row.xml" value="0.17685185185185184" />
         <entry key="app/src/main/res/layout/bar_bottom.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/brand_item_text_view.xml" value="0.12777777777777777" />
         <entry key="app/src/main/res/layout/e_product_row.xml" value="0.2923076923076923" />
         <entry key="app/src/main/res/layout/fragment_amount.xml" value="0.16111111111111112" />
         <entry key="app/src/main/res/layout/header_menu.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/layout_avis_alert.xml" value="0.335" />
         <entry key="app/src/main/res/layout/layout_oublie_dialog.xml" value="0.296875" />
         <entry key="app/src/main/res/layout/side_menu_nav.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/swipe_fragment.xml" value="0.1" />
