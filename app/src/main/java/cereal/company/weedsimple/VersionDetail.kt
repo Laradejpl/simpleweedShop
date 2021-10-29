@@ -144,24 +144,26 @@ class VersionDetail : AppCompatActivity() {
      dialog.window?.setBackgroundDrawableResource(R.drawable.bg_transparent)
      var layout : ConstraintLayout = view.findViewById(R.id.registerConstraint_Avis)
 
+     val ratiStars = dialog.avis_rtgstar_dialog
+
+     ratiStars.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
+         override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
+             Toast.makeText(this@VersionDetail, "Given rating is: $p1", Toast.LENGTH_SHORT).show()
+
+             Person.etoileRating =p1
+
+
+         }
+     })
+
      view.avisbutton_btn.setOnClickListener {
 
          val emailUserAvis = view.edt_email_avis.text.toString()
          val pseudoUserAvis = view.edt_pseudo_avis.text.toString()
          val avisDuUser =  view.edt_Avis_user.text.toString()
-         val ratiStars = dialog.avis_rtgstar_dialog
 
-         ratiStars.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
-             override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
-                 Toast.makeText(this@VersionDetail, "Given rating is: $p1", Toast.LENGTH_SHORT).show()
-
-                 Person.etoileRating =p1
-
-
-             }
-         })
          println(Person.etoileRating)
-         val avisUrl = "https://xxxxxx.com/avis_ktl.php?id_produit=" + idDuProduit +
+         val avisUrl = "https://reggaerencontre.com/avis_ktl.php?id_produit=" + idDuProduit +
                  "&email=" +
                  emailUserAvis+
                 "&pseudo=" + pseudoUserAvis + "&rating_star=" + Person.etoileRating +"&avis="+
@@ -173,7 +175,7 @@ class VersionDetail : AppCompatActivity() {
 
                  response ->
 
-             if (response.equals("your note is registred.")){
+             if (response.equals("Merci,votre note à été bien enregistrez.")){
                  // pour garder une trace de la personne qui s'est logger ou enregistrer.
 
 
