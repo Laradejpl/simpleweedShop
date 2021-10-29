@@ -7,13 +7,7 @@
     android:paddingStart="5dp"
     android:layout_marginBottom="1dp"
     android:orientation="vertical">
-    <TextView
-        android:id="@+id/id_text_avis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ref"
 
-        />
     <TextView
         android:id="@+id/pseudo_avis_tv"
         android:layout_width="wrap_content"
@@ -23,19 +17,24 @@
         android:textColor="@color/black"
         android:layout_marginBottom="20dp"
         />
-    <!--
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/traie"
+        android:layerType="software" />
+
     <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/Avis_rtgstar"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:progressTint="@color/colorSnackBarSuccess"
-        android:progressBackgroundTintMode="@color/limegreen"
+        style="@android:style/Widget.RatingBar"
         android:numStars="5"
-        android:rating="4"
-        android:stepSize="0.5"
-        android:isIndicator="false" />
-        -->
+        android:rating="0"
+        android:stepSize="1"
+        android:isIndicator="true" />
+
     <TextView
         android:id="@+id/avis_text_tv"
         android:layout_width="wrap_content"
@@ -45,11 +44,7 @@
         android:maxLines="4"
         android:text="avis"
         />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:src="@drawable/traie"
-        android:layerType="software" />
+
 
 
 </LinearLayout>

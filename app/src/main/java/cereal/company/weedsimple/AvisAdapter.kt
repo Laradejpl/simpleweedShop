@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_version_detail.view.*
 import kotlinx.android.synthetic.main.avis_row.view.*
 
 class AvisAdapter(var con: Context, var list: ArrayList<AvisProduct>): RecyclerView.Adapter<RecyclerView.ViewHolder>()
@@ -17,7 +18,7 @@ class AvisAdapter(var con: Context, var list: ArrayList<AvisProduct>): RecyclerV
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as AvisViewHolder).show(list[position].pseudo,list[position].avis)
+        (holder as AvisViewHolder).show(list[position].pseudo,list[position].avis,list[position].rating_star)
 
 
     }
@@ -28,10 +29,13 @@ class AvisAdapter(var con: Context, var list: ArrayList<AvisProduct>): RecyclerV
 
 
     class AvisViewHolder(pView: View) : RecyclerView.ViewHolder(pView){
-        fun show( pseudo: String, avis: String) {
+        fun show( pseudo: String, avis: String,rating_star:Int) {
 
             itemView.pseudo_avis_tv.text = pseudo
+
             itemView.avis_text_tv.text = avis
+
+            itemView.Avis_rtgstar.rating = rating_star.toFloat()
         }
 
 

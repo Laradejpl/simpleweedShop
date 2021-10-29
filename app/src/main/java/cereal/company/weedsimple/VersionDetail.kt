@@ -231,6 +231,7 @@ class VersionDetail : AppCompatActivity() {
 
 
                             response.getJSONObject(x).getString("pseudo"),
+                            response.getJSONObject(x).getInt("rating_star"),
                             response.getJSONObject(x).getString("avis"))
                     )
                 var adp = AvisAdapter(this@VersionDetail,list)
