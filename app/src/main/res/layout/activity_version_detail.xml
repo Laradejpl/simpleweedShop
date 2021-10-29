@@ -110,7 +110,7 @@
               android:layout_height="wrap_content"
               style="@android:style/Widget.RatingBar"
               android:numStars="5"
-              android:rating="3"
+              android:rating="0"
               android:stepSize="0.5"
               android:isIndicator="true" />
 
@@ -160,12 +160,11 @@
 
 
             </HorizontalScrollView>
-           <ListView
-               android:id="@+id/Avis_list"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="20dp"
-               />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/avisRV"
+                android:translationZ="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
 
 
             <Button

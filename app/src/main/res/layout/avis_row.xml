@@ -8,6 +8,13 @@
     android:layout_marginBottom="1dp"
     android:orientation="vertical">
     <TextView
+        android:id="@+id/id_text_avis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ref"
+
+        />
+    <TextView
         android:id="@+id/pseudo_avis_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,6 +23,7 @@
         android:textColor="@color/black"
         android:layout_marginBottom="20dp"
         />
+    <!--
     <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/Avis_rtgstar"
         android:layout_marginTop="10dp"
@@ -27,6 +35,7 @@
         android:rating="4"
         android:stepSize="0.5"
         android:isIndicator="false" />
+        -->
     <TextView
         android:id="@+id/avis_text_tv"
         android:layout_width="wrap_content"

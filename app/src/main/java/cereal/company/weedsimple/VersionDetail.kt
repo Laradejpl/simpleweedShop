@@ -14,12 +14,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.palette.graphics.Palette
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.RequestQueue
+import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
 import kotlinx.android.synthetic.main.activity_fetch_one_product.*
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -50,14 +53,6 @@ class VersionDetail : AppCompatActivity() {
 
        idDuProduit=intent.getStringExtra("id")
 
-/* rtgstar.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
-     override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
-         Toast.makeText(this@VersionDetail, "Given rating is: $p1", Toast.LENGTH_SHORT).show()
-     }
- })*/
-
-
-
  val selectedId = intent.getStringExtra("id").toString()
 
  val bitmap:Bitmap = BitmapFactory.decodeResource(resources,R.drawable.blondehair)
@@ -84,12 +79,16 @@ class VersionDetail : AppCompatActivity() {
 
 
 
- var picURL = "https://reggaerencontre.com/"
+
+
+
+        var picURL = "https://reggaerencontre.com/"
 
  var rq: RequestQueue = Volley.newRequestQueue(this)
 
  id_product_fetchone_tv_V.text = "$selectedId"
  var prodUrl ="https://reggaerencontre.com/fetch_one_product.php?id=$selectedId"
+        val requestQ: RequestQueue = Volley.newRequestQueue(this)
 
  var jsonFile= JsonObjectRequest(
      Request.Method.GET,prodUrl,null,
@@ -150,7 +149,7 @@ class VersionDetail : AppCompatActivity() {
          override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
              Toast.makeText(this@VersionDetail, "Given rating is: $p1", Toast.LENGTH_SHORT).show()
 
-             Person.etoileRating =p1
+             Person.etoileRating =p1.toInt()
 
 
          }
@@ -213,7 +212,34 @@ class VersionDetail : AppCompatActivity() {
      }
 
 
+
+
+
+
+
+
      }
+        //ont recupere les avis
+        val url= "https://reggaerencontre.com/fetch_avis_ktl.php?id_produit=$selectedId"
+        val list = ArrayList<AvisProduct>()
+        var rQ= Volley.newRequestQueue(this)
+        var jar  = JsonArrayRequest(Request.Method.GET,url,null,
+            { response ->
+                for (x in 0..response.length()-1)
+                    list.add(
+                        AvisProduct(
+
+
+                            response.getJSONObject(x).getString("pseudo"),
+                            response.getJSONObject(x).getString("avis"))
+                    )
+                var adp = AvisAdapter(this@VersionDetail,list)
+                avisRV.adapter=adp
+                avisRV.layoutManager= LinearLayoutManager(this@VersionDetail)
+            },
+
+            {  })
+        rQ.add(jar)
 
 
 

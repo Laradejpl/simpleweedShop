@@ -14,7 +14,7 @@ class Person {
         //cours du bitcoin en euro
         var euroR = ""
         lateinit var prixApayerEnBtc:BigDecimal
-         var etoileRating = 0.0f
+         var etoileRating = 0
 
 
 
