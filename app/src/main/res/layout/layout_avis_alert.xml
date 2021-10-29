@@ -31,11 +31,11 @@
 
 
         <EditText
-            android:id="@+id/edt_phrase_secret_register_oublie"
+            android:id="@+id/edt_email_avis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Entrez votre email"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -52,7 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_phrase_secret_register_oublie"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email_avis"
             app:layout_constraintVertical_bias="0.098" />
 
         <EditText
@@ -68,15 +68,15 @@
             app:layout_constraintVertical_bias="0.139" />
 
         <androidx.appcompat.widget.AppCompatRatingBar
-            android:id="@+id/Avis_rtgstar_dialog"
+            android:id="@+id/avis_rtgstar_dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:isIndicator="false"
             android:numStars="5"
-            android:progressBackgroundTintMode="@color/limegreen"
-            android:progressTint="@color/colorSnackBarSuccess"
-            android:rating="4"
-            android:stepSize="0.5"
+            style="@android:style/Widget.RatingBar"
+
+            android:rating="5"
+            android:stepSize="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
