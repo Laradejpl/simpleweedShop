@@ -1,16 +1,14 @@
 package cereal.company.weedsimple
 
-import android.app.Activity
-import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.RatingBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.palette.graphics.Palette
@@ -22,17 +20,13 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
-import kotlinx.android.synthetic.main.activity_fetch_one_product.*
-import kotlinx.android.synthetic.main.activity_login.*
-
 import kotlinx.android.synthetic.main.activity_version_detail.*
 import kotlinx.android.synthetic.main.layout_avis_alert.*
 import kotlinx.android.synthetic.main.layout_avis_alert.view.*
 
 class VersionDetail : AppCompatActivity() {
 
-    var idDuProduit:String?=null
+    private var idDuProduit:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,8 +65,8 @@ class VersionDetail : AppCompatActivity() {
      //@TODO aleert dialog pour mettre dans le panier
 
      Person.addToCartProductID = intent.getStringExtra("id")?.toInt()!!
-     var amountFragment = AmountFragment()
-     var fragmentManager = (this@VersionDetail).fragmentManager
+     val amountFragment = AmountFragment()
+     val fragmentManager = (this@VersionDetail).fragmentManager
      amountFragment.show(fragmentManager, "TAG")
  }
 
@@ -82,22 +76,22 @@ class VersionDetail : AppCompatActivity() {
 
 
 
-        var picURL = "https://reggaerencontre.com/"
+        val picURL = "https://reggaerencontre.com/"
 
- var rq: RequestQueue = Volley.newRequestQueue(this)
+ val rq: RequestQueue = Volley.newRequestQueue(this)
 
  id_product_fetchone_tv_V.text = "$selectedId"
- var prodUrl ="https://reggaerencontre.com/fetch_one_product.php?id=$selectedId"
-        val requestQ: RequestQueue = Volley.newRequestQueue(this)
+ val prodUrl1 ="https://reggaerencontre.com/fetch_one_product.php?id=$selectedId"
+        val requestQp: RequestQueue = Volley.newRequestQueue(this)
 
- var jsonFile= JsonObjectRequest(
-     Request.Method.GET,prodUrl,null,
+ val jsonFile= JsonObjectRequest(
+     Request.Method.GET,prodUrl1,null,
      { response ->
 
          val prixDuProduit =response.getInt("price").toString()
          val referenceProduit = response.getString("id")
 
-         id_product_fetchone_tv_V.text=" ref: ${ referenceProduit }"
+         id_product_fetchone_tv_V.text=" ref: ${ referenceProduit}"
          name_product_fetchone_tv_V.text=response.getString("name")
          description_product_tv_V.text=response.getString("description")
 
@@ -123,11 +117,11 @@ class VersionDetail : AppCompatActivity() {
 
      }, { error ->
 
-         name_product_fetchone_tv.text=error.message
+         //name_product_fetchone_tv.text=error.message
 
 
      })
- rq.add(jsonFile)
+        requestQp.add(jsonFile)
 
 
 
