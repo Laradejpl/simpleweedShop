@@ -72,17 +72,38 @@ class VersionDetail : AppCompatActivity() {
 
 
 
+//Requete pour  avg avis
+
+
+        val reqavg: RequestQueue = Volley.newRequestQueue(this)
+        id_product_fetchone_tv_V.text = "$selectedId"
+        val starUrl = "https://reggaerencontre.com/averagektl.php?id_produit=$selectedId"
+        val jsonORStar = JsonObjectRequest(
+            Request.Method.GET,starUrl,null,
+            { response ->
+
+                val starAvg = response.getInt("Note_produit").toFloat()
+                rtgstar.rating = starAvg
+                println(starAvg)
+
+            }, { error ->
+
+               println(error.message)
 
 
 
+            })
+        reqavg.add(jsonORStar )
 
+
+//FIN Requete pour  avg avis
         val picURL = "https://reggaerencontre.com/"
 
  val rq: RequestQueue = Volley.newRequestQueue(this)
 
  id_product_fetchone_tv_V.text = "$selectedId"
  val prodUrl1 ="https://reggaerencontre.com/fetch_one_product.php?id=$selectedId"
-        val requestQp: RequestQueue = Volley.newRequestQueue(this)
+       // val requestQp: RequestQueue = Volley.newRequestQueue(this)
 
  val jsonOR = JsonObjectRequest(
      Request.Method.GET,prodUrl1,null,
