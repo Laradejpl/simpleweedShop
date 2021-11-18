@@ -86,7 +86,7 @@
         android:layout_marginBottom="18dp"
         />
     <ImageView
-        android:id="@+id/favorit_star"
+        android:id="@+id/favorit_star1"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/favorite"

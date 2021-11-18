@@ -3,7 +3,9 @@ package cereal.company.weedsimple
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
+import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
@@ -11,6 +13,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
+import kotlinx.android.synthetic.main.alert_add_fav.view.*
 import kotlinx.android.synthetic.main.e_product_row.*
 import kotlinx.android.synthetic.main.e_product_row.view.*
 import kotlinx.android.synthetic.main.header_menu.*
@@ -39,6 +42,8 @@ class FetchEproductsActivity : AppCompatActivity() {
             val intent = Intent(this@FetchEproductsActivity, MainActivity::class.java)
             startActivity(intent)
         }
+
+
 
 
 

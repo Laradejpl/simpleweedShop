@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/drawable/ic_upload.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/receive_round_box.xml" value="0.274" />
         <entry key="app/src/main/res/drawable/title_oublie_background.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/tittle_add_product.xml" value="0.181" />
         <entry key="app/src/main/res/drawable/traie.xml" value="0.151" />
         <entry key="app/src/main/res/layout/activity_bot.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_cart_products.xml" value="0.335" />
@@ -25,6 +26,7 @@
         <entry key="app/src/main/res/layout/activity_robot.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_uploader.xml" value="0.2777777777777778" />
         <entry key="app/src/main/res/layout/activity_version_detail.xml" value="0.26329803466796875" />
+        <entry key="app/src/main/res/layout/alert_add_fav.xml" value="0.390625" />
         <entry key="app/src/main/res/layout/avis_row.xml" value="0.375" />
         <entry key="app/src/main/res/layout/bar_bottom.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/brand_item_text_view.xml" value="0.12777777777777777" />

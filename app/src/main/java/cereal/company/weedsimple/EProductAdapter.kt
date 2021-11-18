@@ -1,6 +1,7 @@
 package cereal.company.weedsimple
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.alert_add_fav.view.*
 import kotlinx.android.synthetic.main.e_product_row.view.*
 
 class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
@@ -68,6 +70,33 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
 
 
             }
+
+
+            itemView.favorit_star1.setOnClickListener{
+
+                // dialogue  pour ajouter les favoris
+
+                val view = View.inflate(context,R.layout.alert_add_fav,null)
+                var builder = AlertDialog.Builder(context)
+                builder.setView(view)
+                val dialog =builder.create()
+                dialog.show()
+                view.oui_btn_film_add.setOnClickListener {
+                    //@TODO ENREGISTREMENT DANS BASE SQLITE,Remplacement de l'etoile par un coeur
+                }
+
+
+                view.non_btn_film_add.setOnClickListener {
+
+
+                    dialog.dismiss()
+                }
+
+
+
+            }
+
+
 
             itemView.imgProduct.setOnClickListener {
 

@@ -1,6 +1,7 @@
 package cereal.company.weedsimple
 
 import android.content.Intent
+import android.location.Location
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
@@ -236,7 +237,7 @@ class MainActivity : AppCompatActivity() {
 
         profil_tv.setOnClickListener {
 
-            val intentProfil = Intent(this@MainActivity, LocationActivity::class.java)
+            val intentProfil = Intent(this@MainActivity,Location::class.java)
             startActivity(intentProfil)
         }
 

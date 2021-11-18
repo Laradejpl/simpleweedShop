@@ -5,7 +5,7 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
-import android.widget.RatingBar
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +21,8 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_version_detail.*
+import kotlinx.android.synthetic.main.alert_add_fav.view.*
+import kotlinx.android.synthetic.main.e_product_row.*
 import kotlinx.android.synthetic.main.layout_avis_alert.*
 import kotlinx.android.synthetic.main.layout_avis_alert.view.*
 
@@ -69,6 +71,10 @@ class VersionDetail : AppCompatActivity() {
      val fragmentManager = (this@VersionDetail).fragmentManager
      amountFragment.show(fragmentManager, "TAG")
  }
+
+
+
+
 
 
 
@@ -125,6 +131,14 @@ class VersionDetail : AppCompatActivity() {
 
 
          price_product_fetchone_tv_V.text="${ prixDuProduit } €"
+
+
+        if (response.getString("picture") != null
+            && response.getString("picture1") != null
+            && response.getString("picture2") != null
+            && response.getString("picture3") != null){
+
+
          Picasso.with(this).load(picURL + response.getString("picture")).into(image_film_detail_v_V)
 
          Picasso.with(this).load(picURL + response.getString("picture1")).into(miniatureImage)
@@ -133,12 +147,15 @@ class VersionDetail : AppCompatActivity() {
 
          Picasso.with(this).load(picURL + response.getString("picture3")).into(miniature2)
 
+        }else{
 
+            slider_detail_photo.visibility = View.GONE
+        }
 
 
      }, { error ->
 
-         //name_product_fetchone_tv.text=error.message
+
 
 
      })
@@ -186,7 +203,7 @@ class VersionDetail : AppCompatActivity() {
                  response ->
 
              if (response.equals("Merci,votre note à été bien enregistrez.")){
-                 // pour garder une trace de la personne qui s'est logger ou enregistrer.
+
 
 
 
@@ -204,10 +221,6 @@ class VersionDetail : AppCompatActivity() {
 
              }
 
-
-
-
-
          }, { error ->
 
 
@@ -221,12 +234,6 @@ class VersionDetail : AppCompatActivity() {
 
 
      }
-
-
-
-
-
-
 
 
      }
