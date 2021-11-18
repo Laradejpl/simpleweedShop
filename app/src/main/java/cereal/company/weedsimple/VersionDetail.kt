@@ -84,7 +84,7 @@ class VersionDetail : AppCompatActivity() {
  val prodUrl1 ="https://reggaerencontre.com/fetch_one_product.php?id=$selectedId"
         val requestQp: RequestQueue = Volley.newRequestQueue(this)
 
- val jsonFile= JsonObjectRequest(
+ val jsonOR = JsonObjectRequest(
      Request.Method.GET,prodUrl1,null,
      { response ->
 
@@ -121,7 +121,7 @@ class VersionDetail : AppCompatActivity() {
 
 
      })
-        requestQp.add(jsonFile)
+        rq.add(jsonOR )
 
 
 
@@ -139,15 +139,11 @@ class VersionDetail : AppCompatActivity() {
 
      val ratiStars = dialog.avis_rtgstar_dialog
 
-     ratiStars.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
-         override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
-             Toast.makeText(this@VersionDetail, "Given rating is: $p1", Toast.LENGTH_SHORT).show()
+     ratiStars.setOnRatingBarChangeListener { p0, p1, p2 ->
+         Toast.makeText(this@VersionDetail, "Given rating is: $p1", Toast.LENGTH_SHORT).show()
 
-             Person.etoileRating =p1.toInt()
-
-
-         }
-     })
+         Person.etoileRating = p1.toInt()
+     }
 
      view.avisbutton_btn.setOnClickListener {
 

@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_fetch_one_product.backarrow_fetch
 import kotlinx.android.synthetic.main.activity_fetch_one_product.backhome_search
 import kotlinx.android.synthetic.main.activity_sign_up_layout.*
 
-class FetchOneProductActivity : AppCompatActivity() {
+class  FetchOneProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fetch_one_product)
