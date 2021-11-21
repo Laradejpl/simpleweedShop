@@ -7,7 +7,6 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.alert_add_fav.view.*
@@ -59,7 +58,9 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
             var picURL = "https://reggaerencontre.com/"
             //picURL = picURL.replace("", "%20")
 
-            Picasso.with(context).load(picURL +picName).into(itemView.imgProduct)
+
+            val UrlPhoto = picURL + picName
+            Picasso.with(context).load(UrlPhoto).into(itemView.imgProduct)
 
             itemView.imgAdd.setOnClickListener {
                 Person.addToCartProductID = id
@@ -83,6 +84,8 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
                 dialog.show()
                 view.oui_btn_film_add.setOnClickListener {
                     //@TODO ENREGISTREMENT DANS BASE SQLITE,Remplacement de l'etoile par un coeur
+
+
                 }
 
 
@@ -102,8 +105,10 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
 
 
                 val intentpro = Intent(itemView.context as Activity, VersionDetail::class.java)
-
                 intentpro.putExtra("id",id.toString())
+                intentpro.putExtra("title",name)
+                intentpro.putExtra("prix",price)
+                intentpro.putExtra("nomphoto",UrlPhoto)
                 context.startActivity(intentpro)
 
 

@@ -1,18 +1,22 @@
 package cereal.company.weedsimple
 
+import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.LinearLayoutManager
+import cereal.company.weedsimple.Sqlite.DatabaseManager
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
@@ -29,7 +33,9 @@ import kotlinx.android.synthetic.main.layout_avis_alert.view.*
 class VersionDetail : AppCompatActivity() {
 
     private var idDuProduit:String?=null
-
+    private var coeur = false
+    val db = DatabaseManager(this@VersionDetail)
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_version_detail)
@@ -38,16 +44,17 @@ class VersionDetail : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var toolbarC :Toolbar = findViewById(R.id.toobarlayoutv)
 
-
-        /*toolbarC.setNavigationOnClickListener {
-
-            finish()
-        }*/
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
-       idDuProduit=intent.getStringExtra("id")
+
+
+        val titleProduct = intent.getStringExtra("title")
+        val prixDuProduit = intent.getIntExtra("prix",0)
+        val urlImage = intent.getStringExtra("nomphoto")
+        idDuProduit=intent.getStringExtra("id")
+        print(" email du user : ${Person.email}")
 
  val selectedId = intent.getStringExtra("id").toString()
 
@@ -64,7 +71,7 @@ class VersionDetail : AppCompatActivity() {
 
  cadiImg.setOnClickListener {
 
-     //@TODO aleert dialog pour mettre dans le panier
+
 
      Person.addToCartProductID = intent.getStringExtra("id")?.toInt()!!
      val amountFragment = AmountFragment()
@@ -73,7 +80,54 @@ class VersionDetail : AppCompatActivity() {
  }
 
 
+//@TODO ajout aux favoris
+/* ont regarde si le produit est deja dans les favoris
+        val cursor: Cursor
 
+        var favoritProductAdd = db.checkFavoris(Person.email,intentReponseTitre)
+
+        if(favoritProductAdd){
+
+            starfav.setImageResource(R.drawable.fullstar)
+            etoile = true
+        }else{
+
+            starfav.setImageResource(R.drawable.emptystar)
+            etoile = false
+        }*/
+
+
+
+
+        ajoutImg.setOnClickListener{
+
+     // dialogue  pour ajouter les favoris
+
+     val view = View.inflate(this@VersionDetail,R.layout.alert_add_fav,null)
+     var builder = android.app.AlertDialog.Builder(this@VersionDetail)
+     builder.setView(view)
+     val dialog =builder.create()
+     dialog.show()
+     view.oui_btn_film_add.setOnClickListener {
+         //@TODO ENREGISTREMENT DANS BASE SQLITE,Remplacement de l'etoile par un coeur
+
+
+          db.insertProductDataBase(titleProduct,urlImage,Person.email,prixDuProduit)
+           println("insertion reuissi")
+
+         dialog.dismiss()
+     }
+
+
+     view.non_btn_film_add.setOnClickListener {
+
+
+         dialog.dismiss()
+     }
+
+
+
+ }
 
 
 

@@ -11,15 +11,11 @@ class Person {
         var nameUtilisateur =""
         var addToCartProductID = 0
         var transactionName =0
+
         //cours du bitcoin en euro
         var euroR = ""
         lateinit var prixApayerEnBtc:BigDecimal
          var etoileRating = 0
-
-
-
-
-
 
 
     }
