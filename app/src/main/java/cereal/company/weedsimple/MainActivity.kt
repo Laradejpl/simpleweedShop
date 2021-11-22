@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
 import cereal.company.weedsimple.ui.RobotActivity
+import cereal.company.weedsimple.utils.BaseActivity
 import com.airbnb.lottie.LottieAnimationView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -35,7 +36,7 @@ import org.json.JSONObject
 import java.io.IOException
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     lateinit var dotsLayout: LinearLayout
     lateinit var mpager: ViewPager
@@ -98,18 +99,12 @@ class MainActivity : AppCompatActivity() {
             brandsListView.adapter = brandsListAdapter
 
 
-
-
         }, { error ->
-
 
             val dialogBuilder = AlertDialog.Builder(this)
             dialogBuilder.setTitle("Message")
             dialogBuilder.setMessage(error.message)
             dialogBuilder.create().show()
-
-
-
 
         })
 

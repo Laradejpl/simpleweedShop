@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import cereal.company.weedsimple.utils.BaseActivity
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
@@ -22,7 +23,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.layout_oublie_dialog.view.*
 
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -155,27 +156,6 @@ class LoginActivity : AppCompatActivity() {
 
         }
     }
-    fun showErrorSnackBar(message: String, errorMessage: Boolean) {
-        val snackBar =
-            Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
-        val snackBarView = snackBar.view
 
-        if (errorMessage) {
-            snackBarView.setBackgroundColor(
-                ContextCompat.getColor(
-                    this@LoginActivity,
-                    R.color.colorSnackBarError
-                )
-            )
-        }else{
-            snackBarView.setBackgroundColor(
-                ContextCompat.getColor(
-                    this@LoginActivity,
-                    R.color.colorSnackBarSuccess
-                )
-            )
-        }
-        snackBar.show()
-    }
 
 }

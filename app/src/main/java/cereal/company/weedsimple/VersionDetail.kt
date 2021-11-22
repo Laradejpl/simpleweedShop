@@ -16,7 +16,9 @@ import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.LinearLayoutManager
+import cereal.company.weedsimple.Person.Companion.email
 import cereal.company.weedsimple.Sqlite.DatabaseManager
+import cereal.company.weedsimple.utils.BaseActivity
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
@@ -30,7 +32,7 @@ import kotlinx.android.synthetic.main.e_product_row.*
 import kotlinx.android.synthetic.main.layout_avis_alert.*
 import kotlinx.android.synthetic.main.layout_avis_alert.view.*
 
-class VersionDetail : AppCompatActivity() {
+class VersionDetail : BaseActivity  () {
 
     private var idDuProduit:String?=null
     private var coeur = false
@@ -40,7 +42,6 @@ class VersionDetail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_version_detail)
 
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var toolbarC :Toolbar = findViewById(R.id.toobarlayoutv)
 
@@ -48,13 +49,11 @@ class VersionDetail : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
-
-
         val titleProduct = intent.getStringExtra("title")
         val prixDuProduit = intent.getIntExtra("prix",0)
         val urlImage = intent.getStringExtra("nomphoto")
         idDuProduit=intent.getStringExtra("id")
-        print(" email du user : ${Person.email}")
+        print(" email du user : $email")
 
  val selectedId = intent.getStringExtra("id").toString()
 
@@ -81,22 +80,30 @@ class VersionDetail : AppCompatActivity() {
 
 
 //@TODO ajout aux favoris
-/* ont regarde si le produit est deja dans les favoris
-        val cursor: Cursor
+ //ont regarde si le produit est deja dans les favoris
 
-        var favoritProductAdd = db.checkFavoris(Person.email,intentReponseTitre)
+        if (email.isEmpty()){
 
-        if(favoritProductAdd){
+            showErrorSnackBar("Vous netes pas connecter",true)
 
-            starfav.setImageResource(R.drawable.fullstar)
-            etoile = true
         }else{
 
-            starfav.setImageResource(R.drawable.emptystar)
-            etoile = false
-        }*/
+            val cursor: Cursor
+
+            val favoritProductAdd = db.checkFavoris(email,titleProduct)
+
+            if(favoritProductAdd){
+
+                ajoutImg.setImageResource(R.drawable.ic_favorite_green)
+                coeur = true
+            }else{
+
+                ajoutImg.setImageResource(R.drawable.ic_favorite_red)
+                coeur = false
+            }
 
 
+        }
 
 
         ajoutImg.setOnClickListener{
@@ -111,13 +118,15 @@ class VersionDetail : AppCompatActivity() {
      view.oui_btn_film_add.setOnClickListener {
          //@TODO ENREGISTREMENT DANS BASE SQLITE,Remplacement de l'etoile par un coeur
 
+    if (email.equals("")){
 
-          db.insertProductDataBase(titleProduct,urlImage,Person.email,prixDuProduit)
-           println("insertion reuissi")
-
+        showErrorSnackBar("Vous netes pas connecter",true)
+    }else{
+        db.insertProductDataBase(titleProduct,urlImage, email,prixDuProduit)
+        showErrorSnackBar("produit ajouter",false)
+    }
          dialog.dismiss()
      }
-
 
      view.non_btn_film_add.setOnClickListener {
 
@@ -125,15 +134,9 @@ class VersionDetail : AppCompatActivity() {
          dialog.dismiss()
      }
 
-
-
  }
 
-
-
-
 //Requete pour  avg avis
-
 
         val reqavg: RequestQueue = Volley.newRequestQueue(this)
         id_product_fetchone_tv_V.text = "$selectedId"
@@ -150,11 +153,8 @@ class VersionDetail : AppCompatActivity() {
 
                println(error.message)
 
-
-
             })
         reqavg.add(jsonORStar )
-
 
 //FIN Requete pour  avg avis
         val picURL = "https://reggaerencontre.com/"
@@ -180,8 +180,6 @@ class VersionDetail : AppCompatActivity() {
          var toolbarC :Toolbar = findViewById(R.id.toobarlayoutv)
          setSupportActionBar(toolbarC)
          toolbarC.setTitle(response.getString("name"))
-
-
 
 
          price_product_fetchone_tv_V.text="${ prixDuProduit } €"
@@ -210,12 +208,8 @@ class VersionDetail : AppCompatActivity() {
      }, { error ->
 
 
-
-
      })
         rq.add(jsonOR )
-
-
 
 
  avis_btn.setOnClickListener {
@@ -258,11 +252,8 @@ class VersionDetail : AppCompatActivity() {
 
              if (response.equals("Merci,votre note à été bien enregistrez.")){
 
-
-
-
-
-                 Toast.makeText(this@VersionDetail, response, Toast.LENGTH_SHORT).show()
+                 //Toast.makeText(this@VersionDetail, response, Toast.LENGTH_SHORT).show()
+                 showErrorSnackBar(response,false)
                  dialog.dismiss()
 
 
@@ -314,9 +305,9 @@ class VersionDetail : AppCompatActivity() {
             {  })
         rQ.add(jar)
 
-
-
  }
+
+
 
 }
 

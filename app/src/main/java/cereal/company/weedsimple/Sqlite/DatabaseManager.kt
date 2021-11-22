@@ -133,9 +133,9 @@ class DatabaseManager (context: Context) : SQLiteOpenHelper(context, DATABASE_NA
         var db :SQLiteDatabase = this.writableDatabase
         var userEmail = emailUser
 
-        var sql = "SELECT $TITLE FROM $TABLE_PRODUCTS WHERE $TITLE =? AND userEmail =?"
+        var sql = "SELECT $TITLE FROM $TABLE_PRODUCTS WHERE $TITLE =? AND emailUser =?"
 
-        var cursor =db.rawQuery(sql, arrayOf(title,userEmail))
+        val cursor =db.rawQuery(sql, arrayOf(title,userEmail))
 
         if (cursor.count > 0){
 
