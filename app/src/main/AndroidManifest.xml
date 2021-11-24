@@ -16,11 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeedSimple">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".FavoritProductsActivity"
             android:exported="false" />
         <activity
             android:name=".VersionDetail"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ui.RobotActivity"
             android:exported="true" />

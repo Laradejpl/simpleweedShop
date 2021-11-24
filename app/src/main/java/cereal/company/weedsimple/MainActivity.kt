@@ -232,7 +232,7 @@ class MainActivity : BaseActivity() {
 
         profil_tv.setOnClickListener {
 
-            val intentProfil = Intent(this@MainActivity,Location::class.java)
+            val intentProfil = Intent(this@MainActivity,ProfileActivity::class.java)
             startActivity(intentProfil)
         }
 

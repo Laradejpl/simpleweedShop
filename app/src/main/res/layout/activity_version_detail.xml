@@ -7,6 +7,30 @@
     android:fitsSystemWindows="true"
     tools:context=".VersionDetail">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/checkedone"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_rawRes="@raw/checkyellow" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -36,6 +60,8 @@
         android:src="@drawable/photoholder"
         app:layout_collapseMode="parallax"
         />
+
+
 
         <ViewAnimator
             android:layout_width="match_parent"
@@ -113,6 +139,8 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 />
+
+
           <androidx.appcompat.widget.AppCompatRatingBar
               android:id="@+id/rtgstar"
               android:layout_marginTop="10dp"
@@ -191,6 +219,9 @@
 
 
     </androidx.core.widget.NestedScrollView>
+
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/cadiImg"

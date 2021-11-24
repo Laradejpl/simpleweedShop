@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+LocationActivity.kt
+activity_location.xml

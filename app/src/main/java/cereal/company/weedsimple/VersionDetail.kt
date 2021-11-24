@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import cereal.company.weedsimple.Person.Companion.email
 import cereal.company.weedsimple.Sqlite.DatabaseManager
 import cereal.company.weedsimple.utils.BaseActivity
+import com.airbnb.lottie.LottieAnimationView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
@@ -36,6 +37,7 @@ class VersionDetail : BaseActivity  () {
 
     private var idDuProduit:String?=null
     private var coeur = false
+    var checkisDone = false
     val db = DatabaseManager(this@VersionDetail)
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,7 +86,7 @@ class VersionDetail : BaseActivity  () {
 
         if (email.isEmpty()){
 
-            showErrorSnackBar("Vous netes pas connecter",true)
+
 
         }else{
 
@@ -124,6 +126,25 @@ class VersionDetail : BaseActivity  () {
     }else{
         db.insertProductDataBase(titleProduct,urlImage, email,prixDuProduit)
         showErrorSnackBar("produit ajouter",false)
+        if (checkisDone){
+
+            checkedone.speed = -1f
+            checkedone.playAnimation()
+            checkisDone =false
+
+            println("ca marche")
+
+
+        }else{
+            checkedone.speed = 1f
+            checkedone.playAnimation()
+            checkisDone =true
+            println("ca marche pas")
+        }
+
+
+
+
     }
          dialog.dismiss()
      }
