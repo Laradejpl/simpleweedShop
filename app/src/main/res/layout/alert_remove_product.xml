@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerbtn_oublie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@android:color/transparent"
+    android:padding="20dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog_oublie"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/dialog_background"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <TextView
+            android:id="@+id/textitle_oublie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_add_product"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Message"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageIcon_oublie"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/interogation"
+            app:layout_constraintBottom_toBottomOf="@+id/textitle_oublie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textitle_oublie" />
+
+        <TextView
+            android:id="@+id/edt_mdp_confirm_register_oublie"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Voulez vous enlevez ce produit dans vos favoris ?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="@color/colorgris"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textitle_oublie"
+            app:layout_constraintVertical_bias="0.192" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+
+        android:id="@+id/non_btn_film_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/nonbluebtn"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutDialog_oublie"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <ImageView
+        android:id="@+id/oui_btn_P_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toEndOf="@+id/non_btn_film_remove"
+        app:layout_constraintTop_toBottomOf="@+id/layoutDialog_oublie"
+        app:srcCompat="@drawable/ouibluebtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

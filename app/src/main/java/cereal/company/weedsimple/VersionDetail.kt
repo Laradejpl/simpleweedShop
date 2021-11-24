@@ -29,6 +29,7 @@ import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_version_detail.*
 import kotlinx.android.synthetic.main.alert_add_fav.view.*
+import kotlinx.android.synthetic.main.alert_remove_product.view.*
 import kotlinx.android.synthetic.main.e_product_row.*
 import kotlinx.android.synthetic.main.layout_avis_alert.*
 import kotlinx.android.synthetic.main.layout_avis_alert.view.*
@@ -86,8 +87,6 @@ class VersionDetail : BaseActivity  () {
 
         if (email.isEmpty()){
 
-
-
         }else{
 
             val cursor: Cursor
@@ -95,7 +94,6 @@ class VersionDetail : BaseActivity  () {
             val favoritProductAdd = db.checkFavoris(email,titleProduct)
 
             if(favoritProductAdd){
-
                 ajoutImg.setImageResource(R.drawable.ic_favorite_green)
                 coeur = true
             }else{
@@ -107,10 +105,9 @@ class VersionDetail : BaseActivity  () {
 
         }
 
-
         ajoutImg.setOnClickListener{
+if (!coeur){
 
-     // dialogue  pour ajouter les favoris
 
      val view = View.inflate(this@VersionDetail,R.layout.alert_add_fav,null)
      var builder = android.app.AlertDialog.Builder(this@VersionDetail)
@@ -118,14 +115,18 @@ class VersionDetail : BaseActivity  () {
      val dialog =builder.create()
      dialog.show()
      view.oui_btn_film_add.setOnClickListener {
-         //@TODO ENREGISTREMENT DANS BASE SQLITE,Remplacement de l'etoile par un coeur
+
 
     if (email.equals("")){
 
         showErrorSnackBar("Vous netes pas connecter",true)
     }else{
         db.insertProductDataBase(titleProduct,urlImage, email,prixDuProduit)
+        ajoutImg.setImageResource(R.drawable.ic_favorite_green)
+        coeur = true
         showErrorSnackBar("produit ajouter",false)
+
+
         if (checkisDone){
 
             checkedone.speed = -1f
@@ -142,20 +143,40 @@ class VersionDetail : BaseActivity  () {
             println("ca marche pas")
         }
 
-
-
-
     }
          dialog.dismiss()
      }
 
      view.non_btn_film_add.setOnClickListener {
 
-
          dialog.dismiss()
      }
+}else{
+        // enlever
+                val view = View.inflate(this@VersionDetail,R.layout.alert_remove_product,null)
+                var builder = AlertDialog.Builder(this@VersionDetail)
+                builder.setView(view)
+                val dialog =builder.create()
+                dialog.show()
+                view.oui_btn_P_remove.setOnClickListener {
+                    ajoutImg.setImageResource(R.drawable.ic_favorite_red)
+                    db.deleteFavorite(titleProduct)
+                    coeur = false
+                    checkedone.speed = -1f
+                    checkedone.playAnimation()
+                    checkisDone = false
+                    dialog.dismiss()
 
- }
+                }
+                view.non_btn_film_remove.setOnClickListener {
+                    dialog.dismiss()
+                }
+
+
+            }
+
+        }
+
 
 //Requete pour  avg avis
 
