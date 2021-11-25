@@ -1,6 +1,7 @@
 package cereal.company.weedsimple
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.location.Location
 import android.net.Uri
 import android.os.Bundle
@@ -210,14 +211,9 @@ class MainActivity : BaseActivity() {
        // ont verifie si il ya un email ou une connection pour afficher les addresses
       if (emailConnected !=  "" ){
 
-
           adresses.visibility = View.VISIBLE
           profil_tv.visibility = View.VISIBLE
           favori_tv_profile.visibility = View.VISIBLE
-
-
-
-
 
       }
 
@@ -269,8 +265,13 @@ class MainActivity : BaseActivity() {
 
         loginImg.setOnClickListener {
 
+            if (emailConnected !=  "" ){
+                val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+                startActivity(intent)
+            }else {
                 val intent = Intent(this@MainActivity, LoginActivity::class.java)
                 startActivity(intent)
+            }
 
             }
 
@@ -316,12 +317,7 @@ class MainActivity : BaseActivity() {
         }
 
 
-
-
-
-
     }
-
 
 
     fun updatePage()

@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/header_menu" />
+        layout="@layout/top_header_fav" />
     <include layout="@layout/side_menu_nav" />
 
     <TextView

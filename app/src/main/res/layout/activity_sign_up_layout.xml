@@ -12,7 +12,6 @@
         android:id="@+id/retourhome"
         android:layout_width="37dp"
         android:layout_height="40dp"
-
         android:background="@drawable/backarrow"
         app:layout_constraintBottom_toBottomOf="@+id/include2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,14 +182,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
-        android:text="8 characters,1 capital and a sign "
+        android:text="@string/_8_characters_1_capital_and_a_sign"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_layout_btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/sign_upws"
         app:layout_constraintVertical_bias="0.082" />
+
+
 
     <Button
         android:id="@+id/sign_up_layout_btnSubmit"
@@ -211,7 +211,7 @@
         android:layout_height="23dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
-        android:text="Login"
+        android:text="@string/login_register"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

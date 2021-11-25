@@ -1,17 +1,21 @@
 package cereal.company.weedsimple
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.ImageView
 import cereal.company.weedsimple.Sqlite.DatabaseManager
 import cereal.company.weedsimple.Sqlite.FavoriteProducts
 import kotlinx.android.synthetic.main.activity_favorit_products.*
+import kotlinx.android.synthetic.main.top_header_fav.*
 
 class FavoritProductsActivity : AppCompatActivity() {
 
     lateinit var adapter: FavorisProductAdapter
     var id = 0
     var favList = ArrayList<FavoriteProducts>()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +25,36 @@ class FavoritProductsActivity : AppCompatActivity() {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        //val
+     val loginImgFav = findViewById<ImageView>(R.id.login_iv)
+     val panier_fav =  findViewById<ImageView>(R.id.cart_iv)
+     val home_fav_retour = findViewById<ImageView>(R.id.home_iv)
         showFavMovies()
+
+        retourfav.setOnClickListener {
+
+            finish()
+        }
+
+        loginImgFav.setOnClickListener {
+
+                val intent = Intent(this@FavoritProductsActivity, ProfileActivity::class.java)
+                startActivity(intent)
+        }
+
+
+        panier_fav.setOnClickListener {
+
+            val intent = Intent(this@FavoritProductsActivity,CartProductsActivity::class.java)
+            startActivity(intent)
+        }
+
+        home_fav_retour.setOnClickListener {
+
+            val intent = Intent(this@FavoritProductsActivity,MainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     fun showFavMovies(){
