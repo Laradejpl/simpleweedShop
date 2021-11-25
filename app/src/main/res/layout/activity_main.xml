@@ -369,7 +369,9 @@
     <include layout="@layout/bar_bottom" />
 
 
-    <include layout="@layout/side_menu_nav" />
+    <include
+        layout="@layout/side_menu_nav"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/botbtn"

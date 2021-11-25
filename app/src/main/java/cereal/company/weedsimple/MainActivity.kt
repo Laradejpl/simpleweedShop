@@ -213,6 +213,8 @@ class MainActivity : BaseActivity() {
 
           adresses.visibility = View.VISIBLE
           profil_tv.visibility = View.VISIBLE
+          favori_tv_profile.visibility = View.VISIBLE
+
 
 
 
@@ -227,8 +229,12 @@ class MainActivity : BaseActivity() {
 
         }
 
-       
 
+        favori_tv_profile.setOnClickListener {
+
+            val intentProfil = Intent(this@MainActivity,FavoritProductsActivity::class.java)
+            startActivity(intentProfil)
+        }
 
         profil_tv.setOnClickListener {
 

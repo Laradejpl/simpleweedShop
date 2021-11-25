@@ -20,12 +20,13 @@
         <entry key="app/src/main/res/layout/activity_bot.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_cart_products.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_coin_payment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_favorit_products.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_fetch_eproducts.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_fetch_one_product.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_finalize_shopping.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.10112973937503408" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.296875" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2402698495070057" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_robot.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_uploader.xml" value="0.2777777777777778" />
@@ -41,6 +42,7 @@
         <entry key="app/src/main/res/layout/header_menu.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/layout_avis_alert.xml" value="0.335" />
         <entry key="app/src/main/res/layout/layout_oublie_dialog.xml" value="0.296875" />
+        <entry key="app/src/main/res/layout/list_item_layout_fav.xml" value="0.5" />
         <entry key="app/src/main/res/layout/side_menu_nav.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/swipe_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/menu/cart_menu.xml" value="0.16111111111111112" />

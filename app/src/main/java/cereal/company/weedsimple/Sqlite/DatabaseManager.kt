@@ -104,11 +104,9 @@ class DatabaseManager (context: Context) : SQLiteOpenHelper(context, DATABASE_NA
 
         var userEmail = emailUser
 
-        val sql = "SELECT * FROM $TABLE_PRODUCTS WHERE userEmail=?"
+        val sql = "SELECT * FROM $TABLE_PRODUCTS WHERE emailUser=?"
 
         return db.rawQuery(sql, arrayOf(userEmail))
-
-
 
     }
 
