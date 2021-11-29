@@ -1,29 +1,24 @@
 package cereal.company.weedsimple
 
 import android.content.Intent
-import android.content.SharedPreferences
-import android.location.Location
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
 import cereal.company.weedsimple.ui.RobotActivity
 import cereal.company.weedsimple.utils.BaseActivity
-import com.airbnb.lottie.LottieAnimationView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_login.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.bar_bottom.*
 import kotlinx.android.synthetic.main.header_menu.*
@@ -52,7 +47,7 @@ class MainActivity : BaseActivity() {
     lateinit var bransName:String;
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
-
+    var panierText = ""
 
 
 
@@ -77,6 +72,14 @@ class MainActivity : BaseActivity() {
         val whatsapplink = findViewById<ImageView>(R.id.whatapp)
         val telephonelink = findViewById<ImageView>(R.id.phone)
         val phoneNumber = "0769754123"
+        //compteur du panieer
+        if (Person.counter_panier > 0){
+            numberProduct_ajouT_tv.visibility = View.VISIBLE
+            panierText = Person.counter_panier.toString()
+            numberProduct_ajouT_tv.text = panierText
+        }else{
+            numberProduct_ajouT_tv.visibility = View.GONE
+        }
 
         // volley pour les categorie du sidemenu
 

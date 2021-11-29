@@ -35,6 +35,9 @@ class AmountFragment : DialogFragment() {
                 var intent = Intent(activity,CartProductsActivity::class.java)
                 startActivity(intent)
 
+                var sumOfBasket  = (Person.counter_panier + (edtEnterAmountProduct.text.toString()).toInt())
+                Person.counter_panier = sumOfBasket
+
 
 
             }, { error->

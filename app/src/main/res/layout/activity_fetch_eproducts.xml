@@ -31,14 +31,28 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/logoshocbd" />
 
+        <TextView
+            android:id="@+id/numberProduct_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:minWidth="30dp"
+            android:text="0"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_bot_red"
+            />
+
         <ImageView
             android:id="@+id/backhome_search"
             android:layout_width="101dp"
             android:layout_height="30dp"
             android:layout_marginRight="20dp"
-
             android:layout_weight="1"
-            android:background="@drawable/ic_home" />
+            android:background="@drawable/cadi" />
     </LinearLayout>
 
     <TextView

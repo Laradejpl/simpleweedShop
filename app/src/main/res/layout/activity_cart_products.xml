@@ -29,19 +29,19 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="6dp"
-            android:src="@drawable/decline" />
+            android:src="@drawable/ic_shopping_cart" />
 
         <ImageView
             android:id="@+id/disCarte"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="44dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-
-
-            android:layout_marginEnd="116dp"
-            android:layout_marginBottom="9dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginBottom="7dp"
             android:layout_toStartOf="@+id/acceptCarte"
-            android:background="@drawable/ic_shopping_cart" />
+            android:background="@drawable/decline" />
 
         <ImageView
             android:id="@+id/acceptCarte"

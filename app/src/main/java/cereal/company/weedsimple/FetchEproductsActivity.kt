@@ -1,12 +1,11 @@
 package cereal.company.weedsimple
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
-import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -14,6 +13,7 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
 import kotlinx.android.synthetic.main.alert_add_fav.view.*
+import kotlinx.android.synthetic.main.bar_bottom.*
 import kotlinx.android.synthetic.main.e_product_row.*
 import kotlinx.android.synthetic.main.e_product_row.view.*
 import kotlinx.android.synthetic.main.header_menu.*
@@ -29,7 +29,7 @@ class FetchEproductsActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        //println(Person.euroR)
+
 
 
         backarrow_fetch_product.setOnClickListener {
@@ -39,8 +39,16 @@ class FetchEproductsActivity : AppCompatActivity() {
 
         backhome_search.setOnClickListener {
 
-            val intent = Intent(this@FetchEproductsActivity, MainActivity::class.java)
+            val intent = Intent(this@FetchEproductsActivity, CartProductsActivity::class.java)
             startActivity(intent)
+        }
+
+        if (Person.counter_panier > 0){
+            numberProduct_tv.visibility = View.VISIBLE
+           var basketResult = Person.counter_panier.toString()
+            numberProduct_tv.text = basketResult
+        }else{
+            numberProduct_tv.visibility = View.GONE
         }
 
 

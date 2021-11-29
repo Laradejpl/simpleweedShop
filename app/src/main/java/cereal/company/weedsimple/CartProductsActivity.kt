@@ -33,7 +33,7 @@ class CartProductsActivity : AppCompatActivity() {
             val requestQ = Volley.newRequestQueue(this@CartProductsActivity)
             val stringRequest = StringRequest(Request.Method.GET, deleteUrl, {
                     response ->
-
+                  Person.counter_panier = 0
 
                 var intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)

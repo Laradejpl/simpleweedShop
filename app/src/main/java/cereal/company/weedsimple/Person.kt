@@ -16,6 +16,7 @@ class Person {
         var euroR = ""
         lateinit var prixApayerEnBtc:BigDecimal
          var etoileRating = 0
+        var counter_panier = 0
 
 
     }

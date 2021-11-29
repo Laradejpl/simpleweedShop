@@ -69,7 +69,6 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
                 amountFragment.show(fragmentManager, "TAG")
 
 
-
             }
 
 
