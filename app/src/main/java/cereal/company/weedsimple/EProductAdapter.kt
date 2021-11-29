@@ -32,6 +32,7 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
             arrayList.get(position).pictureName,
             arrayList.get(position).stock
 
+
         )
 
 
@@ -55,6 +56,13 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
             itemView.txtName.text = name
             itemView.txtPrice.text = "${price.toString()} €"
             itemView.stokeQuantitytv.text = "${stock.toString()} en stock"
+            if (stock<10) {
+
+                itemView.stokeQuantitytv.setBackgroundResource(R.drawable.bgrougetriangle)
+
+            }
+
+
             var picURL = "https://reggaerencontre.com/"
             //picURL = picURL.replace("", "%20")
 

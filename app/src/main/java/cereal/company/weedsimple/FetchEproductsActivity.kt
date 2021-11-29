@@ -32,6 +32,7 @@ class FetchEproductsActivity : AppCompatActivity() {
 
 
 
+
         backarrow_fetch_product.setOnClickListener {
 
             finish()
@@ -51,11 +52,6 @@ class FetchEproductsActivity : AppCompatActivity() {
             numberProduct_tv.visibility = View.GONE
         }
 
-
-
-
-
-
         val selectedBrand = intent.getStringExtra("BRAND")
         title_brand_text_view.text = "$selectedBrand"
 
@@ -71,10 +67,13 @@ class FetchEproductsActivity : AppCompatActivity() {
                 productsList.add(EProduct(response.getJSONObject(productJOIndex).getInt("id") , response.getJSONObject(productJOIndex).getString("name"),
                     response.getJSONObject(productJOIndex).getInt("price"),response.getJSONObject(productJOIndex).getString("picture"),
                     response.getJSONObject(productJOIndex).getInt("stock")
+
+
                 ))
 
-            }
 
+
+            }
 
             val pAdapter = EProductAdapter(this@FetchEproductsActivity, productsList)
             productsRV.layoutManager = LinearLayoutManager(this@FetchEproductsActivity)
@@ -82,7 +81,6 @@ class FetchEproductsActivity : AppCompatActivity() {
 
 
         }, { error ->
-
 
             val dialogBuilder = AlertDialog.Builder(this)
             dialogBuilder.setTitle("Message")

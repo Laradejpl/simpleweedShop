@@ -17,6 +17,7 @@ class Person {
         lateinit var prixApayerEnBtc:BigDecimal
          var etoileRating = 0
         var counter_panier = 0
+        var stockOfProduct = 0
 
 
     }
