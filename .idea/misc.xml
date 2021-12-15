@@ -5,6 +5,7 @@
       <map>
         <entry key="../Library/Android/sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.24259259259259258" />
         <entry key="app/src/main/res/drawable/account_box.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/active_dots.xml" value="0.18518518518518517" />
         <entry key="app/src/main/res/drawable/backgroundgrey.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_black_round.xml" value="0.205" />
         <entry key="app/src/main/res/drawable/bg_black_semi_round.xml" value="0.10740740740740741" />
@@ -28,9 +29,11 @@
         <entry key="app/src/main/res/layout/activity_finalize_shopping.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.10112973937503408" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.296875" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1606467148262814" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_robot.xml" value="0.2942708333333333" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.3890625" />
+        <entry key="app/src/main/res/layout/activity_thank_you.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_uploader.xml" value="0.2777777777777778" />
         <entry key="app/src/main/res/layout/activity_version_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/alert_add_fav.xml" value="0.390625" />
@@ -40,7 +43,7 @@
         <entry key="app/src/main/res/layout/brand_item_text_view.xml" value="0.12777777777777777" />
         <entry key="app/src/main/res/layout/dialog_progress.xml" value="0.19882246376811594" />
         <entry key="app/src/main/res/layout/e_product_row.xml" value="0.2923076923076923" />
-        <entry key="app/src/main/res/layout/fragment_amount.xml" value="0.16111111111111112" />
+        <entry key="app/src/main/res/layout/fragment_amount.xml" value="0.3290798171325789" />
         <entry key="app/src/main/res/layout/header_menu.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/layout_avis_alert.xml" value="0.335" />
         <entry key="app/src/main/res/layout/layout_oublie_dialog.xml" value="0.296875" />

@@ -83,7 +83,7 @@ class FinalizeShoppingActivity : AppCompatActivity() {
 
 
             var ppProcessing = PayPalPayment(BigDecimal.valueOf(ttPrice),
-                    "EUR", "Online Store Kotlin!",
+                    "EUR", "Online CBD WEED SIMPLE!",
                     PayPalPayment.PAYMENT_INTENT_SALE)
             var paypalPaymentIntent = Intent(this, PaymentActivity::class.java)
             paypalPaymentIntent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, paypalConfig)
@@ -113,11 +113,15 @@ class FinalizeShoppingActivity : AppCompatActivity() {
 
             if (resultCode == Activity.RESULT_OK) {
 
+                //@TODO mettre a jour le stockage
+
 
                 var intent = Intent(this, ThankYouActivity::class.java)
                 startActivity(intent)
 
             } else {
+
+                //@TODO mettre a jour le stockage
 
                 Toast.makeText(this, "Sorry! Something went wrong. Try Again", Toast.LENGTH_SHORT).show()
 

@@ -37,7 +37,7 @@ class MainActivity : BaseActivity() {
     lateinit var dotsLayout: LinearLayout
     lateinit var mpager: ViewPager
     lateinit var toolbar : androidx.appcompat.widget.Toolbar
-    var path:IntArray = intArrayOf(R.drawable.teat,R.drawable.bocalcbd,R.drawable.fruitcbd,R.drawable.blondehair)
+    var path:IntArray = intArrayOf(R.drawable.euforia,R.drawable.bocalcbd,R.drawable.fruitcbd,R.drawable.drhemp)
     lateinit var dots:Array<ImageView>
     lateinit var adapter: PageView
     var currentPage: Int = 0
@@ -181,7 +181,7 @@ class MainActivity : BaseActivity() {
 
         food_brand.setOnClickListener {
 
-            StartCategory("FOOD")
+            StartCategory("FOODS")
         }
 
         bodyheath_brand.setOnClickListener {
@@ -320,6 +320,34 @@ class MainActivity : BaseActivity() {
         }
 
 
+        //les produits clicker
+
+        marley_pict.setOnClickListener {
+          imageClikcable("marley")
+        }
+
+
+        cdbhead_pict.setOnClickListener {
+           imageClikcable("saur")
+        }
+
+        tea_pict.setOnClickListener {
+            imageClikcable("high tea")
+        }
+
+        oil_pict.setOnClickListener {
+            imageClikcable("sleep well")
+        }
+        strawberry_pict.setOnClickListener {
+            imageClikcable("royal cbd")
+        }
+        cookie1_pict.setOnClickListener {
+            imageClikcable("haze")
+        }
+        cookie2_pict1.setOnClickListener {
+            imageClikcable("haze")
+        }
+
     }
 
 
@@ -365,6 +393,12 @@ class MainActivity : BaseActivity() {
 
 
                 dots[i].setImageDrawable(ContextCompat.getDrawable(this,R.drawable.active_dots))
+
+
+
+
+
+
             }else{
 
                 dots[i].setImageDrawable(ContextCompat.getDrawable(this,R.drawable.inactive_dots))
@@ -395,6 +429,10 @@ class MainActivity : BaseActivity() {
         intent.putExtra("BRAND" , laCategori)
         startActivity(intent)
     }
+
+
+
+
 
 
 
@@ -432,7 +470,13 @@ class MainActivity : BaseActivity() {
         })
     }
 
+    fun imageClikcable(prod: String){
 
+        val intentP = Intent(this@MainActivity, SearchActivity::class.java)
+        intentP.putExtra("motclef",prod)
+        startActivity(intentP)
+
+    }
 
 
 }

@@ -188,23 +188,36 @@
 
 
                     <ImageView
+                        android:id="@+id/marley_pict"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
 
                         android:background="@drawable/marleybeer"
-
                         />
                     <ImageView
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_faword"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <ImageView
+                        android:id="@+id/cdbhead_pict"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-
                         android:background="@drawable/tetecbd"
-
                         />
 
                     <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_faword"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <ImageView
+                        android:id="@+id/tea_pict"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
@@ -215,6 +228,14 @@
 
                     <ImageView
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_faword"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <ImageView
+                        android:id="@+id/oil_pict"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
 
@@ -224,30 +245,50 @@
 
                     <ImageView
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_faword"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <ImageView
+                        android:id="@+id/strawberry_pict"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
 
                         android:background="@drawable/strawberry"
 
                         />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_faword"
+                        android:layout_gravity="center_vertical"
+                        />
 
                     <ImageView
+                        android:id="@+id/cookie1_pict"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-
                         android:background="@drawable/cookie"
 
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_faword"
+                        android:layout_gravity="center_vertical"
                         />
 
 
 
 
                     <ImageView
+                        android:id="@+id/cookie2_pict1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-
                         android:background="@drawable/cookies2"
 
                         />
