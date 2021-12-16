@@ -22,6 +22,7 @@
     <string name="_8_characters_1_capital_and_a_sign">8 characters,1 capital and a sign</string>
     <string name="login_register"><u>Login</u></string>
     <string name="j_ai_plus_de_18_ans">J\'ai plus de 18 ANS</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string-array name="planets_array">
         <item>France</item>
         <item>Angleterre</item>

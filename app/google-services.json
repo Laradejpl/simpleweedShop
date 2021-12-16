@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "191609718549",
+    "project_id": "weedsimple-b0ebd",
+    "storage_bucket": "weedsimple-b0ebd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191609718549:android:8b4a7b0becd9a10f718b1c",
+        "android_client_info": {
+          "package_name": "cereal.company.weedsimple"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191609718549-ojdlrrg2125a1fld70d7ouhbsfivjj03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6ZEw3PNfz0WZi-tnWOTjg_-qW0w5Epo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191609718549-ojdlrrg2125a1fld70d7ouhbsfivjj03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

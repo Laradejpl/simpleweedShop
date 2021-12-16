@@ -11,6 +11,9 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
 import kotlinx.android.synthetic.main.alert_add_fav.view.*
 import kotlinx.android.synthetic.main.bar_bottom.*
@@ -20,6 +23,9 @@ import kotlinx.android.synthetic.main.header_menu.*
 import kotlinx.android.synthetic.main.side_menu_nav.*
 
 class FetchEproductsActivity : AppCompatActivity() {
+    private val TAG = "MainActivity"
+
+    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fetch_eproducts)
@@ -29,7 +35,12 @@ class FetchEproductsActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        //@TODO ADMOB intégration
+        MobileAds.initialize(this) {}
 
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
 
 

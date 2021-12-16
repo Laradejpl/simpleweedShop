@@ -10,6 +10,8 @@ import android.view.WindowManager
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import cereal.company.weedsimple.ui.RobotActivity
 import cereal.company.weedsimple.utils.BaseActivity
@@ -18,6 +20,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
 import kotlinx.android.synthetic.main.activity_login.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.bar_bottom.*
@@ -28,6 +31,7 @@ import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient
 import okhttp3.Response
+import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
 import java.util.*
@@ -158,6 +162,96 @@ class MainActivity : BaseActivity() {
             }
         })
 
+        // LES NOUVEAUX PRODUITS
+
+        val productsListNews = ArrayList<EProduct>()
+        val productsUrlNews = "https://reggaerencontre.com/fetchEproducts_news.php"
+        val requestQNews: RequestQueue = Volley.newRequestQueue(this)
+        val jsonAr = JsonArrayRequest(Request.Method.GET, productsUrlNews,null, {
+                response ->
+
+            for (productJOIndex in 0.until(response.length())){
+
+
+                productsListNews.add(EProduct(response.getJSONObject(productJOIndex).getInt("id") , response.getJSONObject(productJOIndex).getString("name"),
+                    response.getJSONObject(productJOIndex).getInt("price"),response.getJSONObject(productJOIndex).getString("picture"),
+                    response.getJSONObject(productJOIndex).getInt("stock")
+
+
+                ))
+
+
+
+            }
+
+            val pAdapter = NewsProductsAdapter(this@MainActivity, productsListNews)
+            horizontal_nouveautee.layoutManager = GridLayoutManager(this@MainActivity,3)
+            horizontal_nouveautee.adapter = pAdapter
+
+
+        }, { error ->
+
+            val dialogBuilder = AlertDialog.Builder(this)
+            dialogBuilder.setTitle("Message")
+            dialogBuilder.setMessage(error.message)
+            dialogBuilder.create().show()
+
+
+
+
+
+
+
+        })
+
+        requestQNews.add(jsonAr)
+
+
+        //@TODO LES PROMOTIONS
+        val productListPromo = ArrayList<EProduct>()
+        val productsUrlPromo = "https://reggaerencontre.com/fetchEproducts_promo.php"
+        val requestQPromo: RequestQueue = Volley.newRequestQueue(this)
+        val jsonArP = JsonArrayRequest(Request.Method.GET, productsUrlPromo,null, {
+                response ->
+
+            for (productJOIndex in 0.until(response.length())){
+
+
+                productListPromo.add(EProduct(response.getJSONObject(productJOIndex).getInt("id") , response.getJSONObject(productJOIndex).getString("name"),
+                    response.getJSONObject(productJOIndex).getInt("price"),response.getJSONObject(productJOIndex).getString("picture"),
+                    response.getJSONObject(productJOIndex).getInt("stock")
+
+
+                ))
+
+
+
+            }
+
+            val pPAdapter = PromoProductAdapter(this@MainActivity, productListPromo)
+            horizontal_promotion.layoutManager = GridLayoutManager(this@MainActivity,3)
+            horizontal_promotion.adapter = pPAdapter
+
+
+        }, { error ->
+
+            val dialogBuilder = AlertDialog.Builder(this)
+            dialogBuilder.setTitle("Message")
+            dialogBuilder.setMessage(error.message)
+            dialogBuilder.create().show()
+
+
+
+
+
+
+
+        })
+
+        requestQPromo.add(jsonArP)
+
+
+
         //LES CATEORIES
         tea_brand.setOnClickListener {
             StartCategory("TEA")
@@ -191,18 +285,18 @@ class MainActivity : BaseActivity() {
 
 
         instalink.setOnClickListener {
-            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data = Uri.parse("https://www.instagram.com/uwallandroidapps/")
             startActivity(openURL)
         }
         facebooklink.setOnClickListener {
-            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data = Uri.parse("https://www.facebook.com/")
             startActivity(openURL)
         }
 
         whatsapplink.setOnClickListener {
-            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data = Uri.parse("https://www.whatsapp.com/")
             startActivity(openURL)
         }
@@ -346,6 +440,9 @@ class MainActivity : BaseActivity() {
         }
         cookie2_pict1.setOnClickListener {
             imageClikcable("haze")
+        }
+        multitrance_cat_img.setOnClickListener {
+            imageClikcable("multitrance")
         }
 
     }

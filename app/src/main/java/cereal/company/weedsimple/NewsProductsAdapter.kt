@@ -1,7 +1,6 @@
 package cereal.company.weedsimple
 
 import android.app.Activity
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,18 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.alert_add_fav.view.*
 import kotlinx.android.synthetic.main.card_view_item.view.*
-import kotlinx.android.synthetic.main.e_product_row.view.*
 
-class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class NewsProductsAdapter (var context: Context, var arrayList: ArrayList<EProduct>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
-        val productView = LayoutInflater.from(context).inflate(R.layout.e_product_row,parent,false)
+        val productViewNew = LayoutInflater.from(context).inflate(R.layout.card_view_item,parent,false)
 
-        return ProductViewHolder(productView)
+        return ProductViewHolder(productViewNew)
 
 
     }
@@ -53,31 +50,31 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
 
         fun initializeRowUIComponents(id: Int ,name: String, price:Int, picName:String, stock: Int){
 
-            itemView.txtId.text = " Ref: ${id.toString()}"
-            itemView.txtName.text = name
-            itemView.txtPrice.text = "${price.toString()} €"
-            itemView.stokeQuantitytv.text = "${stock.toString()} en stock"
+            itemView.id_card_news.text = " Ref: ${id.toString()}"
+            itemView.title_card_news.text = name
+            itemView.price_card_news.text = "${price.toString()} €"
+            itemView.stock_card_news.text = "${stock.toString()} en stock"
             if (stock<10) {
 
-                itemView.stokeQuantitytv.setBackgroundResource(R.drawable.bgrougetriangle)
+                itemView.stock_card_news.setBackgroundResource(R.drawable.bgrougetriangle)
 
             }
             if(stock<1 ){
-                itemView.stokeQuantitytv.setBackgroundResource(R.drawable.bgreytriangle)
-                itemView.stokeQuantitytv.text ="Epuisé"
+                itemView.stock_card_news.setBackgroundResource(R.drawable.bgreytriangle)
+                itemView.stock_card_news.text ="Epuisé"
 
 
             }
 
 
-            var picURL = "https://reggaerencontre.com/"
+            var picURLNews = "https://reggaerencontre.com/"
             //picURL = picURL.replace("", "%20")
 
 
-            val UrlPhoto = picURL + picName
-            Picasso.with(context).load(UrlPhoto).into(itemView.imgProduct)
+            val UrlPhotoNews = picURLNews + picName
+            Picasso.with(context).load(UrlPhotoNews).into(itemView.img_card_news)
 
-            itemView.imgAdd.setOnClickListener {
+            itemView.addToCart_news.setOnClickListener {
                 Person.addToCartProductID = id
                 var amountFragment = AmountFragment()
                 var fragmentManager = (itemView.context as Activity).fragmentManager
@@ -87,35 +84,11 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
             }
 
 
-            itemView.favorit_star1.setOnClickListener{
-
-                // dialogue  pour ajouter les favoris
-
-                val view = View.inflate(context,R.layout.alert_add_fav,null)
-                var builder = AlertDialog.Builder(context)
-                builder.setView(view)
-                val dialog =builder.create()
-                dialog.show()
-                view.oui_btn_film_add.setOnClickListener {
-                    //@TODO ENREGISTREMENT DANS BASE SQLITE,Remplacement de l'etoile par un coeur
-
-
-                }
-
-
-                view.non_btn_film_add.setOnClickListener {
-
-
-                    dialog.dismiss()
-                }
 
 
 
-            }
 
-
-
-            itemView.imgProduct.setOnClickListener {
+            itemView.img_card_news.setOnClickListener {
                 if(stock<1 ){
                     println("Epuise out of stock")
 
@@ -124,7 +97,7 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
                     intentpro.putExtra("id",id.toString())
                     intentpro.putExtra("title",name)
                     intentpro.putExtra("prix",price)
-                    intentpro.putExtra("nomphoto",UrlPhoto)
+                    intentpro.putExtra("nomphoto",UrlPhotoNews)
                     context.startActivity(intentpro)
                 }
 
