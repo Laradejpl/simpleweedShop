@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.CheckBox
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_sign_up_layout.*
 import java.lang.Exception
 
 class SignUpLayout : AppCompatActivity() {
+     lateinit var  newLetterCheckBox :CheckBox
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_layout)
@@ -48,13 +50,15 @@ class SignUpLayout : AppCompatActivity() {
 
             if (sign_up_layout_edtPassword.text.toString().equals(sign_up_layout_edtConfirmPass.text.toString())){
 
-
+               newLetterCheckBox = findViewById(R.id.checkbox_register)
 
 
                 var  signUpUrl = "https://reggaerencontre.com/join_new_user.php?email=" +
                         sign_up_layout_edtEmail.text.toString() +
                         "&username=" +
-                        sign_up_layout_edtUsername.text.toString() + "&pass=" + sign_up_layout_edtPassword.text.toString()
+                        sign_up_layout_edtUsername.text.toString() + "&pass=" + sign_up_layout_edtPassword.text.toString()+
+                        "&newletter=" + newLetterCheckBox.isChecked.toString()
+
 
                 val requestQ: RequestQueue = Volley.newRequestQueue(this)
                 val stringRequest = StringRequest(Request.Method.GET,signUpUrl, {

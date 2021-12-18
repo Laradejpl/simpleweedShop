@@ -178,17 +178,22 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <TextView
+    <CheckBox
+        android:id="@+id/checkbox_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
-        android:text="@string/_8_characters_1_capital_and_a_sign"
+        android:buttonTint="@color/teal_700"
+        android:textColor="@color/black"
+        android:text="Newletter"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_layout_btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_upws"
         app:layout_constraintVertical_bias="0.082" />
+
+
 
 
 

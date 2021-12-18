@@ -21,9 +21,12 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.bar_bottom.*
+import kotlinx.android.synthetic.main.brand_item_text_view.*
+import kotlinx.android.synthetic.main.brand_item_text_view.view.*
 import kotlinx.android.synthetic.main.header_menu.*
 import kotlinx.android.synthetic.main.search_bar_layout.*
 import kotlinx.android.synthetic.main.side_menu_nav.*
@@ -100,11 +103,14 @@ class MainActivity : BaseActivity() {
 
                 brandsList.add(response.getJSONObject(jsonObject).getString("brand"))
 
+
             }
 
 
             var brandsListAdapter = ArrayAdapter(this@MainActivity,R.layout.brand_item_text_view, brandsList)
             brandsListView.adapter = brandsListAdapter
+
+
 
 
         }, { error ->
@@ -207,7 +213,7 @@ class MainActivity : BaseActivity() {
         requestQNews.add(jsonAr)
 
 
-        //@TODO LES PROMOTIONS
+        // LES PROMOTIONS
         val productListPromo = ArrayList<EProduct>()
         val productsUrlPromo = "https://reggaerencontre.com/fetchEproducts_promo.php"
         val requestQPromo: RequestQueue = Volley.newRequestQueue(this)
