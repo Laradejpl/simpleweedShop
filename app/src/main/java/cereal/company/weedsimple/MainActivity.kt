@@ -92,6 +92,11 @@ class MainActivity : BaseActivity() {
 
         // AFFICHE LE COURS DU BTC ET EURO ,DOLLAR
         loadBitcoinPrice()
+
+        //@TODO implementation de la ADMOB
+        spin_img.setOnClickListener {
+
+        }
         var brandsUrl = "https://reggaerencontre.com/fetch_brands.php"
         var brandsList = ArrayList<String>()
         val requestQ: RequestQueue = Volley.newRequestQueue(this)
@@ -130,6 +135,12 @@ class MainActivity : BaseActivity() {
             val intent = Intent(this@MainActivity, FetchEproductsActivity::class.java )
 
             intent.putExtra("BRAND" , tappedBrand)
+            startActivity(intent)
+
+        }
+
+        spin_img.setOnClickListener {
+            val intent = Intent(this@MainActivity, SpinActivity::class.java )
             startActivity(intent)
 
         }

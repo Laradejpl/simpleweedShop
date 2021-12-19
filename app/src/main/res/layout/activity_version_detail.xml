@@ -204,8 +204,20 @@
                 android:id="@+id/avisRV"
                 android:translationZ="2dp"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:visibility="gone"
+                />
 
+
+
+            <TextView
+                android:id="@+id/first_avis_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Soyez le premier a donner votre avis !"
+                android:textSize="25sp"
+                />
 
             <Button
                 android:id="@+id/avis_btn"
@@ -214,6 +226,8 @@
                 android:layout_marginTop="20dp"
                 android:text="votre avis"
                 />
+
+
 
         </LinearLayout>
 

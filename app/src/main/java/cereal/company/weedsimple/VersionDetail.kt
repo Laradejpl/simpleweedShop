@@ -339,9 +339,17 @@ if (!coeur){
                             response.getJSONObject(x).getInt("rating_star"),
                             response.getJSONObject(x).getString("avis"))
                     )
+                if (list.size <1){
+                    avisRV.visibility = View.GONE
+                    first_avis_txt.visibility =View.VISIBLE
+                }else{
+                    avisRV.visibility = View.VISIBLE
+                    first_avis_txt.visibility =View.GONE
+
                 var adp = AvisAdapter(this@VersionDetail,list)
                 avisRV.adapter=adp
                 avisRV.layoutManager= LinearLayoutManager(this@VersionDetail)
+                }
             },
 
             {  })

@@ -47,6 +47,10 @@ class CartProductsActivity : AppCompatActivity() {
 
             requestQ.add(stringRequest)
         }
+        backThome_img.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         acceptCarte.setOnClickListener {
 

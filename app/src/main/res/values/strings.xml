@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">WeedSimple</string>
 
-    <string name="label_splash"> © Larade jean-philippe - 2021</string>
-    <string name="et_hint_email_id">Enter your Email</string>
-    <string name="et_hint_password">Enter your Password</string>
-    <string name="et_hint_password_confirmation">Confirm your Password</string>
-    <string name="et_hint_username">Enter your Username</string>
-    <string name="account"><u>Do you have an account?</u></string>
-    <string name="tosubscribe"> | <u>Register</u></string>
-    <string name="create_account"> <u>CREATE ACCOUNT</u></string>
+    <string name="label_splash"> © mobiletech - 2021</string>
+    <string name="et_hint_email_id">Entrez votre Email</string>
+    <string name="et_hint_password">Entrez votre mot de passe</string>
+    <string name="et_hint_password_confirmation">Confirmez votre mot de passe</string>
+    <string name="et_hint_username">Entrez votre nom</string>
+    <string name="account"><u>avez vous un compte?</u></string>
+    <string name="tosubscribe"> | <u>Enregistrez-vous</u></string>
+    <string name="create_account"> <u>CREEZ UN COMPTE</u></string>
     <string name="welcome_to_home">Welcome to home !!!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="enter_amount">Enter amount</string>
+    <string name="enter_amount">Entrez une quantitée</string>
     <string name="espaceperso"><u>Voici votre espace personnel</u></string>
     <string name="la_descrition">jkjkjdjskdjksjdksjdksdsjggdjsdjdhjshxcnjchhkcdhckdhkchdhkdhkchkdhckdhkchdkchkdhcdcguhkhcjhchihcihicheihiehiheiiehiehibcjbdjbvgftdtadgdacfshgasjhdkkdfhkdhkfhdkfhkdhfkdhfkhdkfhkdfkhdkfhkdfhkdhfhdkfhkdhfkdhfk dfhdkfkdfhk dfhdkfhdkhfkdhfkdhfkhdkfdjfjdfhdhfkdhfkhdkfhdkfhdkfdkfhdkfhdkfhkdfhkdfhkdfhkdfhdkfhdkhf  jkjkjdjskdjksjdksjdksdsjggdjsdjdhjshxcnjchhkcdhckdhkchdhkdhkchkdhckdhkchdkchkdhcdcguhkhcjhchihcihicheihiehiheiiehiehibcjbdjbvgftdtadgdacfshgasjhdkkdfhkdhkfhdkfhkdhfkdhfkhdkfhkdfkhdkfhkdfhkdhfhdkfhkdhfkdhfk dfhdkfkdfhk dfhdkfhdkhfkdhfkdhfkhdkfdjfjdfhdhfkdhfkhdkfhdkfhdkfdkfhdkfhdkfhkdfhkdfhkdfhkdfhdkfhdkhf jkjkjdjskdjksjdksjdksdsjggdjsdjdhjshxcnjchhkcdhckdhkchdhkdhkchkdhckdhkchdkchkdhcdcguhkhcjhchihcihicheihiehiheiiehiehibcjbdjbvgftdtadgdacfshgasjhdkkdfhkdhkfhdkfhkdhfkdhfkhdkfhkdfkhdkfhkdfhkdhfhdkfhkdhfkdhfk dfhdkfkdfhk dfhdkfhdkhfkdhfkdhfkhdkfdjfjdfhdhfkdhfkhdkfhdkfhdkfdkfhdkfhdkfhkdfhkdfhkdfhkdfhdkfhdkhf jkjkjdjskdjksjdksjdksdsjggdjsdjdhjshxcnjchhkcdhckdhkchdhkdhkchkdhckdhkchdkchkdhcdcguhkhcjhchihcihicheihiehiheiiehiehibcjbdjbvgftdtadgdacfshgasjhdkkdfhkdhkfhdkfhkdhfkdhfkhdkfhkdfkhdkfhkdfhkdhfhdkfhkdhfkdhfk dfhdkfkdfhk dfhdkfhdkhfkdhfkdhfkhdkfdjfjdfhdhfkdhfkhdkfhdkfhdkfdkfhdkfhdkfhkdfhkdfhkdfhkdfhdkfhdkhf</string>
     <string name="votre_panier">Votre panier</string>
@@ -20,9 +20,15 @@
     <string name="politique_de_confidentialit_e"><u>Politique de confidentialitée</u></string>
     <string name="cgu">Cgu</string>
     <string name="_8_characters_1_capital_and_a_sign">8 characters,1 capital and a sign</string>
-    <string name="login_register"><u>Login</u></string>
+    <string name="login_register"><u>Connection</u></string>
     <string name="j_ai_plus_de_18_ans">J\'ai plus de 18 ANS</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="newletter">abonnez-vous à notre Newletter</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="desc_spin">FAITES TOURNER LA ROUE POUR TENTER DE GAGNER DU CBD GRATUIT !</string>
+    <string name="explication_spin">Atteignez un score de 50000 points pour avoir droit a un produit cbd gratuit</string>
+    <string name="tap_on_the_yellow_button">Tentez votre chance !</string>
+
     <string-array name="planets_array">
         <item>France</item>
         <item>Angleterre</item>
