@@ -55,7 +55,7 @@ class MainActivity : BaseActivity() {
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
     var panierText = ""
-
+    val emailConnected = Person.email
 
 
 
@@ -94,9 +94,7 @@ class MainActivity : BaseActivity() {
         loadBitcoinPrice()
 
         //@TODO implementation de la ADMOB
-        spin_img.setOnClickListener {
 
-        }
         var brandsUrl = "https://reggaerencontre.com/fetch_brands.php"
         var brandsList = ArrayList<String>()
         val requestQ: RequestQueue = Volley.newRequestQueue(this)
@@ -114,8 +112,6 @@ class MainActivity : BaseActivity() {
 
             var brandsListAdapter = ArrayAdapter(this@MainActivity,R.layout.brand_item_text_view, brandsList)
             brandsListView.adapter = brandsListAdapter
-
-
 
 
         }, { error ->
@@ -140,8 +136,16 @@ class MainActivity : BaseActivity() {
         }
 
         spin_img.setOnClickListener {
-            val intent = Intent(this@MainActivity, SpinActivity::class.java )
-            startActivity(intent)
+            if (emailConnected !=  "" ){
+
+                val intent = Intent(this@MainActivity, SpinActivity::class.java )
+                intent.putExtra("emailUser",emailConnected)
+                startActivity(intent)
+
+            }else{
+                 showErrorSnackBar(getString(R.string.spin_alert),true)
+            }
+
 
         }
 
@@ -258,11 +262,6 @@ class MainActivity : BaseActivity() {
             dialogBuilder.create().show()
 
 
-
-
-
-
-
         })
 
         requestQPromo.add(jsonArP)
@@ -319,7 +318,7 @@ class MainActivity : BaseActivity() {
         }
 
          //ont affiche l'email du user connecter
-        val emailConnected = Person.email
+
         email_tv_side_menu.text = emailConnected
 
        // ont verifie si il ya un email ou une connection pour afficher les addresses
@@ -328,6 +327,8 @@ class MainActivity : BaseActivity() {
           adresses.visibility = View.VISIBLE
           profil_tv.visibility = View.VISIBLE
           favori_tv_profile.visibility = View.VISIBLE
+
+
 
       }
 

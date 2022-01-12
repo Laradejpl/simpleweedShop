@@ -105,6 +105,7 @@ class CartProductsActivity : AppCompatActivity() {
                 android.R.layout.simple_list_item_1,
                 cartProductsList
             )
+
             cartProductsListView.adapter = cartProductsAdapter
 
         }, { error ->

@@ -18,6 +18,7 @@ class Person {
          var etoileRating = 0
         var counter_panier = 0
         var stockOfProduct = 0
+        var pointDeFidelite =  0
 
 
     }

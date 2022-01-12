@@ -57,7 +57,6 @@ class ProfileActivity : AppCompatActivity() {
                 dialogBuilder.setTitle("INFO")
                 dialogBuilder.setMessage("No adress yet")
                 dialogBuilder.create().show()
-
                 //Toast.makeText(this@LocationActivity,"No adress yet ", Toast.LENGTH_SHORT).show()
 
 

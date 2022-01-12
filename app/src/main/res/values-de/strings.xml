@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JustCBD</string>
+
+    <string name="label_splash"> © mobiletech - 2021</string>
+    <string name="et_hint_email_id">geben sie ihre E-Mail Adresse ein</string>
+    <string name="et_hint_password">Geben Sie Ihr Passwort ein</string>
+    <string name="et_hint_password_confirmation">Bestätigen Sie Ihr Passwort</string>
+    <string name="et_hint_username">Gib deinen Namen ein</string>
+    <string name="account"><u>hast du einen Account?</u></string>
+    <string name="tosubscribe"> | <u>Registrieren</u></string>
+    <string name="create_account"> <u>EIN KONTO ERSTELLEN</u></string>
+    <string name="welcome_to_home">Herzlich willkommen!!!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_amount">Geben Sie eine Menge ein</string>
+    <string name="espaceperso"><u>Hier ist dein persönlicher Bereich</u></string>
+    <string name="la_descrition">jkjkjdjskdjksjdksjdksdsjggdjsdjdhjshxcnjchhkcdhckdhkchdhkdhkchkdhckdhkchdkchkdhcdcguhkhcjhchihcihicheihiehiheiiehiehibcjbdjbvgftdtadgdacfshgasjhdkkdfhkdhkfhdkfhkdhfkdhfkhdkfhkdfkhdkfhkdfhkdhfhdkfhkdhfkdhfk dfhdkfkdfhk dfhdkfhdkhfkdhfkdhfkhdkfdjfjdfhdhfkdhfkhdkfhdkfhdkfdkfhdkfhdkfhkdfhkdfhkdfhkdfhdkfhdkhf  jkjkjdjskdjksjdksjdksdsjggdjsdjdhjshxcnjchhkcdhckdhkchdhkdhkchkdhckdhkchdkchkdhcdcguhkhcjhchihcihicheihiehiheiiehiehibcjbdjbvgftdtadgdacfshgasjhdkkdfhkdhkfhdkfhkdhfkdhfkhdkfhkdfkhdkfhkdfhkdhfhdkfhkdhfkdhfk dfhdkfkdfhk dfhdkfhdkhfkdhfkdhfkhdkfdjfjdfhdhfkdhfkhdkfhdkfhdkfdkfhdkfhdkfhkdfhkdfhkdfhkdfhdkfhdkhf jkjkjdjskdjksjdksjdksdsjggdjsdjdhjshxcnjchhkcdhckdhkchdhkdhkchkdhckdhkchdkchkdhcdcguhkhcjhchihcihicheihiehiheiiehiehibcjbdjbvgftdtadgdacfshgasjhdkkdfhkdhkfhdkfhkdhfkdhfkhdkfhkdfkhdkfhkdfhkdhfhdkfhkdhfkdhfk dfhdkfkdfhk dfhdkfhdkhfkdhfkdhfkhdkfdjfjdfhdhfkdhfkhdkfhdkfhdkfdkfhdkfhdkfhkdfhkdfhkdfhkdfhdkfhdkhf jkjkjdjskdjksjdksjdksdsjggdjsdjdhjshxcnjchhkcdhckdhkchdhkdhkchkdhckdhkchdkchkdhcdcguhkhcjhchihcihicheihiehiheiiehiehibcjbdjbvgftdtadgdacfshgasjhdkkdfhkdhkfhdkfhkdhfkdhfkhdkfhkdfkhdkfhkdfhkdhfhdkfhkdhfkdhfk dfhdkfkdfhk dfhdkfhdkhfkdhfkdhfkhdkfdjfjdfhdhfkdhfkhdkfhdkfhdkfdkfhdkfhdkfhkdfhkdfhkdfhkdfhdkfhdkhf</string>
+    <string name="votre_panier">dein korb</string>
+    <string name="please_wait">Warten&#8230;</string>
+    <string name="politique_de_confidentialit_e"><u>
+    Datenschutz-Bestimmungen</u></string>
+    <string name="cgu">Cgu</string>
+    <string name="_8_characters_1_capital_and_a_sign">8 Zeichen, 1 Großbuchstabe und ein Zeichen</string>
+    <string name="login_register"><u>Verbindung</u></string>
+    <string name="j_ai_plus_de_18_ans">Ich bin über 18 Jahre alt</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="newletter">Abonniere unseren Newsletter</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="desc_spin">DREHEN SIE DAS RAD, UM ZU VERSUCHEN, KOSTENLOSE CBD ZU GEWINNEN!</string>
+    <string name="explication_spin">Erreichen Sie eine Punktzahl von 50.000 Punkten, um sich für ein kostenloses CBD-Produkt zu qualifizieren</string>
+    <string name="tap_on_the_yellow_button">Versuch dein Glück !</string>
+    <string name="best_selection">Versuch dein Glück!</string>
+    <string name="nos_s_l_ctions_de_cbd">Unsere CBD-Auswahl</string>
+    <string name="politiquetxt">Die Politik von Just Cbd besteht darin, niemals Marihuana zu verkaufen, das wir nicht verwenden, ist nicht unsere Angewohnheit und unsere Kunden wollen das Beste.</string>
+    <string name="promotxt">Unsere Aktionen AUF NUR CBD</string>
+    <string name="nouveautees_cbd">NEUIGKEITEN ZU NUR CBD</string>
+    <string name="spin_alert">Melden Sie sich an, um eine Gewinnchance zu erhalten !!!</string>
+    <string name="connectez_vous">Einloggen</string>
+    <string name="login_button">Verbindung</string>
+
+    <string-array name="planets_array">
+        <item>Frankreich</item>
+        <item>England</item>
+        <item>Deutchland</item>
+        <item>Spanien</item>
+
+    </string-array>
+    <string name="forgot_your_password">Passwort vergessen?</string>
+    <string name="cart_bottom">Korb</string>
+    <string name="home_button">Startseite</string>
+    <string name="enregistrez_btn">Speichern</string>
+    <string name="login_side_menu">Verbindung |</string>
+    <string name="sign_up">" Registrieren"</string>
+    <string name="validez_cart">Bestätigen</string>
+    <string name="ajoutez_cart">hinzufügen</string>
+    <string name="effacer_cart">Löschen</string>
+    <string name="votre_profil">DEIN PROFIL</string>
+    <string name="rue_profile">Straße:</string>
+    <string name="ville_profile">Stadt:</string>
+    <string name="pays_profile">Land:</string>
+    <string name="change_your_expedition_adress">Ändern Sie Ihre Lieferadresse</string>
+    <string name="votre_tel_profile">dein Telefon</string>
+    <string name="submit_profile">Bestätigen Sie</string>
+    <string name="vos_produits_favoris">Ihre Lieblingsprodukte</string>
+    <string name="votre_profil_txt">dein Profil</string>
+    <string name="vos_adresses">deine adressen</string>
+    <string name="text_btc_advice">Sie können in Bitcoin über die CoinPayment-Plattform, per Visa-Karte oder Paypal bezahlen. Nach Eingang Ihrer Zahlung werden wir Ihre Bestellung versenden.</string>
+    <string name="prix_payer">\"Du musst bezahlen: \"</string>
+    <string name="street_adre">Straße</string>
+</resources>

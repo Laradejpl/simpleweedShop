@@ -13,7 +13,7 @@
         android:background="@drawable/radiusbackground"
         android:gravity="start"
         android:padding="15dp"
-        android:text="VOTRE PROFIL"
+        android:text="@string/votre_profil"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,7 +24,6 @@
         android:id="@+id/imageView2"
         android:layout_width="437dp"
         android:layout_height="270dp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +115,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:text="Rue:"
+                android:text="@string/rue_profile"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -142,7 +141,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:text="Ville:"
+                android:text="@string/ville_profile"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -193,7 +192,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:text="Pays:"
+                android:text="@string/pays_profile"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -241,7 +240,7 @@
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:layout_weight="1"
-                android:text="Change your expedition adress" />
+                android:text="@string/change_your_expedition_adress" />
 
         </LinearLayout>
 

@@ -50,8 +50,8 @@ class FinalizeShoppingActivity : AppCompatActivity() {
         val requestQ = Volley.newRequestQueue(this@FinalizeShoppingActivity)
         val stringRequest = StringRequest(Request.Method.GET, calculateTotalPriceUrl, { response ->
 
-
-            paiment_reel.setText("Vous devez payez:  $response €" )
+          val textPrixPrefix =getString(R.string.prix_payer)
+            paiment_reel.setText(textPrixPrefix + response + "€" )
             ttPrice = response.toLong()
             prixEnD = response.toInt()
             priceToS=response
@@ -152,14 +152,6 @@ class FinalizeShoppingActivity : AppCompatActivity() {
 
                 var euroRate = (JSONObject(json).getJSONObject("bpi").getJSONObject("EUR")
                         ["rate"] as String).split(".")[0]
-
-
-
-
-
-
-
-
 
 
 

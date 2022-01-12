@@ -24,7 +24,7 @@
         <entry key="app/src/main/res/drawable/tittle_add_product.xml" value="0.181" />
         <entry key="app/src/main/res/drawable/traie.xml" value="0.151" />
         <entry key="app/src/main/res/layout/activity_bot.xml" value="0.2942708333333333" />
-        <entry key="app/src/main/res/layout/activity_cart_products.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_cart_products.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_coin_payment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_favorit_products.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_fetch_eproducts.xml" value="0.1" />
@@ -32,12 +32,13 @@
         <entry key="app/src/main/res/layout/activity_finalize_shopping.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.10112973937503408" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.296875" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.260507880910683" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_robot.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.3890625" />
-        <entry key="app/src/main/res/layout/activity_spin.xml" value="0.14678899082568808" />
+        <entry key="app/src/main/res/layout/activity_spin.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.3974358974358974" />
+        <entry key="app/src/main/res/layout/activity_test_volley.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/layout/activity_thank_you.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_uploader.xml" value="0.2777777777777778" />
         <entry key="app/src/main/res/layout/activity_version_detail.xml" value="0.15" />

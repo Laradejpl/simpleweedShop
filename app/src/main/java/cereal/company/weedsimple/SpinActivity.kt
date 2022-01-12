@@ -10,12 +10,24 @@ import android.view.animation.DecelerateInterpolator
 import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.content_main.*
+import java.math.RoundingMode
+import java.text.DecimalFormat
+import java.lang.reflect.Method
+import java.math.BigDecimal
 
 class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
 
     private var count = 0
     private var flag = false
-
+    val userEmailConnected = Person.email
+    var valeurOfPoint : Double = 0.000025
     private var powerButton: ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +38,37 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
+        // AFFICHER  LES POINTS DE FIDELITES
+        val urlPts = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=$userEmailConnected"
 
-        /**get Id*/
+        val requestPoints: RequestQueue = Volley.newRequestQueue(this)
+        val stringR = StringRequest(
+            Request.Method.GET,urlPts,{
+
+            response->
+                pts_user.text= "${ response.toString()} Points"
+                val df = DecimalFormat("#.###")
+                df.roundingMode = RoundingMode.CEILING
+
+
+                val euroPpoint =((valeurOfPoint * response.toLong())/1)
+                val convPtE =df.format(euroPpoint)
+
+
+                convert_points.text= "${ convPtE } €"
+
+        }, { error ->
+
+
+                val dialogBuilder = AlertDialog.Builder(this)
+                dialogBuilder.setTitle("Message")
+                dialogBuilder.setMessage("error.message")
+                dialogBuilder.create().show()
+            })
+
+        requestPoints.add(stringR)
+
+                /**get Id*/
         powerButton = findViewById(R.id.powerButton)
         powerButton!!.setOnTouchListener(PowerTouchListener())
         intSpinner()
@@ -71,9 +112,33 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
         val shift = 0 // shit where the arrow points
         val prizeIndex = (shift + end) % numOfPrizes
 
+
+
+
+        val pointURL = "https://reggaerencontre.com/pts_ktl.php?email_users_pts=" +
+                userEmailConnected +
+                "&points=" + prizes[prizeIndex]
+
+        val requestPts: RequestQueue = Volley.newRequestQueue(this)
+
+        val stringRequest = StringRequest(
+            Request.Method.GET,pointURL,{
+                    response ->
+
+
+
+            }, { error ->
+
+
+                val dialogBuilder = AlertDialog.Builder(this)
+                dialogBuilder.setTitle("Message")
+                dialogBuilder.setMessage("error.message")
+                dialogBuilder.create().show()
+            })
+
+        requestPts.add(stringRequest)
+
         prizeText = "Le Prix est : ${prizes[prizeIndex]}"
-
-
         val rotateAnim = RotateAnimation(
             0f,mSpinRevolution + end,
             Animation.RELATIVE_TO_SELF,

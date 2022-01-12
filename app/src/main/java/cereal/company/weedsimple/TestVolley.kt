@@ -2,6 +2,7 @@ package cereal.company.weedsimple
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
@@ -17,6 +18,10 @@ class TestVolley : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_volley)
+
+        getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         val spinner: Spinner = findViewById(R.id.planets_spinner)
 // Create an ArrayAdapter using the string array and a default spinner layout

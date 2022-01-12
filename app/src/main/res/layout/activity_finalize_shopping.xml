@@ -203,7 +203,7 @@
         android:id="@+id/payment_tv"
         android:layout_width="358dp"
         android:layout_height="77dp"
-        android:text="Vous pouvez payez en bitcoin via la plateform CoinPayment,par carte visa ,ou Paypal. aprés avoir recu votre paiement nous procéderont a l'envoie de votre commande."
+        android:text="@string/text_btc_advice"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -242,17 +242,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.359" />
 
-    <ImageView
-        android:id="@+id/stripe_imgv"
-        android:layout_width="317dp"
-        android:layout_height="70dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.648"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892"
-        app:srcCompat="@drawable/logostripe" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

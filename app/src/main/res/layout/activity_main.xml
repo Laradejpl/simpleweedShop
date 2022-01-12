@@ -77,7 +77,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nos séléctions de CBD"
+                android:text="@string/nos_s_l_ctions_de_cbd"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_gravity="start"
@@ -163,7 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
-                    android:text="Best selection"
+                    android:text="@string/best_selection"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -306,7 +306,7 @@
   <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-      android:text="NOUVEAUTEES SUR JUST CBD"
+      android:text="@string/nouveautees_cbd"
       android:textColor="@color/white"
       android:gravity="center"
       android:textSize="20sp"
@@ -341,7 +341,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nos promotions SUR JUST CBD"
+                android:text="@string/promotxt"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:textSize="20sp"
@@ -374,8 +374,10 @@
                 android:textStyle="bold"
                 android:maxLines="4"
                 android:lines="4"
-                android:text="Just Cbd  policy is to never sell what we don't use marijuana is not our habit and our customer want the best."
+                android:text="@string/politiquetxt"
                 android:clickable="false" />
+
+
 
 
             <ImageView
