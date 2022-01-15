@@ -7,6 +7,7 @@ import android.os.Handler
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
@@ -79,6 +80,8 @@ class MainActivity : BaseActivity() {
         val whatsapplink = findViewById<ImageView>(R.id.whatapp)
         val telephonelink = findViewById<ImageView>(R.id.phone)
         val phoneNumber = "0769754123"
+        //@TODO animer la roue si tour dispo
+        //animBobinB()
         //compteur du panieer
         if (Person.counter_panier > 0){
             numberProduct_ajouT_tv.visibility = View.VISIBLE
@@ -591,6 +594,11 @@ class MainActivity : BaseActivity() {
         intentP.putExtra("motclef",prod)
         startActivity(intentP)
 
+    }
+
+    private fun animBobinB() {
+       val rotate_anim = AnimationUtils.loadAnimation(this, R.anim.rotate_animation)
+        spin_img.setAnimation(rotate_anim)
     }
 
 

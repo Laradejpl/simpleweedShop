@@ -89,8 +89,6 @@ class LoginActivity : BaseActivity() {
 
 
 
-
-
             }, { error ->
 
 

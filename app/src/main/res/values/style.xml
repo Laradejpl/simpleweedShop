@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <item name="android:textStyle"> bold</item>
+        <item name="android:windowBackground">@drawable/azure_background_quizz</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+</resources>

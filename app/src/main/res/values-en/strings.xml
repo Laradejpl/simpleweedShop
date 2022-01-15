@@ -69,4 +69,9 @@
     <string name="text_btc_advice">"You can pay in bitcoin via the CoinPayment platform, by visa card, or Paypal. after receiving your payment we will proceed to ship your order. "</string>
     <string name="prix_payer">"The price is: "</string>
     <string name="street_adre">Street</string>
+    <string name="touner_spin">Spin...</string>
+    <string name="pub_no_ready">The rewarded ad wasn\'t ready yet</string>
+    <string name="recompense_modal">YOU HAVE A RIDE READY</string>
+    <string name="free_ride">Free ride</string>
+    <string name="prize">\"The price is : \"</string>
 </resources>

@@ -69,4 +69,9 @@
     <string name="text_btc_advice">Sie können in Bitcoin über die CoinPayment-Plattform, per Visa-Karte oder Paypal bezahlen. Nach Eingang Ihrer Zahlung werden wir Ihre Bestellung versenden.</string>
     <string name="prix_payer">\"Du musst bezahlen: \"</string>
     <string name="street_adre">Straße</string>
+    <string name="touner_spin">Spin...</string>
+    <string name="pub_no_ready">" Prämienankündigung war noch nicht fertig"</string>
+    <string name="recompense_modal">SIE HABEN EINE FAHRT BEREIT</string>
+    <string name="free_ride">Freifahrt</string>
+    <string name="prize">" \"Der Preis ist : \""</string>
 </resources>

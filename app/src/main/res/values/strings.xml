@@ -66,4 +66,9 @@
     <string name="text_btc_advice">Vous pouvez payez en bitcoin via la plateform CoinPayment,par carte visa ,ou Paypal. aprés avoir recu votre paiement nous procéderont a l\'envoie de votre commande.</string>
     <string name="prix_payer">\"Vous devez payez: \"</string>
     <string name="street_adre">Rue</string>
+    <string name="touner_spin">Tournez...</string>
+    <string name="pub_no_ready">l\'annonce de récompense n\'était pas prête</string>
+    <string name="recompense_modal">\" VOUS AVEZ UN TOUR PRET\"</string>
+    <string name="free_ride">Tours gratuits</string>
+    <string name="prize">\"Le Prix est : \"</string>
 </resources>

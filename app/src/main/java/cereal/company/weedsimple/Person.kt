@@ -19,6 +19,7 @@ class Person {
         var counter_panier = 0
         var stockOfProduct = 0
         var pointDeFidelite =  0
+        var tourOfSpin = 0
 
 
     }

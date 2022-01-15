@@ -116,18 +116,10 @@ class SignUpLayout : AppCompatActivity() {
                 dialogBuilder.create().show()
 
 
-
-
-
             }
 
 
-
-
         }
-
-
-
 
 
 
