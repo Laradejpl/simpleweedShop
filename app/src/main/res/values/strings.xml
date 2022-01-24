@@ -71,4 +71,11 @@
     <string name="recompense_modal">\" VOUS AVEZ UN TOUR PRET\"</string>
     <string name="free_ride">Tours gratuits</string>
     <string name="prize">\"Le Prix est : \"</string>
+    <string name="votre_cagnotte">votre cagnotte</string>
+    <string name="btc_cours_txt">le cours du bitcoin est indisponible</string>
+    <string name="epuiser">Epuisé</string>
+    <string name="dispo_tour">Pas de tour disponible</string>
+    <string name="notification_channel_description">notification pour avoir des points</string>
+    <string name="spinPub">cliquez sur la notification</string>
+
 </resources>

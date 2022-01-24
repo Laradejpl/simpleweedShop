@@ -24,7 +24,6 @@ class PromoProductAdapter (var context: Context,var arrayList: ArrayList<EProduc
             arrayList.get(position).pictureName,
             arrayList.get(position).stock
 
-
         )
     }
 
@@ -51,7 +50,7 @@ class PromoProductAdapter (var context: Context,var arrayList: ArrayList<EProduc
             }
             if(stock<1 ){
                 itemView.stock_card_promo.setBackgroundResource(R.drawable.bgreytriangle)
-                itemView.stock_card_promo.text ="Epuisé"
+                itemView.stock_card_promo.text =context.getString(R.string.epuiser)
 
             }
 

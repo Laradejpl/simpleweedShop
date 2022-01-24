@@ -74,4 +74,10 @@
     <string name="recompense_modal">SIE HABEN EINE FAHRT BEREIT</string>
     <string name="free_ride">Freifahrt</string>
     <string name="prize">" \"Der Preis ist : \""</string>
+    <string name="votre_cagnotte">Dein Kätzchen</string>
+    <string name="btc_cours_txt">Bitcoin-Preis ist nicht verfügbar</string>
+    <string name="epuiser">Erschöpft</string>
+    <string name="dispo_tour">" Keine Tour verfügbar"</string>
+    <string name="notification_channel_description">notif for points</string>
+    <string name="spinPub">klicken Sie auf Benachrichtigung</string>
 </resources>

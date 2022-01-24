@@ -20,47 +20,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeedSimple">
         <activity
-            android:name=".SpinActivity"
-            android:hardwareAccelerated="true"
-            android:screenOrientation="portrait"
+            android:name=".ResultActivity"
             android:exported="false" />
         <activity
+            android:name=".SpinActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".TestActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" /> <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713 -->
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5223452786617280~8243991999" />
 
         <activity
             android:name=".ProfileActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".FavoritProductsActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".VersionDetail"
-            android:screenOrientation="portrait"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.RobotActivity"
-            android:screenOrientation="portrait"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CoinPaymentActivity"
-            android:screenOrientation="portrait"
-            android:exported="true" />
-        <activity android:name=".SearchActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".LocationActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".TestVolley"
-            android:screenOrientation="portrait"
-            />
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestVolley"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ThankYouActivity"
             android:screenOrientation="portrait" />
@@ -95,6 +98,15 @@
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true" />
+
+        <service
+            android:name=".NotificationService"
+            android:enabled="true" />
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"

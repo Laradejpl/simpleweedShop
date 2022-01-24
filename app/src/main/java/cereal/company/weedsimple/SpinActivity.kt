@@ -1,7 +1,15 @@
 package cereal.company.weedsimple
 
+import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.DialogInterface
+import android.content.Intent
+import android.content.SharedPreferences
+import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
@@ -12,8 +20,10 @@ import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import cereal.company.weedsimple.Person.Companion.tourOfSpin
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
@@ -29,6 +39,7 @@ import kotlinx.android.synthetic.main.content_main.*
 import org.json.JSONObject
 import java.math.RoundingMode
 import java.text.DecimalFormat
+import java.util.*
 
 class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
     // ADMOB
@@ -40,6 +51,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
     val userEmailConnected = Person.email
     var valeurOfPoint : Double = 0.000025
     private var powerButton: ImageView? = null
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spin)
@@ -47,59 +59,6 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        //ADMOB
-
-        ad_btn_spin.setOnClickListener {
-
-            val adRequest = AdRequest.Builder().build()
-
-
-            // INITIALIZE ADMOB
-            MobileAds.initialize(
-                this
-            ) { }
-
-
-            RewardedAd.load(this,"ca-app-pub-3940256099942544/5224354917", adRequest, object : RewardedAdLoadCallback() {
-            override fun onAdFailedToLoad(adError: LoadAdError) {
-                Log.d(TAG, adError?.message)
-                mRewardedAd = null
-            }
-
-            override fun onAdLoaded(rewardedAd: RewardedAd) {
-                Log.d(TAG, "Ad was loaded.")
-                mRewardedAd = rewardedAd
-
-            }
-        })
-
-
-
-            if (mRewardedAd != null) {
-                mRewardedAd?.show(this, OnUserEarnedRewardListener() {
-                    fun onUserEarnedReward(rewardItem: RewardItem) {
-
-
-
-                    }
-                    //TODO gerer les tours de spin
-                    alert(getString(R.string.recompense_modal))
-                    toursSpins +=1
-                    Person.tourOfSpin = toursSpins
-
-                })
-            } else {
-                Log.d(TAG, "The rewarded ad wasn't ready yet.")
-                val dialogBuilder = AlertDialog.Builder(this)
-                dialogBuilder.setTitle("Message")
-                dialogBuilder.setMessage(getString(R.string.pub_no_ready))
-                dialogBuilder.create().show()
-
-            }
-        }
-         //ADMOB FIN
-
 
 
         // AFFICHER  LES POINTS DE FIDELITES
@@ -111,15 +70,108 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
             response->
                 pts_user.text= response.getInt("points").toString()
                 tour_user.text= response.getInt("tour_spin").toString()
-                val df = DecimalFormat("#.###")
+               var spinRide = response.getInt("tour_spin")
+
+                val df = DecimalFormat("#.##")
                 df.roundingMode = RoundingMode.CEILING
-
-
                 val euroPpoint =((valeurOfPoint * response.getInt("points"))/1)
                 val convPtE =df.format(euroPpoint)
-
-
                 convert_points.text= "${ convPtE } €"
+               tourOfSpin = response.getInt("tour_spin")
+               powerButton = findViewById(R.id.powerButton)
+               powerButton!!.setOnTouchListener(PowerTouchListener())
+               intSpinner()
+               spinEnabled()
+
+
+            //ADMOB
+
+            ad_btn_spin.setOnClickListener {
+
+                var adRequest = AdRequest.Builder().build()
+
+
+                // INITIALIZE ADMOB
+                MobileAds.initialize(
+                    this
+                ) { }
+
+
+                RewardedAd.load(this,"ca-app-pub-3940256099942544/5224354917", adRequest, object : RewardedAdLoadCallback() {
+                    override fun onAdFailedToLoad(adError: LoadAdError) {
+                        Log.d(TAG, adError?.message)
+                        mRewardedAd = null
+                    }
+
+                    override fun onAdLoaded(rewardedAd: RewardedAd) {
+                        Log.d(TAG, "Ad was loaded.")
+                        mRewardedAd = rewardedAd
+
+                    }
+                })
+
+
+
+                if (mRewardedAd != null) {
+                    mRewardedAd?.show(this, OnUserEarnedRewardListener() {
+
+                        //TODO gerer les tours de spin
+                        alert(getString(R.string.recompense_modal))
+                        spinRide ++
+                        dissabledSpin()
+                        ad_btn_spin.setEnabled(false)
+                        adRequest = AdRequest.Builder().build()
+
+
+
+
+                        //tour_user.text = spinRide.toString()
+                        //TODO requette pour mise à jour  en base de donner des spin
+
+                        tour_user.text=(toursSpins +1).toString()
+                        //AJOUT UN TOUR DE SPIN
+                        val TourSpinURL = "https://reggaerencontre.com/tourSpin.php?email_users_pts=" +
+                                userEmailConnected
+                        val requestTspin: RequestQueue = Volley.newRequestQueue(this)
+
+                        val stringRequest = StringRequest(
+                            Request.Method.GET,TourSpinURL,{
+                                    response ->
+
+                            }, { error ->
+
+
+                                val dialogBuilder = AlertDialog.Builder(this)
+                                dialogBuilder.setTitle("Message")
+                                dialogBuilder.setMessage("error.message")
+                                dialogBuilder.create().show()
+                            })
+
+                        requestTspin.add(stringRequest)
+
+                        //startActivity(Intent(this@SpinActivity,SpinActivity::class.java))
+
+                       var lesTours = toursSpins +1
+                        println(lesTours)
+
+
+
+
+
+                    })
+                } else {
+                    Log.d(TAG, "The rewarded ad wasn't ready yet.")
+                    val dialogBuilder = AlertDialog.Builder(this)
+                    dialogBuilder.setTitle("Message")
+                    dialogBuilder.setMessage(getString(R.string.pub_no_ready))
+                    dialogBuilder.create().show()
+
+                }
+
+
+
+            }
+            //ADMOB FIN
 
         }, { error ->
 
@@ -132,10 +184,9 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
 
         requestPoints.add(stringR)
 
+
                 /**get Id*/
-        powerButton = findViewById(R.id.powerButton)
-        powerButton!!.setOnTouchListener(PowerTouchListener())
-        intSpinner()
+
     }
 
     /**
@@ -177,17 +228,20 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
         val prizeIndex = (shift + end) % numOfPrizes
 
 
-
+    // MISE A JOUR DES POINTS EN BASE, ENLEVE UN TOUR
 
         val pointURL = "https://reggaerencontre.com/pts_ktl.php?email_users_pts=" +
                 userEmailConnected +
                 "&points=" + prizes[prizeIndex]
+
 
         val requestPts: RequestQueue = Volley.newRequestQueue(this)
 
         val stringRequest = StringRequest(
             Request.Method.GET,pointURL,{
                     response ->
+                println( tourOfSpin)
+                tour_user.text=tourOfSpin.toString()
 
 
 
@@ -203,6 +257,20 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
         requestPts.add(stringRequest)
 
         prizeText = getString(R.string.prize) + prizes[prizeIndex]
+        spinEnabled()
+        Handler().postDelayed(
+
+            {
+
+                //lance le mainActivity
+                val intent = Intent(this@SpinActivity, MainActivity::class.java )
+                intent.putExtra("dispoPub", false)
+                startActivity(intent)
+                finish()
+
+            },7000
+        )
+
         val rotateAnim = RotateAnimation(
             0f,mSpinRevolution + end,
             Animation.RELATIVE_TO_SELF,
@@ -223,6 +291,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
 
     override fun onAnimationEnd(p0: Animation?) {
         infoText!!.text = prizeText
+
     }
 
     override fun onAnimationRepeat(p0: Animation?) {}
@@ -264,6 +333,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
             }
 
             return false
+
         }
 
     }
@@ -274,11 +344,36 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
             .setMessage(message)
             .setPositiveButton(
                 "X"
-            ) { dialog, which -> dialog.dismiss() }
+            ) { dialog, which ->
+                dialog.dismiss()
+               ;
+            }
             .create()
         unealert.window!!.setLayout(700, 500)
         unealert.show()
     }
+
+    private fun spinEnabled(){
+        if(tourOfSpin <1){
+
+            powerButton?.setEnabled(false)
+            ad_btn_spin.setEnabled(true)
+
+        }
+    }
+
+    private fun dissabledSpin(){
+
+            powerButton?.setEnabled(true)
+
+    }
+
+
+
+
+
+
+
 }
 
 

@@ -74,4 +74,10 @@
     <string name="recompense_modal">YOU HAVE A RIDE READY</string>
     <string name="free_ride">Free ride</string>
     <string name="prize">\"The price is : \"</string>
+    <string name="votre_cagnotte">Your kitty</string>
+    <string name="btc_cours_txt">bitcoin price is unavailable</string>
+    <string name="epuiser">Out of stock</string>
+    <string name="dispo_tour">No tour available</string>
+    <string name="notification_channel_description">notif for points</string>
+    <string name="spinPub">click on notification</string>
 </resources>

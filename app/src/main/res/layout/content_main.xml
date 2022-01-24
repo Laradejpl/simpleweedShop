@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/pts_user"
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -41,7 +41,8 @@
         android:layout_marginBottom="575dp"
         android:background="@drawable/bg_bot_red"
         android:gravity="center"
-        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="Points"
         android:textColor="@color/white"
         android:textSize="15sp" />
@@ -154,7 +155,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/bg_lime_spin"
         android:gravity="center"
         android:padding="10dp"

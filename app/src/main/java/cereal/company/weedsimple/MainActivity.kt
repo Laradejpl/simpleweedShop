@@ -1,7 +1,11 @@
 package cereal.company.weedsimple
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -9,18 +13,22 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
+import androidx.work.*
 import cereal.company.weedsimple.ui.RobotActivity
 import cereal.company.weedsimple.utils.BaseActivity
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.shape.ShapeAppearanceModel.builder
 import kotlinx.android.synthetic.main.activity_fetch_eproducts.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.view.*
@@ -28,6 +36,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.bar_bottom.*
 import kotlinx.android.synthetic.main.brand_item_text_view.*
 import kotlinx.android.synthetic.main.brand_item_text_view.view.*
+import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.header_menu.*
 import kotlinx.android.synthetic.main.search_bar_layout.*
 import kotlinx.android.synthetic.main.side_menu_nav.*
@@ -38,7 +47,11 @@ import okhttp3.Response
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
+import java.math.RoundingMode
+import java.text.DecimalFormat
 import java.util.*
+import java.util.concurrent.TimeUnit
+import kotlin.properties.Delegates
 
 class MainActivity : BaseActivity() {
 
@@ -52,12 +65,14 @@ class MainActivity : BaseActivity() {
     lateinit var timer: Timer
     val DELAY_MS: Long = 5000
     val PERIOD_MS: Long = 5000
+    private var valeurOfPoint : Double = 0.000025
+    private var toursDeSpins = 0
     lateinit var bransName:String;
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
     var panierText = ""
     val emailConnected = Person.email
-
+    private val mNotificationTime = Calendar.getInstance().timeInMillis + 3600000 //Set after 5 seconds from the current time 1 heure =3600000.
 
 
 
@@ -68,6 +83,10 @@ class MainActivity : BaseActivity() {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        //LES NOTIFICATIONS
+
 
                        //variables de menu
 
@@ -91,7 +110,32 @@ class MainActivity : BaseActivity() {
             numberProduct_ajouT_tv.visibility = View.GONE
         }
 
-        // volley pour les categorie du sidemenu
+        // LA CAGNOTTE
+
+        val urlPts = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=$emailConnected"
+
+        val requestPts: RequestQueue = Volley.newRequestQueue(this)
+        val stringRq= JsonObjectRequest(Request.Method.GET,urlPts,null, {
+
+                response ->
+
+            val df = DecimalFormat("#.##")
+            df.roundingMode = RoundingMode.CEILING
+            val euroPpoint = ((valeurOfPoint * response.getInt("points")) / 1)
+            val convPtE = df.format(euroPpoint)
+            euro_cagnotte.text = "${convPtE} €"
+            toursDeSpins = response.getInt("tour_spin")
+
+        },{ error ->
+
+
+
+        })
+
+        requestPts.add(stringRq)
+
+
+            // volley pour les categorie du sidemenu
 
         // AFFICHE LE COURS DU BTC ET EURO ,DOLLAR
         loadBitcoinPrice()
@@ -138,14 +182,33 @@ class MainActivity : BaseActivity() {
 
         }
 
+      val dispoPub = intent.getBooleanExtra("dispoPub",true)
+        println("cla valeur du ads:" + dispoPub)
+
+        if(dispoPub){
+
+            spin_img.setEnabled(true)
+
+
+        }else{
+            spin_img.setEnabled(false)
+
+        }
+
+
+
+
         spin_img.setOnClickListener {
             if (emailConnected !=  "" ){
 
+                NotificationUtils().setNotification(mNotificationTime, this@MainActivity)
                 val intent = Intent(this@MainActivity, SpinActivity::class.java )
                 intent.putExtra("emailUser",emailConnected)
                 startActivity(intent)
 
             }else{
+
+
                  showErrorSnackBar(getString(R.string.spin_alert),true)
             }
 
@@ -330,6 +393,7 @@ class MainActivity : BaseActivity() {
           adresses.visibility = View.VISIBLE
           profil_tv.visibility = View.VISIBLE
           favori_tv_profile.visibility = View.VISIBLE
+          cagnotte_tv.visibility = View.VISIBLE
 
 
 
@@ -469,6 +533,8 @@ class MainActivity : BaseActivity() {
     }
 
 
+
+
     fun updatePage()
     {
 
@@ -513,10 +579,6 @@ class MainActivity : BaseActivity() {
                 dots[i].setImageDrawable(ContextCompat.getDrawable(this,R.drawable.active_dots))
 
 
-
-
-
-
             }else{
 
                 dots[i].setImageDrawable(ContextCompat.getDrawable(this,R.drawable.inactive_dots))
@@ -549,18 +611,13 @@ class MainActivity : BaseActivity() {
     }
 
 
-
-
-
-
-
     private fun loadBitcoinPrice(){
 
         val request:okhttp3.Request = okhttp3.Request.Builder().url(URL).build()
         okHttpClient.newCall(request).enqueue(object : Callback{
             override fun onFailure(call: Call, e: IOException) {
 
-                bitcoinValues.text ="le cours du bitcoin est indisponible"
+                bitcoinValues.text =getString(R.string.btc_cours_txt)
 
             }
 
@@ -600,6 +657,7 @@ class MainActivity : BaseActivity() {
        val rotate_anim = AnimationUtils.loadAnimation(this, R.anim.rotate_animation)
         spin_img.setAnimation(rotate_anim)
     }
+
 
 
 }
