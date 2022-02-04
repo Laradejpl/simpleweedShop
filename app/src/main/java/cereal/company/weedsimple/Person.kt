@@ -20,6 +20,7 @@ class Person {
         var stockOfProduct = 0
         var pointDeFidelite =  0
         var tourOfSpin = 0
+        var euroToFidel = 0
 
 
     }

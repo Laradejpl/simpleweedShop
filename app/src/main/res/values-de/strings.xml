@@ -29,7 +29,7 @@
     <string name="newletter">Abonniere unseren Newsletter</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="desc_spin">DREHEN SIE DAS RAD, UM ZU VERSUCHEN, KOSTENLOSE CBD ZU GEWINNEN!</string>
-    <string name="explication_spin">Erreichen Sie eine Punktzahl von 50.000 Punkten, um sich für ein kostenloses CBD-Produkt zu qualifizieren</string>
+    <string name="explication_spin">Erreichen Sie eine Punktzahl von 500.0000 Punkten, um sich für ein kostenloses CBD-Produkt zu qualifizieren</string>
     <string name="tap_on_the_yellow_button">Versuch dein Glück !</string>
     <string name="best_selection">Versuch dein Glück!</string>
     <string name="nos_s_l_ctions_de_cbd">Unsere CBD-Auswahl</string>
@@ -80,4 +80,10 @@
     <string name="dispo_tour">" Keine Tour verfügbar"</string>
     <string name="notification_channel_description">notif for points</string>
     <string name="spinPub">klicken Sie auf Benachrichtigung</string>
+    <string name="j_ai_18_ans_ou_plus">Ich bin 18 oder älter</string>
+    <string name="thank_you_for_your_purchase">Danke für Ihren Einkauf!!</string>
+    <string name="prise_en_compte">Nochmals vielen Dank Sehr geehrter Kunde, Sie erhalten eine E-Mail, die bestätigt, dass Ihre Bestellung berücksichtigt wurde.</string>
+    <string name="votre_profil_prof">PROFIL</string>
+    <string name="bienvenue">willkommen</string>
+    <string name="avis_txt">Geben Sie als Erster Ihre Meinung ab!</string>
 </resources>

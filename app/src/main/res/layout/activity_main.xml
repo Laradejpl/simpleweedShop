@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    >
+    tools:ignore="ExtraText">
 
 
     <include layout="@layout/search_bar_layout" />
@@ -15,14 +14,13 @@
 
 
 
-
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="422dp"
         android:layout_height="165dp"
         android:layout_below="@+id/toolbar"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        tools:ignore="MissingConstraints"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
         tools:layout_editor_absoluteX="-11dp">
 
 
@@ -44,7 +42,6 @@
     </LinearLayout>
 
 
-
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="408dp"
@@ -54,7 +51,8 @@
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
 
 
     </HorizontalScrollView>
@@ -81,7 +79,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_gravity="start"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginBottom="10dp"
                 />
             <LinearLayout
@@ -95,8 +93,9 @@
                     android:id="@+id/tea_brand"
                     android:layout_width="110dp"
                     android:layout_height="90dp"
-                    android:layout_marginLeft="40dp"
-                    android:background="@drawable/coldteaa" />
+                    android:layout_marginStart="40dp"
+                    android:background="@drawable/coldteaa"
+                    android:contentDescription="TODO" />
 
                 <ImageView
                     android:id="@+id/vap_brand"
@@ -329,6 +328,18 @@
                 android:layout_marginEnd="20dp"
                 />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorgris"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:text="Faites tourner la roue de la fortune pour gagnez des points de fidélités et du CBD , chaque achat vous permet d'avoir des points,vous serez jamais à cours zen attitude."
+                />
+
 
             <ImageView
                 android:id="@+id/multitrance_cat_img"
@@ -468,7 +479,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/cgu"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_gravity="center"
 
@@ -518,6 +529,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024" />
+
+    <ImageView
+        android:id="@+id/under_18"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/undereighteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

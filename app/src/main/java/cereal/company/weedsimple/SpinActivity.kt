@@ -49,7 +49,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
     private var toursSpins = 0
     private var flag = false
     val userEmailConnected = Person.email
-    var valeurOfPoint : Double = 0.000025
+    var valeurOfPoint : Double = 0.0000025
     private var powerButton: ImageView? = null
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -122,11 +122,6 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
                         ad_btn_spin.setEnabled(false)
                         adRequest = AdRequest.Builder().build()
 
-
-
-
-                        //tour_user.text = spinRide.toString()
-                        //TODO requette pour mise à jour  en base de donner des spin
 
                         tour_user.text=(toursSpins +1).toString()
                         //AJOUT UN TOUR DE SPIN
@@ -229,7 +224,14 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
 
 
     // MISE A JOUR DES POINTS EN BASE, ENLEVE UN TOUR
+ if(prizes[prizeIndex] == 1200
+     || prizes[prizeIndex] == 400 ||
+     prizes[prizeIndex] == 500
+     || prizes[prizeIndex] == 250
+ ){
 
+     winAnimation_lott.visibility = View.VISIBLE
+ }
         val pointURL = "https://reggaerencontre.com/pts_ktl.php?email_users_pts=" +
                 userEmailConnected +
                 "&points=" + prizes[prizeIndex]
@@ -367,7 +369,6 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
             powerButton?.setEnabled(true)
 
     }
-
 
 
 

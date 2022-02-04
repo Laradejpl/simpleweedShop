@@ -23,6 +23,11 @@ class TestVolley : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        backFleche_adrss.setOnClickListener {
+
+            finish()
+        }
+
         val spinner: Spinner = findViewById(R.id.planets_spinner)
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(

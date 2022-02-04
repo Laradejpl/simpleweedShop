@@ -23,9 +23,6 @@ class CoinPaymentActivity : AppCompatActivity() {
         );
 
 
-
-
-
         // ONT RECUPERE LE PRIX TOTAL A PAYER
         var prixApayer = intent.getLongExtra("prixtotal",0)
 

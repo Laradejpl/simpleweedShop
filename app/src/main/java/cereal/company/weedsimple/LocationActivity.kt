@@ -3,6 +3,7 @@ package cereal.company.weedsimple
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
@@ -11,8 +12,11 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_fetch_one_product.*
 import kotlinx.android.synthetic.main.activity_location.*
+import kotlinx.android.synthetic.main.bar_bottom.*
 
 class LocationActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_location)
@@ -20,11 +24,16 @@ class LocationActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+
+
         settings_profil_tv_layout.setOnClickListener {
 
             val intentProfil = Intent(this@LocationActivity, TestVolley::class.java)
             startActivity(intentProfil)
         }
+
+
+
 
 
          val infoUrl = "https://reggaerencontre.com/profil_kotlin_user.php?email="+ Person.email

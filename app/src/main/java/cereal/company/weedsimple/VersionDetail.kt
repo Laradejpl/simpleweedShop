@@ -82,7 +82,7 @@ class VersionDetail : BaseActivity  () {
  }
 
 
-//@TODO ajout aux favoris
+// ajout aux favoris
  //ont regarde si le produit est deja dans les favoris
 
         if (email.isEmpty()){
@@ -322,7 +322,6 @@ if (!coeur){
 
      }
 
-
      }
         //ont recupere les avis
         val url= "https://reggaerencontre.com/fetch_avis_ktl.php?id_produit=$selectedId"
@@ -356,8 +355,6 @@ if (!coeur){
         rQ.add(jar)
 
  }
-
-
 
 }
 

@@ -10,13 +10,18 @@ import android.view.WindowManager
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.android.volley.Request
+import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_cart_products.*
+import kotlinx.android.synthetic.main.side_menu_nav.*
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class CartProductsActivity : AppCompatActivity() {
-
+     //private var valeurOfPoints : Double = 0.000025
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +31,30 @@ class CartProductsActivity : AppCompatActivity() {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        /*LA CAGNOTTE
+       // val urlPoints = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=${Person.email}"
+
+        val requestPtsss: RequestQueue = Volley.newRequestQueue(this)
+        val stringRqss= JsonObjectRequest(Request.Method.GET,urlPoints ,null, {
+
+                response ->
+
+            val df = DecimalFormat("#.##")
+            df.roundingMode = RoundingMode.CEILING
+
+            val euroPpointA = ((valeurOfPoints * response.getInt("points")) / 1)
+            val convPtEss = df.format(euroPpointA)
+            Kitty_tv.text = " déduction: ${convPtEss} €"
+
+        },{ error ->
+
+        })
+
+        requestPtsss.add(stringRqss)
+          */
+
+
+
 
         disCarte.setOnClickListener {
 
@@ -73,6 +102,7 @@ class CartProductsActivity : AppCompatActivity() {
             requestQ.add(stringRequest)
         }
 
+
         backarrow_fetch_product_V.setOnClickListener {
 
             var intent = Intent(this, MainActivity::class.java)
@@ -117,6 +147,8 @@ class CartProductsActivity : AppCompatActivity() {
         requestQ.add(jsonAR)
 
     }
+
+
 
 
 }

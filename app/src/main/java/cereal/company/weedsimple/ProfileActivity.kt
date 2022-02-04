@@ -11,6 +11,14 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_fetch_one_product.*
 import kotlinx.android.synthetic.main.activity_location.*
+import kotlinx.android.synthetic.main.activity_location.cp_profil_tv_layout
+import kotlinx.android.synthetic.main.activity_location.email_profil_tv_layout
+import kotlinx.android.synthetic.main.activity_location.pays_profil_tv_layout
+import kotlinx.android.synthetic.main.activity_location.rue_profil_tv_layout
+import kotlinx.android.synthetic.main.activity_location.settings_profil_tv_layout
+import kotlinx.android.synthetic.main.activity_location.tel_profil_tv_layout
+import kotlinx.android.synthetic.main.activity_location.ville_profil_tv_layout
+import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +33,10 @@ class ProfileActivity : AppCompatActivity() {
 
             val intentProfil = Intent(this@ProfileActivity, TestVolley::class.java)
             startActivity(intentProfil)
+        }
+        backFleche.setOnClickListener {
+
+           finish()
         }
 
 

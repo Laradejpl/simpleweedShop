@@ -65,6 +65,7 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
             if(stock<1 ){
                 itemView.stokeQuantitytv.setBackgroundResource(R.drawable.bgreytriangle)
                 itemView.stokeQuantitytv.text ="Epuisé"
+                itemView.imgAdd.isEnabled = false
 
 
             }
@@ -87,31 +88,7 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
             }
 
 
-            itemView.favorit_star1.setOnClickListener{
 
-                // dialogue  pour ajouter les favoris
-
-                val view = View.inflate(context,R.layout.alert_add_fav,null)
-                var builder = AlertDialog.Builder(context)
-                builder.setView(view)
-                val dialog =builder.create()
-                dialog.show()
-                view.oui_btn_film_add.setOnClickListener {
-                    //@TODO ENREGISTREMENT DANS BASE SQLITE,Remplacement de l'etoile par un coeur
-
-
-                }
-
-
-                view.non_btn_film_add.setOnClickListener {
-
-
-                    dialog.dismiss()
-                }
-
-
-
-            }
 
 
 

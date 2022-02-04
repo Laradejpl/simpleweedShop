@@ -28,7 +28,7 @@
     <string name="newletter">Subscribe to our newsletter</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="desc_spin">SPIN THE WHEEL TO TRY TO WIN FREE CBD!</string>
-    <string name="explication_spin">Achieve a score of 50,000 points to qualify for a free cbd product</string>
+    <string name="explication_spin">Achieve a score of 500.0000 points to qualify for a free cbd product</string>
     <string name="tap_on_the_yellow_button">Try your luck !</string>
     <string name="best_selection">Best selection</string>
     <string name="politiquetxt">Just Cbd policy is to never sell what we don\'t use marijuana is not our habit and our customer want the best.</string>
@@ -65,7 +65,7 @@
     <string name="submit_profile">Submit</string>
     <string name="vos_produits_favoris">Your favorite products</string>
     <string name="votre_profil_txt">Your profile</string>
-    <string name="vos_adresses">Your addess</string>
+    <string name="vos_adresses">Your address</string>
     <string name="text_btc_advice">"You can pay in bitcoin via the CoinPayment platform, by visa card, or Paypal. after receiving your payment we will proceed to ship your order. "</string>
     <string name="prix_payer">"The price is: "</string>
     <string name="street_adre">Street</string>
@@ -80,4 +80,10 @@
     <string name="dispo_tour">No tour available</string>
     <string name="notification_channel_description">notif for points</string>
     <string name="spinPub">click on notification</string>
+    <string name="j_ai_18_ans_ou_plus">"I am 18 or older go"</string>
+    <string name="thank_you_for_your_purchase">Thank you for your purchase!!</string>
+    <string name="prise_en_compte">Thank you again Dear Customer, you will receive an email confirming that your order has been taken into account.</string>
+    <string name="votre_profil_prof"> PROFIL</string>
+    <string name="bienvenue">Welcome</string>
+    <string name="avis_txt">Be the first to give your opinion!</string>
 </resources>

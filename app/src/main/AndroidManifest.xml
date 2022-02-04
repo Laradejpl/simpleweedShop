@@ -20,16 +20,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeedSimple">
         <activity
+            android:name=".PaypalEarnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PoliticActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResultActivity"
             android:exported="false" />
         <activity
             android:name=".SpinActivity"
             android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".TestActivity"
-            android:exported="false"
             android:screenOrientation="portrait" /> <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

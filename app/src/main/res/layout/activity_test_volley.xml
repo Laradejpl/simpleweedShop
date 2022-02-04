@@ -5,6 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TestVolley">
+    <ImageView
+        android:id="@+id/backFleche_adrss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backarrowblack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:translationZ="2dp"
+        app:layout_constraintVertical_bias="0.022" />
 
 
 
@@ -19,6 +31,7 @@
         android:id="@+id/street_edt"
         android:layout_width="411dp"
         android:layout_height="50dp"
+        android:backgroundTint="@color/lime"
         android:layout_marginTop="200dp"
         android:hint="@string/street_adre"
 
@@ -106,7 +119,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_PostalAddress" />
 
-    <include layout="@layout/bar_bottom"
 
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>

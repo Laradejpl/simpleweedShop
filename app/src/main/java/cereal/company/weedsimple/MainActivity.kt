@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
@@ -65,14 +66,14 @@ class MainActivity : BaseActivity() {
     lateinit var timer: Timer
     val DELAY_MS: Long = 5000
     val PERIOD_MS: Long = 5000
-    private var valeurOfPoint : Double = 0.000025
+    private var valeurOfPoint : Double = 0.0000025
     private var toursDeSpins = 0
     lateinit var bransName:String;
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
     var panierText = ""
     val emailConnected = Person.email
-    private val mNotificationTime = Calendar.getInstance().timeInMillis + 3600000 //Set after 5 seconds from the current time 1 heure =3600000.
+    private val mNotificationTime = Calendar.getInstance().timeInMillis + 60000 //Set after 5 seconds from the current time 1 heure =3600000.
 
 
 
@@ -83,7 +84,6 @@ class MainActivity : BaseActivity() {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
 
         //LES NOTIFICATIONS
 
@@ -99,9 +99,11 @@ class MainActivity : BaseActivity() {
         val whatsapplink = findViewById<ImageView>(R.id.whatapp)
         val telephonelink = findViewById<ImageView>(R.id.phone)
         val phoneNumber = "0769754123"
-        //@TODO animer la roue si tour dispo
+
         //animBobinB()
         //compteur du panieer
+
+
         if (Person.counter_panier > 0){
             numberProduct_ajouT_tv.visibility = View.VISIBLE
             panierText = Person.counter_panier.toString()
@@ -111,6 +113,11 @@ class MainActivity : BaseActivity() {
         }
 
         // LA CAGNOTTE
+        kitty_tv_main.setOnClickListener {
+            val intent = Intent(this@MainActivity, PaypalEarnActivity::class.java )
+            startActivity(intent )
+
+        }
 
         val urlPts = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=$emailConnected"
 
@@ -383,6 +390,12 @@ class MainActivity : BaseActivity() {
             startActivity(openURL)
         }
 
+        politic_tv.setOnClickListener {
+            val intent = Intent(this@MainActivity, PoliticActivity::class.java )
+            intent.putExtra("emailUser",emailConnected)
+            startActivity(intent)
+        }
+
          //ont affiche l'email du user connecter
 
         email_tv_side_menu.text = emailConnected
@@ -397,7 +410,12 @@ class MainActivity : BaseActivity() {
 
 
 
+
+
+      }else{
+          email_tv_side_menu.text = getString(R.string.bienvenue)
       }
+
 
         // BOT
         botbtn.setOnClickListener {
