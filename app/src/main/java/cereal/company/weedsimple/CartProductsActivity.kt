@@ -31,30 +31,6 @@ class CartProductsActivity : AppCompatActivity() {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        /*LA CAGNOTTE
-       // val urlPoints = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=${Person.email}"
-
-        val requestPtsss: RequestQueue = Volley.newRequestQueue(this)
-        val stringRqss= JsonObjectRequest(Request.Method.GET,urlPoints ,null, {
-
-                response ->
-
-            val df = DecimalFormat("#.##")
-            df.roundingMode = RoundingMode.CEILING
-
-            val euroPpointA = ((valeurOfPoints * response.getInt("points")) / 1)
-            val convPtEss = df.format(euroPpointA)
-            Kitty_tv.text = " déduction: ${convPtEss} €"
-
-        },{ error ->
-
-        })
-
-        requestPtsss.add(stringRqss)
-          */
-
-
-
 
         disCarte.setOnClickListener {
 

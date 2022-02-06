@@ -64,6 +64,7 @@ class PaypalEarnActivity : BaseActivity() {
                 }
                 if (response.getInt("points") >= 6002000){
                     paypal_cart_cup_3.setImageResource(R.drawable.coffretour)
+                    space_cake_img.visibility = View.VISIBLE
                 }
             }
             else{

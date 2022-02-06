@@ -4,9 +4,11 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.BaseAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import cereal.company.weedsimple.Person.Companion.euroR
+import cereal.company.weedsimple.utils.BaseActivity
 
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
@@ -25,7 +27,7 @@ import java.io.IOException
 import java.lang.NumberFormatException
 import java.math.BigDecimal
 
-class FinalizeShoppingActivity : AppCompatActivity() {
+class FinalizeShoppingActivity : BaseActivity() {
 
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
@@ -41,6 +43,35 @@ class FinalizeShoppingActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        login_iv.setOnClickListener {
+
+            if (Person.email != null){
+
+                val intent= Intent(this@FinalizeShoppingActivity, ProfileActivity::class.java)
+                startActivity(intent)
+
+            }else{
+
+                showErrorSnackBar("Connectez-vous." ,true)
+
+            }
+        }
+        cart_iv_wb.setOnClickListener {
+
+            val intent= Intent(this@FinalizeShoppingActivity, CartProductsActivity::class.java)
+            startActivity(intent)
+        }
+        fav_iv.setOnClickListener {
+
+                val intent= Intent(this@FinalizeShoppingActivity, FavoritProductsActivity::class.java)
+                startActivity(intent)
+            }
+        home_iv.setOnClickListener {
+
+            val intent= Intent(this@FinalizeShoppingActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
+        backarrow_fetch_product.setOnClickListener { finish() }
 
         loadBitcoinPriceFinalA()
 

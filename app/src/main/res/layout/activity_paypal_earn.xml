@@ -57,17 +57,56 @@
         android:translationZ="2dp"
         app:lottie_rawRes="@raw/paypal"
         />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
     <TextView
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Des récompences vous attendent ..."
         android:layout_marginTop="5dp"
+        android:layout_marginStart="65dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:background="@drawable/bg_pink_round"
         android:padding="10dp"
         android:textStyle="bold"
         />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:src="@drawable/blanc"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            />
+        <LinearLayout
+            android:id="@+id/space_cake_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/spacecakeward"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grattez une carte"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,6 +114,7 @@
         android:layout_marginStart="10dp"
         android:textStyle="bold"
         />
+
     <LinearLayout
         android:layout_width="400dp"
         android:layout_height="wrap_content"
@@ -127,6 +167,8 @@
 
 
     </LinearLayout>
+
+
 
     <TextView
         android:layout_width="wrap_content"

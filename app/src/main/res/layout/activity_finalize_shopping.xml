@@ -39,7 +39,7 @@
             android:layout_marginRight="20dp"
 
             android:layout_weight="1"
-            android:background="@drawable/ic_home" />
+            android:background="@drawable/blanc" />
     </LinearLayout>
 
 
