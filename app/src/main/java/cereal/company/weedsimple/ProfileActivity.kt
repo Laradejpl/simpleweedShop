@@ -31,7 +31,7 @@ class ProfileActivity : AppCompatActivity() {
 
         settings_profil_tv_layout.setOnClickListener {
 
-            val intentProfil = Intent(this@ProfileActivity, TestVolley::class.java)
+            val intentProfil = Intent(this@ProfileActivity, AdressActivity::class.java)
             startActivity(intentProfil)
         }
         backFleche.setOnClickListener {

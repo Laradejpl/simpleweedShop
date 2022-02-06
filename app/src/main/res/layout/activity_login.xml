@@ -139,6 +139,7 @@
         android:layout_height="46dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/boutonrond"
+        android:backgroundTint="@color/dodgerblue"
         android:text="@string/login_button"
         android:textStyle="bold"
         android:textColor="@color/white"

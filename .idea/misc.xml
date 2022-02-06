@@ -20,6 +20,7 @@
         <entry key="app/src/main/res/drawable/button_green.xml" value="0.28425925925925927" />
         <entry key="app/src/main/res/drawable/button_red.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/drawable/dialog_background.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/edit_grey_bg.xml" value="0.34814814814814815" />
         <entry key="app/src/main/res/drawable/gr_lime_round.xml" value="0.25462962962962965" />
         <entry key="app/src/main/res/drawable/ic_favorite_red.xml" value="0.109" />
         <entry key="app/src/main/res/drawable/ic_picture.xml" value="0.124" />
@@ -29,6 +30,7 @@
         <entry key="app/src/main/res/drawable/title_oublie_background.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/tittle_add_product.xml" value="0.181" />
         <entry key="app/src/main/res/drawable/traie.xml" value="0.151" />
+        <entry key="app/src/main/res/layout/activity_adress.xml" value="0.3619791666666667" />
         <entry key="app/src/main/res/layout/activity_bot.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_cart_products.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_coin_payment.xml" value="0.25" />

@@ -84,6 +84,8 @@
     <string name="votre_profil_prof">VOTRE PROFIL</string>
     <string name="bienvenue">Bienvenue</string>
     <string name="avis_txt">Soyez le premier a donner votre avis !</string>
+    <string name="nom_adress">Entrez votre nom</string>
+    <string name="prenom_adress">Entrez votre prenom</string>
 
 
 </resources>

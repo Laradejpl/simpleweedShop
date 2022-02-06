@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeedSimple">
         <activity
+            android:name=".AdressActivity"
+            android:exported="false" />
+        <activity
             android:name=".PaypalEarnActivity"
             android:exported="false" />
         <activity

@@ -441,7 +441,7 @@ class MainActivity : BaseActivity() {
 
         adresses.setOnClickListener {
 
-            val intentAdrss = Intent(this@MainActivity, TestVolley::class.java)
+            val intentAdrss = Intent(this@MainActivity, AdressActivity::class.java)
             startActivity(intentAdrss)
         }
 

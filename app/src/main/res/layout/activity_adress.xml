@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdressActivity">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <ImageView
+          android:id="@+id/backFleche_adrss"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_weight="1"
+          android:src="@drawable/backarrowblack"
+         />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/winAnimation_lott"
+        android:layout_width="300dp"
+        android:layout_weight="2"
+        android:layout_height="100dp"
+        app:lottie_imageAssetsFolder="raw"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:translationZ="2dp"
+        app:lottie_rawRes="@raw/adress"
+        android:layout_marginEnd="40dp"
+        />
+
+  </LinearLayout>
+
+    <TextView
+        android:id="@+id/email_connect_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/nom_adress_edt"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_grey_roundd"
+            android:hint="@string/nom_adress"
+            android:inputType="text" />
+        <EditText
+            android:id="@+id/prenom_adress_edt"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_grey_roundd"
+            android:hint="@string/prenom_adress"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/street_edt"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_grey_roundd"
+            android:hint="@string/street_adre"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/ville_edt"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_grey_roundd"
+            android:hint="@string/ville_profile"
+            android:inputType="text" />
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_grey_roundd"
+            android:hint="@string/votre_tel_profile"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/edt_PostalAddress"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_grey_roundd"
+            android:hint="code postal"
+            android:inputType="textPostalAddress" />
+
+
+        <Spinner
+            android:id="@+id/planets_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_PostalAddress" />
+
+
+        <Button
+            android:id="@+id/btn_street"
+            android:layout_width="175dp"
+            android:layout_height="43dp"
+            android:text="@string/submit_profile"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/dodgerblue"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

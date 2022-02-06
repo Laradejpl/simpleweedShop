@@ -19,42 +19,40 @@
         app:layout_constraintVertical_bias="0.022" />
 
 
-
     <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/street_edt"
-        android:background="@drawable/weedpipette"/>
+        android:background="@drawable/weedpipette"
+        app:layout_constraintBottom_toTopOf="@+id/street_edt" />
 
 
     <EditText
         android:id="@+id/street_edt"
-        android:layout_width="411dp"
+        android:layout_width="370dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/lime"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/bg_grey_roundd"
         android:hint="@string/street_adre"
-
-
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ville_edt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/bg_grey_roundd"
         android:ems="10"
         android:inputType="text"
         android:text="@string/ville_profile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/street_edt" />
-
 
     <Button
         android:id="@+id/btn_street"
@@ -69,27 +67,28 @@
 
     <EditText
         android:id="@+id/editTextPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/votre_tel_profile"
-        android:layout_marginTop="44dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_grey_roundd"
         android:ems="10"
+        android:hint="@string/votre_tel_profile"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ville_edt" />
 
     <EditText
         android:id="@+id/edt_PostalAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
         android:layout_marginTop="36dp"
-        android:ems="10"
         android:hint="code postal"
+        android:background="@drawable/bg_grey_roundd"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
