@@ -52,7 +52,7 @@ class FinalizeShoppingActivity : BaseActivity() {
 
             }else{
 
-                showErrorSnackBar("Connectez-vous." ,true)
+                showErrorSnackBar(getString(R.string.connec_snack) ,true)
 
             }
         }
@@ -172,7 +172,7 @@ class FinalizeShoppingActivity : BaseActivity() {
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
 
-                Btc_tv.text ="le cours du bitcoin est indisponible"
+                Btc_tv.text =getString(R.string.indisponiblebtc)
 
             }
 

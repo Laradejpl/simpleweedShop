@@ -35,7 +35,8 @@
             android:name=".SpinActivity"
             android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="portrait" /> <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713 -->
+            android:screenOrientation="portrait" /> <!-- production
+ca-app-pub-5223452786617280/5000232629 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5223452786617280~8243991999" />

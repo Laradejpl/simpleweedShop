@@ -88,4 +88,13 @@
     <string name="avis_txt">Geben Sie als Erster Ihre Meinung ab!</string>
     <string name="nom_adress">" gib deinen Namen ein"</string>
     <string name="prenom_adress">" Geben Sie Ihren Vornamen ein"</string>
+    <string name="cbd_gratuit">Kostenloses CBD</string>
+    <string name="notif_message">Tue es! Treuepunkte warten auf Sie</string>
+    <string name="code_postal_adress">Postleitzahl</string>
+    <string name="des_r_compences_vous_attendent">" Belohnungen warten auf Sie ..."</string>
+    <string name="vous_avez">Di als:</string>
+    <string name="accomplissements">" Erfolge"</string>
+    <string name="les_r_compences">Die Belohnungen</string>
+    <string name="connec_snack">Anmeldung</string>
+    <string name="indisponiblebtc">Bitcoin-Preis ist nicht verfügbar</string>
 </resources>

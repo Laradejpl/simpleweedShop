@@ -72,6 +72,7 @@ class LoginActivity : BaseActivity() {
                     Person.email = activity_main_edtEmail.text.toString()
 
                     Toast.makeText(this@LoginActivity, response, Toast.LENGTH_SHORT).show()
+
                     val homeIntent = Intent(this, MainActivity::class.java)
                     startActivity(homeIntent)
 
