@@ -66,14 +66,14 @@ class MainActivity : BaseActivity() {
     lateinit var timer: Timer
     val DELAY_MS: Long = 5000
     val PERIOD_MS: Long = 5000
-    private var valeurOfPoint : Double = 0.0000025
+    private var valeurOfPoint : Double = 0.00000025
     private var toursDeSpins = 0
     lateinit var bransName:String;
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
     var panierText = ""
     val emailConnected = Person.email
-    private val mNotificationTime = Calendar.getInstance().timeInMillis + 60000 //Set after 5 seconds from the current time 1 heure =3600000.
+    private val mNotificationTime = Calendar.getInstance().timeInMillis + 300000 //Set after 5 seconds from the current time 1 heure =3600000.
 
 
 
@@ -289,10 +289,6 @@ class MainActivity : BaseActivity() {
             dialogBuilder.setTitle("Message")
             dialogBuilder.setMessage(error.message)
             dialogBuilder.create().show()
-
-
-
-
 
 
 

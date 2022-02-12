@@ -40,7 +40,7 @@ class CartProductsActivity : AppCompatActivity() {
                     response ->
                   Person.counter_panier = 0
 
-                var intent = Intent(this, MainActivity::class.java)
+                var intent = Intent(this, CartProductsActivity::class.java)
                 startActivity(intent)
 
             }, {
@@ -82,6 +82,7 @@ class CartProductsActivity : AppCompatActivity() {
         backarrow_fetch_product_V.setOnClickListener {
 
             var intent = Intent(this, MainActivity::class.java)
+
             startActivity(intent)
         }
 

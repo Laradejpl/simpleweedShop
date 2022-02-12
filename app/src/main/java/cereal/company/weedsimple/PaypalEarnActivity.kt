@@ -20,7 +20,7 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 
 class PaypalEarnActivity : BaseActivity() {
-    private var valeurOfPoints : Double = 0.0000025
+    private var valeurOfPoints : Double = 0.00000025
     val emailConnectedPaypal = Person.email
     var valueCart = 0.0;
     var newCagnotte = 0.0
@@ -47,7 +47,7 @@ class PaypalEarnActivity : BaseActivity() {
 
                 response ->
 
-            val df = DecimalFormat("#.##")
+            val df = DecimalFormat("#.###")
             df.roundingMode = RoundingMode.CEILING
             val euroPpoints = ((valeurOfPoints * response.getInt("points")) / 1)
             val convPtEs = df.format(euroPpoints)

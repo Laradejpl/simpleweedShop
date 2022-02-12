@@ -19,13 +19,17 @@
     android:id="@+id/winAnimation_lott"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="gone"
+    android:visibility="gone
+"
     app:lottie_imageAssetsFolder="raw"
     app:lottie_autoPlay="true"
     app:lottie_loop="true"
     android:translationZ="2dp"
     app:lottie_rawRes="@raw/starswinner"
     />
+
+
+
 
     <TextView
         android:layout_width="335dp"

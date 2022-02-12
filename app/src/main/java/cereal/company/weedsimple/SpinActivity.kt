@@ -49,7 +49,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
     private var toursSpins = 0
     private var flag = false
     val userEmailConnected = Person.email
-    var valeurOfPoint : Double = 0.0000025
+    var valeurOfPoint : Double = 0.00000025
     private var powerButton: ImageView? = null
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,7 +72,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
                 tour_user.text= response.getInt("tour_spin").toString()
                var spinRide = response.getInt("tour_spin")
 
-                val df = DecimalFormat("#.##")
+                val df = DecimalFormat("#.###")
                 df.roundingMode = RoundingMode.CEILING
                 val euroPpoint =((valeurOfPoint * response.getInt("points"))/1)
                 val convPtE =df.format(euroPpoint)
@@ -224,14 +224,16 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
 
 
     // MISE A JOUR DES POINTS EN BASE, ENLEVE UN TOUR
- if(prizes[prizeIndex] == 1200
-     || prizes[prizeIndex] == 400 ||
+ if(prizes[prizeIndex] == 400 ||
      prizes[prizeIndex] == 500
      || prizes[prizeIndex] == 250
  ){
 
+
+
      winAnimation_lott.visibility = View.VISIBLE
  }
+
         val pointURL = "https://reggaerencontre.com/pts_ktl.php?email_users_pts=" +
                 userEmailConnected +
                 "&points=" + prizes[prizeIndex]

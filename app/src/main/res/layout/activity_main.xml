@@ -421,7 +421,7 @@
            <ImageView
                android:id="@+id/insta"
                android:layout_width="50dp"
-               android:layout_height="match_parent"
+               android:layout_height="50dp"
                android:layout_marginLeft="30dp"
                android:background="@drawable/instagramlittle"
 
@@ -430,7 +430,7 @@
            <ImageView
                android:id="@+id/facbook"
                android:layout_width="50dp"
-               android:layout_height="match_parent"
+               android:layout_height="50dp"
                android:layout_marginLeft="30dp"
                android:background="@drawable/faceboo"
                />
@@ -438,7 +438,7 @@
            <ImageView
                android:id="@+id/whatapp"
                android:layout_width="50dp"
-               android:layout_height="match_parent"
+               android:layout_height="50dp"
                android:layout_marginLeft="30dp"
                android:background="@drawable/whatap"
                />
