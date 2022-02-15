@@ -44,6 +44,20 @@
 
         </LinearLayout>
     </LinearLayout>
+    <TextView
+        android:id="@+id/marquee_tv_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:text="Jouez a nos jeux quotidiennement pour gagnez de l'argent , atteignez ,déverouiller des niveaux pour débloquer de nouveaux jeux qui vous permetrons de gagnez a max!! bonne chance."
+        />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/winAnimation_lott"

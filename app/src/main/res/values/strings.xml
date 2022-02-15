@@ -93,8 +93,9 @@
     <string name="vous_avez">vous avez :</string>
     <string name="accomplissements">Accomplissements</string>
     <string name="les_r_compences">Les récompenses</string>
-    <string name="connec_snack" translatable="false">Connectez-vous.</string>
     <string name="indisponiblebtc">le cours du bitcoin est indisponible</string>
+    <string name="suprimer_votre_compte">suprimer votre compte</string>
+    <string name="supprimer_acount_msg">voulez vous supprimer votre compte?</string>
 
 
 </resources>

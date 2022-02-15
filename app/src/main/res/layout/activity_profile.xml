@@ -34,8 +34,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="437dp"
-        android:layout_height="270dp"
+        android:layout_width="475dp"
+        android:layout_height="211dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -236,8 +236,8 @@
 
 
         <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="match_parent"
+            android:layout_width="395dp"
+            android:layout_height="43dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@color/colorLightGrey"
@@ -246,21 +246,31 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/location"
                 android:layout_marginLeft="30dp"
-                />
+                android:background="@drawable/location" />
 
             <TextView
                 android:id="@+id/settings_profil_tv_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
                 android:layout_weight="1"
-                android:text="@string/change_your_expedition_adress" />
+                android:text="@string/change_your_expedition_adress"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/delete_tv_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/suprimer_votre_compte"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            />
 
 
 

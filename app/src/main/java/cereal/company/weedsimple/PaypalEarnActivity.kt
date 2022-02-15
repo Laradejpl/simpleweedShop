@@ -35,6 +35,7 @@ class PaypalEarnActivity : BaseActivity() {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        marquee_tv_pay.isSelected = true
         bbacArrow.setOnClickListener {
 
             finish()
@@ -47,7 +48,7 @@ class PaypalEarnActivity : BaseActivity() {
 
                 response ->
 
-            val df = DecimalFormat("#.###")
+            val df = DecimalFormat("#.####")
             df.roundingMode = RoundingMode.CEILING
             val euroPpoints = ((valeurOfPoints * response.getInt("points")) / 1)
             val convPtEs = df.format(euroPpoints)

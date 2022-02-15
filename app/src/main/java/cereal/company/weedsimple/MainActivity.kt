@@ -68,6 +68,7 @@ class MainActivity : BaseActivity() {
     val PERIOD_MS: Long = 5000
     private var valeurOfPoint : Double = 0.00000025
     private var toursDeSpins = 0
+    var pubFromCarte= true
     lateinit var bransName:String;
     val URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
     var okHttpClient: OkHttpClient = OkHttpClient()
@@ -84,6 +85,7 @@ class MainActivity : BaseActivity() {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //marquee_tv_main.isSelected = true
 
         //LES NOTIFICATIONS
 
@@ -118,6 +120,18 @@ class MainActivity : BaseActivity() {
             startActivity(intent )
 
         }
+        // ont verifie si il ya un email ou une connection pour afficher les addresses
+        if (emailConnected !=  "" ){
+
+            adresses.visibility = View.VISIBLE
+            profil_tv.visibility = View.VISIBLE
+            favori_tv_profile.visibility = View.VISIBLE
+            cagnotte_tv.visibility = View.VISIBLE
+            login_tv_side_menu.text ="Logout|"
+
+        }else{
+            email_tv_side_menu.text = getString(R.string.bienvenue)
+        }
 
         val urlPts = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=$emailConnected"
 
@@ -126,7 +140,7 @@ class MainActivity : BaseActivity() {
 
                 response ->
 
-            val df = DecimalFormat("#.##")
+            val df = DecimalFormat("#.####")
             df.roundingMode = RoundingMode.CEILING
             val euroPpoint = ((valeurOfPoint * response.getInt("points")) / 1)
             val convPtE = df.format(euroPpoint)
@@ -188,6 +202,8 @@ class MainActivity : BaseActivity() {
             startActivity(intent)
 
         }
+
+
 
       val dispoPub = intent.getBooleanExtra("dispoPub",true)
         println("cla valeur du ads:" + dispoPub)
@@ -396,21 +412,7 @@ class MainActivity : BaseActivity() {
 
         email_tv_side_menu.text = emailConnected
 
-       // ont verifie si il ya un email ou une connection pour afficher les addresses
-      if (emailConnected !=  "" ){
 
-          adresses.visibility = View.VISIBLE
-          profil_tv.visibility = View.VISIBLE
-          favori_tv_profile.visibility = View.VISIBLE
-          cagnotte_tv.visibility = View.VISIBLE
-
-
-
-
-
-      }else{
-          email_tv_side_menu.text = getString(R.string.bienvenue)
-      }
 
 
         // BOT
@@ -446,8 +448,18 @@ class MainActivity : BaseActivity() {
 
         login_tv_side_menu.setOnClickListener {
 
-            val intentLog = Intent(this@MainActivity, LoginActivity::class.java)
-            startActivity(intentLog)
+
+           /* if (login_tv_side_menu.text.equals("Logout|")){
+                //@TODO logout volley request
+
+
+            }else{
+
+            }*/
+                val intentLog = Intent(this@MainActivity, LoginActivity::class.java)
+                startActivity(intentLog)
+
+
         }
 
 

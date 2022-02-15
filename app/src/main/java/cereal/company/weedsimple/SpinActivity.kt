@@ -72,7 +72,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
                 tour_user.text= response.getInt("tour_spin").toString()
                var spinRide = response.getInt("tour_spin")
 
-                val df = DecimalFormat("#.###")
+                val df = DecimalFormat("#.####")
                 df.roundingMode = RoundingMode.CEILING
                 val euroPpoint =((valeurOfPoint * response.getInt("points"))/1)
                 val convPtE =df.format(euroPpoint)

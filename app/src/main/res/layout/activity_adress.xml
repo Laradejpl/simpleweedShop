@@ -51,7 +51,7 @@
 
         <EditText
             android:id="@+id/nom_adress_edt"
-            android:layout_width="370dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:gravity="center"
@@ -62,7 +62,7 @@
             android:inputType="text" />
         <EditText
             android:id="@+id/prenom_adress_edt"
-            android:layout_width="370dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:gravity="center"
@@ -74,7 +74,7 @@
 
         <EditText
             android:id="@+id/street_edt"
-            android:layout_width="370dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:gravity="center"
@@ -86,7 +86,7 @@
 
         <EditText
             android:id="@+id/ville_edt"
-            android:layout_width="370dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:gravity="center"
@@ -97,7 +97,7 @@
             android:inputType="text" />
         <EditText
             android:id="@+id/editTextPhone"
-            android:layout_width="370dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:gravity="center"
@@ -109,7 +109,7 @@
 
         <EditText
             android:id="@+id/edt_PostalAddress"
-            android:layout_width="370dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:gravity="center"

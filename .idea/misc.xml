@@ -42,7 +42,7 @@
         <entry key="app/src/main/res/layout/activity_finalize_shopping.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_paypal_earn.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_politic.xml" value="0.24098258706467662" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
@@ -55,8 +55,11 @@
         <entry key="app/src/main/res/layout/activity_thank_you.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_uploader.xml" value="0.2777777777777778" />
         <entry key="app/src/main/res/layout/activity_version_detail.xml" value="0.15" />
-        <entry key="app/src/main/res/layout/alert_add_fav.xml" value="0.390625" />
+        <entry key="app/src/main/res/layout/alert_add_fav.xml" value="0.22" />
         <entry key="app/src/main/res/layout/alert_remove_film.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/alert_remove_product.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/alert_supprim_account.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/alert_supprim_user.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/avis_row.xml" value="0.375" />
         <entry key="app/src/main/res/layout/bar_bottom.xml" value="0.33" />
         <entry key="app/src/main/res/layout/brand_item_text_view.xml" value="0.12777777777777777" />

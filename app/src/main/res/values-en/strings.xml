@@ -95,6 +95,7 @@
     <string name="vous_avez">you have :</string>
     <string name="accomplissements">Achievements</string>
     <string name="les_r_compences">The rewards</string>
-    <string name="connec_snack">Login</string>
     <string name="indisponiblebtc">bitcoin price is unavailable</string>
+    <string name="suprimer_votre_compte">delete your account</string>
+    <string name="supprimer_acount_msg">do you want to delete your account?</string>
 </resources>

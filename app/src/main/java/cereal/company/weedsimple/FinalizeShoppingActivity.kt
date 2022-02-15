@@ -52,7 +52,7 @@ class FinalizeShoppingActivity : BaseActivity() {
 
             }else{
 
-                showErrorSnackBar(getString(R.string.connec_snack) ,true)
+                showErrorSnackBar("Connectez-vous" ,true)
 
             }
         }

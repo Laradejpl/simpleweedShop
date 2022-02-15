@@ -95,6 +95,7 @@
     <string name="vous_avez">Di als:</string>
     <string name="accomplissements">" Erfolge"</string>
     <string name="les_r_compences">Die Belohnungen</string>
-    <string name="connec_snack">Anmeldung</string>
     <string name="indisponiblebtc">Bitcoin-Preis ist nicht verfügbar</string>
+    <string name="suprimer_votre_compte">Lösche deinen Account</string>
+    <string name="supprimer_acount_msg">Möchten Sie Ihr Konto löschen?</string>
 </resources>
