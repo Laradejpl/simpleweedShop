@@ -5,10 +5,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import cereal.company.weedsimple.utils.BaseActivity
@@ -22,6 +19,8 @@ import kotlinx.android.synthetic.main.layout_oublie_dialog.view.*
 
 class LoginActivity : BaseActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -33,6 +32,10 @@ class LoginActivity : BaseActivity() {
         val btnsubscribe = findViewById<TextView>(R.id.tv_subscribe)
         val btnhome = findViewById<ImageView>(R.id.home_iv)
         val btlogin = findViewById<Button>(R.id.btnLogin)
+
+
+
+
         btnsubscribe.setOnClickListener{
 
             val intent = Intent(this@LoginActivity, SignUpLayout::class.java)
@@ -66,7 +69,7 @@ class LoginActivity : BaseActivity() {
                 response ->
 
                 if (response.equals("Bienvenue au WEED SIMPLE Shop")){
-                    // pour garder une trace de la personne qui s'est logger ou enregistrer.
+                    // pour garder une trace de la personne qui s'est logger ou enregistrer
 
 
                     Person.email = activity_main_edtEmail.text.toString()

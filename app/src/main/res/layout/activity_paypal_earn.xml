@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
         >
     <ImageView
         android:id="@+id/bbacArrow"
@@ -55,7 +56,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:background="@color/black"
+        android:background="@color/colorDarkSemiTransparent"
         android:text="Jouez a nos jeux quotidiennement pour gagnez de l'argent , atteignez ,déverouiller des niveaux pour débloquer de nouveaux jeux qui vous permetrons de gagnez a max!! bonne chance."
         />
 
@@ -65,7 +66,7 @@
         android:layout_gravity="center"
         android:layout_height="80dp"
         app:lottie_imageAssetsFolder="raw"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="5dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         android:translationZ="2dp"

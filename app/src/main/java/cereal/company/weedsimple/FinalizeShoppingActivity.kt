@@ -76,7 +76,7 @@ class FinalizeShoppingActivity : BaseActivity() {
         loadBitcoinPriceFinalA()
 
 
-        val calculateTotalPriceUrl = "https://reggaerencontre.com/calculate_total_price.php?invoice_num=${intent.getStringExtra("LATEST_INVOICE_NUMBER")}"
+        val calculateTotalPriceUrl = "https://reggaerencontre.com/calculate_total_price.php?prix_expedition=${intent.getIntExtra("expeditionTax",0)}&   invoice_num=${intent.getStringExtra("LATEST_INVOICE_NUMBER")}"
 
         val requestQ = Volley.newRequestQueue(this@FinalizeShoppingActivity)
         val stringRequest = StringRequest(Request.Method.GET, calculateTotalPriceUrl, { response ->
@@ -114,7 +114,7 @@ class FinalizeShoppingActivity : BaseActivity() {
 
 
             var ppProcessing = PayPalPayment(BigDecimal.valueOf(ttPrice),
-                    "EUR", "Online CBD WEED SIMPLE!",
+                    "EUR", "Online JUST CBD !",
                     PayPalPayment.PAYMENT_INTENT_SALE)
             var paypalPaymentIntent = Intent(this, PaymentActivity::class.java)
             paypalPaymentIntent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, paypalConfig)

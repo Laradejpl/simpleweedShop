@@ -29,6 +29,20 @@
             android:layout_marginBottom="20dp"
             android:src="@drawable/backarrowblack" />
 
+        <TextView
+            android:id="@+id/soustotal_tempo"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_bot_red"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="total"
+            android:textColor="@color/white" />
+
 
     </RelativeLayout>
 
@@ -63,24 +77,23 @@
 
     <ListView
         android:id="@+id/cartProductsListView"
-        android:layout_width="378dp"
-        android:layout_height="500dp"
+        android:layout_width="375dp"
+        android:layout_height="412dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
-        android:visibility="visible"
         android:background="@color/colorLightGrey"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_cart_tv"
         app:layout_constraintVertical_bias="0.091"
-        tools:visibility="visible"/>
-
-
+        tools:visibility="visible" />
 
 
     <View
+        android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
@@ -90,21 +103,78 @@
         tools:layout_editor_absoluteX="1dp" />
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartProductsListView"
+        app:layout_constraintVertical_bias="0.221">
+
+        <TextView
+            android:id="@+id/long_delivery_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/dodgerblue"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="8€ pour l'expédition,livré en 10 jours" />
+
+        <TextView
+            android:id="@+id/short_delivery_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:background="@color/blueLighty"
+            android:padding="5dp"
+            android:text="15€ pour l'expédition,livré en 3 jours" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/freeShipping_txt"
+        android:layout_width="277dp"
+        android:layout_height="62dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/blueLighty"
+        android:visibility="gone"
+        android:text="Vos frais d'envoie gratuit a partir 50€"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartProductsListView"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="410dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartProductsListView">
+        app:layout_constraintTop_toBottomOf="@+id/cartProductsListView"
+        app:layout_constraintVertical_bias="0.86">
 
         <TextView
             android:id="@+id/disCarte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:background="@drawable/button_red"
+            android:background="@drawable/button_light_red"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/effacer_cart"
@@ -116,14 +186,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
 
-            android:background="@drawable/button_green"
+            android:background="@drawable/button_light_blue"
             android:gravity="center"
+            android:paddingStart="20dp"
             android:paddingTop="10dp"
             android:paddingEnd="20dp"
-            android:paddingStart="20dp"
             android:paddingBottom="10dp"
             android:text="@string/validez_cart"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <TextView
@@ -139,10 +209,7 @@
             android:textColor="@color/white" />
 
 
-
-
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

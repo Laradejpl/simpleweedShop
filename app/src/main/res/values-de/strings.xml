@@ -20,7 +20,7 @@
     <string name="votre_panier">dein korb</string>
     <string name="please_wait">Warten&#8230;</string>
     <string name="politique_de_confidentialit_e"><u>
-    Datenschutz-Bestimmungen</u></string>
+    Datenschutz-Bestimmungen | </u></string>
     <string name="cgu">Cgu</string>
     <string name="_8_characters_1_capital_and_a_sign">8 Zeichen, 1 Großbuchstabe und ein Zeichen</string>
     <string name="login_register"><u>Verbindung</u></string>

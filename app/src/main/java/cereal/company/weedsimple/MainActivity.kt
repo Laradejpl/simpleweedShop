@@ -100,7 +100,7 @@ class MainActivity : BaseActivity() {
         val facebooklink = findViewById<ImageView>(R.id.facbook)
         val whatsapplink = findViewById<ImageView>(R.id.whatapp)
         val telephonelink = findViewById<ImageView>(R.id.phone)
-        val phoneNumber = "0769754123"
+        val phoneNumber = "0752037627"
 
         //animBobinB()
         //compteur du panieer
@@ -127,7 +127,10 @@ class MainActivity : BaseActivity() {
             profil_tv.visibility = View.VISIBLE
             favori_tv_profile.visibility = View.VISIBLE
             cagnotte_tv.visibility = View.VISIBLE
-            login_tv_side_menu.text ="Logout|"
+            //login_tv_side_menu.text ="Logout|"
+            login_tv_side_menu.visibility=View.GONE
+            sign_up_tv_side_menu.visibility=View.GONE
+
 
         }else{
             email_tv_side_menu.text = getString(R.string.bienvenue)

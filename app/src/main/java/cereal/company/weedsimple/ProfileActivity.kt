@@ -1,13 +1,10 @@
 package cereal.company.weedsimple
 
-import android.content.DialogInterface
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.content.Intent
-import android.view.View
+import android.os.Bundle
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
@@ -27,6 +24,7 @@ import kotlinx.android.synthetic.main.alert_remove_product.*
 import kotlinx.android.synthetic.main.alert_remove_product.view.*
 
 class ProfileActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
