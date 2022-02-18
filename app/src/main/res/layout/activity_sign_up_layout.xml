@@ -237,9 +237,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_layout_btnSubmit" />
 
-    <include
-        android:id="@+id/include2"
 
-        layout="@layout/bar_bottom" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

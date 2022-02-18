@@ -21,13 +21,17 @@
         android:theme="@style/Theme.WeedSimple">
         <activity
             android:name=".AdressActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PaypalEarnActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PoliticActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".ResultActivity"
             android:exported="false" />
@@ -52,7 +56,9 @@ ca-app-pub-5223452786617280/5000232629 -->
         <activity
             android:name=".VersionDetail"
             android:exported="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+
+            />
         <activity
             android:name=".ui.RobotActivity"
             android:exported="true"
