@@ -97,7 +97,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
                 ) { }
 
                 // ca-app-pub-5223452786617280/6850613721   pour production
-                RewardedAd.load(this,"ca-app-pub-3940256099942544/5224354917", adRequest, object : RewardedAdLoadCallback() {
+                RewardedAd.load(this,"ca-app-pub-5223452786617280/6850613721", adRequest, object : RewardedAdLoadCallback() {
                     override fun onAdFailedToLoad(adError: LoadAdError) {
                         Log.d(TAG, adError?.message)
                         mRewardedAd = null
