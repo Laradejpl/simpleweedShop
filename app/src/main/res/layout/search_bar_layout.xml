@@ -25,8 +25,8 @@
         android:id="@+id/submit_search"
         android:layout_width="156dp"
         android:layout_height="60dp"
-        android:background="@color/lime"
+        android:background="@color/color_red"
         android:layout_weight="1"
-        app:srcCompat="@drawable/search" />
+        app:srcCompat="@drawable/searching" />
 
 </LinearLayout>

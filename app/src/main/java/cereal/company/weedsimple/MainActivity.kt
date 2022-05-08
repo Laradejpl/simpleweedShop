@@ -59,7 +59,7 @@ class MainActivity : BaseActivity() {
     lateinit var dotsLayout: LinearLayout
     lateinit var mpager: ViewPager
     lateinit var toolbar : androidx.appcompat.widget.Toolbar
-    var path:IntArray = intArrayOf(R.drawable.euforia,R.drawable.bocalcbd,R.drawable.fruitcbd,R.drawable.drhemp)
+    var path:IntArray = intArrayOf(R.drawable.alien,R.drawable.valentune,R.drawable.dragonballtea,R.drawable.pokemon)
     lateinit var dots:Array<ImageView>
     lateinit var adapter: PageView
     var currentPage: Int = 0
@@ -100,10 +100,18 @@ class MainActivity : BaseActivity() {
         val facebooklink = findViewById<ImageView>(R.id.facbook)
         val whatsapplink = findViewById<ImageView>(R.id.whatapp)
         val telephonelink = findViewById<ImageView>(R.id.phone)
+        val homebtn = findViewById<ImageView>(R.id.home_iv)
+
         val phoneNumber = "0752037627"
+
+
+
 
         //animBobinB()
         //compteur du panieer
+
+
+
 
 
         if (Person.counter_panier > 0){

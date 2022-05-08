@@ -26,9 +26,12 @@
         <entry key="app/src/main/res/drawable/edit_grey_bg.xml" value="0.34814814814814815" />
         <entry key="app/src/main/res/drawable/gr_lime_round.xml" value="0.25462962962962965" />
         <entry key="app/src/main/res/drawable/ic_favorite_red.xml" value="0.109" />
+        <entry key="app/src/main/res/drawable/ic_ham.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/drawable/ic_hamburger.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_picture.xml" value="0.124" />
         <entry key="app/src/main/res/drawable/ic_upload.xml" value="0.1285" />
+        <entry key="app/src/main/res/drawable/nav_bottom_layout.xml" value="0.4197916666666667" />
         <entry key="app/src/main/res/drawable/receive_round_box.xml" value="0.274" />
         <entry key="app/src/main/res/drawable/title_add_film.xml" value="0.2861111111111111" />
         <entry key="app/src/main/res/drawable/title_oublie_background.xml" value="0.139" />
@@ -44,7 +47,7 @@
         <entry key="app/src/main/res/layout/activity_finalize_shopping.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_paypal_earn.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_politic.xml" value="0.24098258706467662" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
@@ -79,11 +82,12 @@
         <entry key="app/src/main/res/layout/layout_paypal_adress.xml" value="0.3890625" />
         <entry key="app/src/main/res/layout/list_item_layout_fav.xml" value="0.5" />
         <entry key="app/src/main/res/layout/message_item.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/navbottom_layout.xml" value="0.335" />
         <entry key="app/src/main/res/layout/search_bar_layout.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/side_menu_nav.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/side_menu_nav.xml" value="0.45476246657300223" />
         <entry key="app/src/main/res/layout/swipe_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/tes_register.xml" value="0.3974358974358974" />
-        <entry key="app/src/main/res/layout/top_header_fav.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/top_header_fav.xml" value="0.33" />
         <entry key="app/src/main/res/menu/cart_menu.xml" value="0.16111111111111112" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19907407407407407" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JustCBD</string>
+    <string name="app_name">CandyShop</string>
 
     <string name="label_splash"> © mobiletech - 2021</string>
     <string name="et_hint_email_id">Entrez votre Email</string>
@@ -48,7 +48,7 @@
     <string name="cart_bottom">Panier</string>
     <string name="home_button">Accueil</string>
     <string name="enregistrez_btn">Enregistrez</string>
-    <string name="login_side_menu">Connection |</string>
+    <string name="login_side_menu">Connection </string>
     <string name="sign_up">" S'inscrire"</string>
     <string name="validez_cart">Valider</string>
     <string name="ajoutez_cart">Ajouter</string>

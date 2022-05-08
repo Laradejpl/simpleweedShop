@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">JustCBD</string>
+    <string name="app_name">CandyShop</string>
 
     <string name="label_splash"> © mobiletech - 2021</string>
     <string name="et_hint_email_id">geben sie ihre E-Mail Adresse ein</string>

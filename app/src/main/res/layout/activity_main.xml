@@ -13,17 +13,14 @@
         layout="@layout/header_menu" />
 
 
-
-
-
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
-        android:layout_width="422dp"
-        android:layout_height="165dp"
+        android:layout_width="426dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/toolbar"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="-11dp">
+        tools:layout_editor_absoluteX="-13dp">
 
 
     </androidx.viewpager.widget.ViewPager>
@@ -93,24 +90,27 @@
 
                 <ImageView
                     android:id="@+id/tea_brand"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="90dp"
+                    android:layout_marginRight="5dp"
                     android:layout_marginStart="40dp"
-                    android:background="@drawable/coldteaa"
+                    android:background="@drawable/japan"
                     android:contentDescription="TODO" />
 
                 <ImageView
                     android:id="@+id/vap_brand"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="90dp"
-                    android:background="@drawable/greenpowa" />
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/soda" />
 
 
                 <ImageView
                     android:id="@+id/flowers_brand"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="90dp"
-                    android:background="@drawable/flowerpink" />
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gum" />
 
 
 
@@ -188,7 +188,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
 
-                        android:background="@drawable/marleybeer"
+                        android:background="@drawable/angrybid"
                         />
                     <ImageView
                         android:layout_width="wrap_content"
@@ -306,12 +306,12 @@
 
   <TextView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="80dp"
       android:text="@string/nouveautees_cbd"
       android:textColor="@color/white"
       android:gravity="center"
       android:textSize="20sp"
-      android:background="@color/black"
+      android:background="@drawable/rosebg"
       android:paddingTop="20dp"
       android:paddingBottom="20dp"
       android:fontFamily="casual"
@@ -333,7 +333,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorgris"
+                android:background="@color/pinkbg"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:paddingTop="10dp"
@@ -353,12 +353,12 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:text="@string/promotxt"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:background="@color/black"
+                android:background="@drawable/violetbg"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:fontFamily="casual"
@@ -505,26 +505,18 @@
     </ScrollView>
 
 
-    <include layout="@layout/bar_bottom" />
+
+    <include
+        layout="@layout/navbottom_layout"/>
+
+
 
 
     <include
         layout="@layout/side_menu_nav"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/botbtn"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:translationZ="2dp"
-        android:background="@drawable/bg_bot_red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9900"
-        app:layout_constraintStart_toStartOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/icbot" />
+
 
     <ImageView
         android:id="@+id/spin_img"
@@ -550,6 +542,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:visibility="gone"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/botbtn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_bot_red"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/icbot" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

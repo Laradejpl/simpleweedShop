@@ -16,24 +16,27 @@
 
         <ImageView
             android:id="@+id/hamburger"
-            android:layout_width="99dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_hamburger" />
+            android:background="@color/color_red"
+            app:srcCompat="@drawable/ic_hamwhite" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="358dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/logoshocbd" />
+            android:background="@color/color_red"
+            app:srcCompat="@drawable/bonbonlogo" />
 
         <ImageView
             android:id="@+id/settings_imgv"
             android:layout_width="101dp"
             android:layout_height="match_parent"
+            android:background="@color/color_red"
             android:layout_weight="1"
-            app:srcCompat="@drawable/search" />
+            app:srcCompat="@drawable/searching" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
