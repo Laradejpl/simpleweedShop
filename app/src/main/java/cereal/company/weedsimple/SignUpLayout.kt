@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.CheckBox
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -17,11 +18,12 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_sign_up_layout.*
+import kotlinx.android.synthetic.main.bar_bottom.*
 import java.lang.Exception
 
 class SignUpLayout : AppCompatActivity() {
      lateinit var  newLetterCheckBox :CheckBox
-     lateinit var  majorityCheckBox:CheckBox
+     //lateinit var  majorityCheckBox:CheckBox
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_layout)
@@ -31,11 +33,32 @@ class SignUpLayout : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+         val btnhome = findViewById<ImageView>(R.id.home_iv)
+
         retourhome.setOnClickListener {
            // retour a l'activié davant
             finish()
 
         }
+
+         btnhome.setOnClickListener {
+             val intent = Intent(this@SignUpLayout, MainActivity::class.java)
+             startActivity(intent)
+
+         }
+
+         login_iv.setOnClickListener {
+             val intent = Intent(this@SignUpLayout, LoginActivity::class.java)
+             startActivity(intent)
+
+         }
+
+         cart_iv.setOnClickListener {
+
+             val intentcart = Intent(this@SignUpLayout, CartProductsActivity::class.java)
+             startActivity(intentcart)
+
+         }
 
         sign_up_layout_btn_TextLogin.setOnClickListener {
 
@@ -52,14 +75,14 @@ class SignUpLayout : AppCompatActivity() {
             if (sign_up_layout_edtPassword.text.toString().equals(sign_up_layout_edtConfirmPass.text.toString())){
 
                 newLetterCheckBox = findViewById(R.id.checkbox_register)
-                majorityCheckBox = findViewById(R.id.checkbox_18ans)
+               // majorityCheckBox = findViewById(R.id.checkbox_18ans)
 
 
                 var  signUpUrl = "https://reggaerencontre.com/join_new_user.php?email=" +
                         sign_up_layout_edtEmail.text.toString() +
                         "&username=" +
                         sign_up_layout_edtUsername.text.toString() + "&pass=" + sign_up_layout_edtPassword.text.toString()+
-                        "&newletter=" + newLetterCheckBox.isChecked.toString() + "&majority=" +  majorityCheckBox.isChecked.toString()
+                        "&newletter=" + newLetterCheckBox.isChecked.toString()
 
 
                 val requestQ: RequestQueue = Volley.newRequestQueue(this)

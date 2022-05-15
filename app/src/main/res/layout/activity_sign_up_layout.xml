@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/handaccount"
+    android:background="@drawable/signup"
     tools:context=".SignUpLayout">
 
 
@@ -12,8 +12,8 @@
         android:id="@+id/retourhome"
         android:layout_width="37dp"
         android:layout_height="40dp"
-        android:background="@drawable/backarrow"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        android:background="@drawable/previous"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +38,8 @@
         android:layout_marginTop="56dp"
         android:gravity="center"
         android:text="@string/create_account"
+        android:textColor="@color/white"
+        android:background="@drawable/azure_background_quizz"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,11 +50,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sign_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="290dp"
+        android:layout_width="250dp"
         android:layout_height="65dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="68dp"
         android:hint="@string/et_hint_email_id"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/blueclair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +67,7 @@
             android:layout_marginTop="113dp"
             android:autofillHints=""
             android:background="@color/white"
-            android:drawableRight="@drawable/email"
+            android:drawableRight="@drawable/courrier"
             android:inputType="textEmailAddress"
             android:padding="@dimen/et_padding"
             android:textColor="@color/black"
@@ -81,11 +83,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sign_username"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="290dp"
+        android:layout_width="250dp"
         android:layout_height="65dp"
         android:layout_marginTop="8dp"
         android:hint="@string/et_hint_username"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/blueclair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +100,7 @@
             android:layout_marginTop="113dp"
             android:autofillHints=""
             android:background="@color/white"
-            android:drawableRight="@drawable/account_box"
+            android:drawableRight="@drawable/user_icolor"
             android:inputType="text"
             android:padding="@dimen/et_padding"
             android:textColor="@color/black"
@@ -115,11 +117,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sign_upass"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="290dp"
+        android:layout_width="250dp"
         android:layout_height="65dp"
         android:layout_marginTop="8dp"
         android:hint="@string/et_hint_password"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/blueclair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +134,7 @@
             android:layout_marginTop="113dp"
             android:autofillHints=""
             android:background="@color/white"
-            android:drawableRight="@drawable/password"
+            android:drawableRight="@drawable/shield"
             android:inputType="textPassword"
             android:padding="@dimen/et_padding"
             android:textColor="@color/black"
@@ -148,11 +150,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sign_upws"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="290dp"
+        android:layout_width="250dp"
         android:layout_height="65dp"
         android:layout_marginTop="8dp"
         android:hint="@string/et_hint_password_confirmation"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/blueclair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -165,7 +167,7 @@
             android:layout_marginTop="113dp"
             android:autofillHints=""
             android:background="@color/white"
-            android:drawableRight="@drawable/confirm_password"
+            android:drawableRight="@drawable/shielddeux"
             android:inputType="textPassword"
             android:padding="@dimen/et_padding"
             android:textColor="@color/black"
@@ -183,16 +185,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
-        android:buttonTint="@color/teal_700"
-        android:textColor="@color/black"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
         android:text="@string/newletter"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_layout_btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_upws"
         app:layout_constraintVertical_bias="0.082" />
-    <CheckBox
+    <!--<CheckBox
         android:id="@+id/checkbox_18ans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -205,7 +207,7 @@
         app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_upws"
-        app:layout_constraintVertical_bias="0.400" />
+        app:layout_constraintVertical_bias="0.400" />-->
 
 
 
@@ -236,6 +238,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_layout_btnSubmit" />
+
+
+    <include
+        layout="@layout/navbottom_layout"/>
 
 
 

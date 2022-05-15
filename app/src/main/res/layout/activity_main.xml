@@ -84,6 +84,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
                 android:orientation="horizontal">
 
 
@@ -120,29 +121,34 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
                 android:orientation="horizontal">
 
 
 
                 <ImageView
                     android:id="@+id/hash_brand"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="90dp"
+                    android:layout_marginRight="5dp"
                     android:layout_marginLeft="40dp"
-                    android:background="@drawable/popolen" />
+                    android:background="@drawable/foods" />
 
                 <ImageView
                     android:id="@+id/food_brand"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="90dp"
-                    android:background="@drawable/lolipops" />
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/candy" />
 
 
                 <ImageView
                     android:id="@+id/bodyheath_brand"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="90dp"
-                    android:background="@drawable/healthbody" />
+                    android:layout_marginRight="5dp"
+
+                    android:background="@drawable/vegan" />
 
 
 
@@ -182,12 +188,12 @@
                     android:orientation="horizontal">
 
 
+
                     <ImageView
                         android:id="@+id/marley_pict"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="30dp"
-
+                        android:layout_marginLeft="25dp"
                         android:background="@drawable/angrybid"
                         />
                     <ImageView
@@ -347,7 +353,7 @@
                 android:id="@+id/multitrance_cat_img"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/multitrance"
+                android:src="@drawable/cocas"
                 android:layout_gravity="top"
                 />
 
@@ -465,7 +471,7 @@
                 android:paddingRight="30dp"
                 android:paddingTop="20dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/black"
+                android:background="@color/pinkbuble"
                 >
                 <TextView
                     android:id="@+id/politic_tv"

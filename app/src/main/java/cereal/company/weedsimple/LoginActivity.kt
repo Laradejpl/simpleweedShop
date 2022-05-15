@@ -1,5 +1,6 @@
 package cereal.company.weedsimple
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -21,6 +22,7 @@ class LoginActivity : BaseActivity() {
 
 
 
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -31,7 +33,7 @@ class LoginActivity : BaseActivity() {
 
         val btnsubscribe = findViewById<TextView>(R.id.tv_subscribe)
         val btnhome = findViewById<ImageView>(R.id.home_iv)
-        val btlogin = findViewById<Button>(R.id.btnLogin)
+        val btlogin = findViewById<ImageView>(R.id.btnLogin)
 
 
 
