@@ -80,6 +80,7 @@ class LoginActivity : BaseActivity() {
 
                     val homeIntent = Intent(this, MainActivity::class.java)
                     startActivity(homeIntent)
+                    Person.counter_panier = 0
 
 
                 } else{

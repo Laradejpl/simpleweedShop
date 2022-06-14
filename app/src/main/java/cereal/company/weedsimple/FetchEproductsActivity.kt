@@ -1,5 +1,6 @@
 package cereal.company.weedsimple
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -25,6 +26,7 @@ import kotlinx.android.synthetic.main.side_menu_nav.*
 
 class FetchEproductsActivity : BaseActivity() {
     private val TAG = "MainActivity"
+    private lateinit var mProgressDialog: Dialog
 
     lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,6 +97,7 @@ class FetchEproductsActivity : BaseActivity() {
         val requestQ: RequestQueue = Volley.newRequestQueue(this)
         var jsonAR = JsonArrayRequest(Request.Method.GET, productsUrl,null, {
                 response ->
+            showProgressDialog("Patientez un peu...")
 
             for (productJOIndex in 0.until(response.length())){
 
@@ -113,6 +116,9 @@ class FetchEproductsActivity : BaseActivity() {
             val pAdapter = EProductAdapter(this@FetchEproductsActivity, productsList)
             productsRV.layoutManager = LinearLayoutManager(this@FetchEproductsActivity)
             productsRV.adapter = pAdapter
+
+
+            hideProgressDialog()
 
 
         }, { error ->

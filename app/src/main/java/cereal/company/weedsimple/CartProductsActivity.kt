@@ -82,7 +82,7 @@ class CartProductsActivity : BaseActivity() {
         acceptCarte.setOnClickListener {
         if (Person.email != "" && shippingPayed ){
             acceptOrder ()
-            showProgressDialog("voila du boudin")
+
         }
         else if (Person.email == "" ){
 

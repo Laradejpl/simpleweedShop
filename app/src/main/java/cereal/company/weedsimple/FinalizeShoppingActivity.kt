@@ -70,8 +70,12 @@ class FinalizeShoppingActivity : BaseActivity() {
 
             val intent= Intent(this@FinalizeShoppingActivity, MainActivity::class.java)
             startActivity(intent)
+            Person.counter_panier = 0
         }
-        backarrow_fetch_product.setOnClickListener { finish() }
+        backarrow_fetch_product.setOnClickListener {
+            finish()
+            Person.counter_panier = 0
+        }
 
         loadBitcoinPriceFinalA()
 
