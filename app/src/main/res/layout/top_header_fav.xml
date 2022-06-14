@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/header_nav_layout_fav"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -19,21 +19,24 @@
             android:layout_width="99dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/backarrowblack" />
+            android:background="@color/color_red"
+            app:srcCompat="@drawable/previous" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="358dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/logoshocbd" />
+            android:background="@color/color_red"
+            app:srcCompat="@drawable/bonbonlogo" />
 
         <ImageView
 
             android:layout_width="101dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/backarrow" />
+            android:background="@color/color_red"
+            app:srcCompat="@drawable/invisiblered" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

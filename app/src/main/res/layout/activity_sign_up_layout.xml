@@ -51,7 +51,7 @@
         android:id="@+id/sign_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
-        android:layout_height="65dp"
+        android:layout_height="45dp"
         android:layout_marginTop="68dp"
         android:hint="@string/et_hint_email_id"
         android:textColorHint="@color/blueclair"
@@ -84,7 +84,7 @@
         android:id="@+id/sign_username"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
-        android:layout_height="65dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:hint="@string/et_hint_username"
         android:textColorHint="@color/blueclair"
@@ -118,7 +118,7 @@
         android:id="@+id/sign_upass"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
-        android:layout_height="65dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:hint="@string/et_hint_password"
         android:textColorHint="@color/blueclair"
@@ -151,7 +151,7 @@
         android:id="@+id/sign_upws"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
-        android:layout_height="65dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:hint="@string/et_hint_password_confirmation"
         android:textColorHint="@color/blueclair"
@@ -194,20 +194,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_upws"
         app:layout_constraintVertical_bias="0.082" />
-    <!--<CheckBox
-        android:id="@+id/checkbox_18ans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:buttonTint="@color/color_red"
-        android:textColor="@color/black"
-        android:text="@string/j_ai_18_ans_ou_plus"
-        app:layout_constraintBottom_toTopOf="@+id/checkbox_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_upws"
-        app:layout_constraintVertical_bias="0.400" />-->
+
 
 
 

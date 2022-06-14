@@ -48,7 +48,7 @@ class TestVolley : AppCompatActivity() {
         btn_street.setOnClickListener {
 
 
-             val strUrl = "https://reggaerencontre.com/volley.php?street=" +
+             val strUrl = "https://mobileandweb.alwaysdata.net/volley.php?street=" +
                      street_edt.text.toString() +
                      "&ville=" +ville_edt.text.toString() +
                      "&telephone=" + editTextPhone.text.toString() +

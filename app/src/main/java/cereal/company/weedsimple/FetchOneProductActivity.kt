@@ -36,12 +36,12 @@ class  FetchOneProductActivity : AppCompatActivity() {
 
 
 
-        var picURL = "https://reggaerencontre.com/"
+        var picURL = "https://mobileandweb.alwaysdata.net/"
 
         var rq: RequestQueue = Volley.newRequestQueue(this)
         val selectedId = intent.getStringExtra("id").toString()
         id_product_fetchone_tv.text = "$selectedId"
-        var prodUrl ="https://reggaerencontre.com/fetch_one_product.php?id=$selectedId"
+        var prodUrl ="https://mobileandweb.alwaysdata.net/fetch_one_product.php?id=$selectedId"
 
         var jsonFile= JsonObjectRequest(Request.Method.GET,prodUrl,null,
                 { response ->

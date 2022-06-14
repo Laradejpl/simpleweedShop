@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:background="@drawable/bgsky"
+    >
 
     <ImageView
         android:id="@+id/backFleche"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/backarrowblack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/previous"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.041"
@@ -21,36 +23,43 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/radiusbackground"
+        android:background="@drawable/bg_bot_red"
         android:gravity="start"
         android:padding="15dp"
         android:text="@string/votre_profil"
+        android:fontFamily="@font/buble"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="475dp"
-        android:layout_height="211dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/boitolettre" />
+        app:layout_constraintVertical_bias="0.118" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="485dp"
+        android:layout_height="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lapinavatar" />
 
 
     <TextView
         android:id="@+id/textVespace"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginTop="24dp"
         android:text="@string/espaceperso"
         android:textSize="20dp"
+        android:padding="5dp"
+        android:fontFamily="@font/buble"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        android:background="@drawable/azure_background_quizz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -60,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+
         app:layout_constraintTop_toBottomOf="@+id/textVespace">
 
         <LinearLayout
@@ -77,6 +87,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:text="Email:"
+                android:textColor="@color/blueclair"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -104,6 +115,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:text="Telephone:"
+                android:textColor="@color/blueclair"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -130,6 +142,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
+                android:textColor="@color/blueclair"
                 android:text="@string/rue_profile"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -156,6 +169,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
+                android:textColor="@color/blueclair"
                 android:text="@string/ville_profile"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -184,6 +198,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:text="Zip code:"
+                android:textColor="@color/blueclair"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -211,6 +226,7 @@
                 android:layout_weight="1"
                 android:text="@string/pays_profile"
                 android:textSize="18sp"
+                android:textColor="@color/blueclair"
                 android:textStyle="bold" />
 
             <TextView
@@ -247,7 +263,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:background="@drawable/location" />
+                android:background="@drawable/googlemaps" />
 
             <TextView
                 android:id="@+id/settings_profil_tv_layout"
@@ -267,6 +283,7 @@
             android:layout_height="wrap_content"
             android:text="@string/suprimer_votre_compte"
             android:layout_marginTop="5dp"
+            android:fontFamily="@font/buble"
             android:textSize="10sp"
             android:layout_gravity="end"
             android:layout_marginEnd="20dp"
@@ -276,6 +293,9 @@
 
 
     </LinearLayout>
+
+    <include
+        layout="@layout/navbottom_layout"/>
 
 
 

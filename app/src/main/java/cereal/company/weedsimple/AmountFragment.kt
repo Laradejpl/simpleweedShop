@@ -26,7 +26,7 @@ class AmountFragment : DialogFragment() {
         var btnAddCart = fragmentView.findViewById<ImageButton>(R.id.btnAddToCart)
         btnAddCart.setOnClickListener {
 
-            var addbuttonUrl ="https://reggaerencontre.com/insert_temporary_order.php?email=${Person.email}" +
+            var addbuttonUrl ="https://mobileandweb.alwaysdata.net/insert_temporary_order.php?email=${Person.email}" +
                     "&product_id=${Person.addToCartProductID}&amount=${edtEnterAmountProduct.text}"
             var requestQ = Volley.newRequestQueue(activity)
             var stringRequest = StringRequest(Request.Method.GET, addbuttonUrl, {

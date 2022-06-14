@@ -43,7 +43,7 @@ class SearchActivity : AppCompatActivity() {
         var keyWord = intent.getStringExtra("motclef")
 
         var productsListsearch = ArrayList<EProduct>()
-        val searchUrl = "https://reggaerencontre.com/search_kotlin.php?keyword=$keyWord"
+        val searchUrl = "https://mobileandweb.alwaysdata.net/search_kotlin.php?keyword=$keyWord"
         val requestQ: RequestQueue = Volley.newRequestQueue(this)
         var jsonAR = JsonArrayRequest(Request.Method.GET, searchUrl,null, {
 

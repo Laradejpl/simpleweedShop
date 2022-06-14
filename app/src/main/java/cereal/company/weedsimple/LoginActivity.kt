@@ -58,7 +58,7 @@ class LoginActivity : BaseActivity() {
         btlogin.setOnClickListener {
 
 
-            val loginURL = "https://reggaerencontre.com/login_app_user.php?email=" +
+            val loginURL = "https://mobileandweb.alwaysdata.net/login_app_user.php?email=" +
                     activity_main_edtEmail.text.toString() +
                     "&pass=" + activity_main_edtPassword.text.toString()
 
@@ -122,7 +122,7 @@ class LoginActivity : BaseActivity() {
             view.oubliebutton_oublie.setOnClickListener {
 
                 var emailOublie = view.edt_phrase_secret_register_oublie.text.toString()
-                val oublieUrl = "https://reggaerencontre.com/oublieMotdePasse.php?email=" + emailOublie
+                val oublieUrl = "https://mobileandweb.alwaysdata.net/oublieMotdePasse.php?email=" + emailOublie
                 val requestQ: RequestQueue = Volley.newRequestQueue(this)
                 val stringRequest = StringRequest(Request.Method.GET,oublieUrl, {
                         response ->

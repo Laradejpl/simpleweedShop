@@ -7,6 +7,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import cereal.company.weedsimple.utils.BaseActivity
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
@@ -22,7 +23,7 @@ import kotlinx.android.synthetic.main.e_product_row.view.*
 import kotlinx.android.synthetic.main.header_menu.*
 import kotlinx.android.synthetic.main.side_menu_nav.*
 
-class FetchEproductsActivity : AppCompatActivity() {
+class FetchEproductsActivity : BaseActivity() {
     private val TAG = "MainActivity"
 
     lateinit var mAdView : AdView
@@ -49,6 +50,29 @@ class FetchEproductsActivity : AppCompatActivity() {
             finish()
         }
 
+        home_iv.setOnClickListener {
+            val intent = Intent(this@FetchEproductsActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        cart_iv.setOnClickListener {
+            val intent = Intent(this@FetchEproductsActivity, CartProductsActivity::class.java)
+            startActivity(intent)
+
+        }
+        login_iv.setOnClickListener {
+
+            if (Person.email != ""){
+                val intent = Intent(this@FetchEproductsActivity, ProfileActivity::class.java)
+                startActivity(intent)
+
+            }else {
+                showErrorSnackBar("Vous devez etre connecter",true)
+
+            }
+
+        }
+
         backhome_search.setOnClickListener {
 
             val intent = Intent(this@FetchEproductsActivity, CartProductsActivity::class.java)
@@ -67,7 +91,7 @@ class FetchEproductsActivity : AppCompatActivity() {
         title_brand_text_view.text = "$selectedBrand"
 
         var productsList = ArrayList<EProduct>()
-        var productsUrl = "https://reggaerencontre.com/fetch_eproducts.php?brand=$selectedBrand"
+        var productsUrl = "https://mobileandweb.alwaysdata.net/fetch_eproducts.php?brand=$selectedBrand"
         val requestQ: RequestQueue = Volley.newRequestQueue(this)
         var jsonAR = JsonArrayRequest(Request.Method.GET, productsUrl,null, {
                 response ->

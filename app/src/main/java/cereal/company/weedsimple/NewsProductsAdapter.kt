@@ -67,7 +67,7 @@ class NewsProductsAdapter (var context: Context, var arrayList: ArrayList<EProdu
             }
 
 
-            var picURLNews = "https://reggaerencontre.com/"
+            var picURLNews = "https://mobileandweb.alwaysdata.net/"
             //picURL = picURL.replace("", "%20")
 
 

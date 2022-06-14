@@ -62,7 +62,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
 
 
         // AFFICHER  LES POINTS DE FIDELITES
-        val urlPts = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=$userEmailConnected"
+        val urlPts = "https://mobileandweb.alwaysdata.net/fetchPointsF.php?email_users_pts=$userEmailConnected"
 
         val requestPoints: RequestQueue = Volley.newRequestQueue(this)
         val stringR= JsonObjectRequest(Request.Method.GET,urlPts,null,{
@@ -125,7 +125,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
 
                         tour_user.text=(toursSpins +1).toString()
                         //AJOUT UN TOUR DE SPIN
-                        val TourSpinURL = "https://reggaerencontre.com/tourSpin.php?email_users_pts=" +
+                        val TourSpinURL = "https://mobileandweb.alwaysdata.net/tourSpin.php?email_users_pts=" +
                                 userEmailConnected
                         val requestTspin: RequestQueue = Volley.newRequestQueue(this)
 

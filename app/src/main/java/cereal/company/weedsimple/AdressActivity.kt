@@ -53,7 +53,7 @@ class AdressActivity : AppCompatActivity() {
         btn_street.setOnClickListener {
 
 
-            val strUrl = "https://reggaerencontre.com/volley.php?nom=" +
+            val strUrl = "https://mobileandweb.alwaysdata.net/volley.php?nom=" +
                     nom_adress_edt.text.toString() + "&prenom=" +  prenom_adress_edt.text.toString() +
                      "&street=" + street_edt.text.toString() +
                     "&ville=" +ville_edt.text.toString() +

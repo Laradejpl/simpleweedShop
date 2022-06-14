@@ -22,7 +22,7 @@
             android:id="@+id/textitle_oublie"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/title_add_product"
+            android:background="@color/color_red"
             android:gravity="center"
             android:padding="10dp"
             android:text="Message"

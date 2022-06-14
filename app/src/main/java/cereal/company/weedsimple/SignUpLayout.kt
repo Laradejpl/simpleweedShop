@@ -78,7 +78,7 @@ class SignUpLayout : AppCompatActivity() {
                // majorityCheckBox = findViewById(R.id.checkbox_18ans)
 
 
-                var  signUpUrl = "https://reggaerencontre.com/join_new_user.php?email=" +
+                var  signUpUrl = "https://mobileandweb.alwaysdata.net/join_new_user.php?email=" +
                         sign_up_layout_edtEmail.text.toString() +
                         "&username=" +
                         sign_up_layout_edtUsername.text.toString() + "&pass=" + sign_up_layout_edtPassword.text.toString()+

@@ -144,7 +144,7 @@ class MainActivity : BaseActivity() {
             email_tv_side_menu.text = getString(R.string.bienvenue)
         }
 
-        val urlPts = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=$emailConnected"
+        val urlPts = "https://mobileandweb.alwaysdata.net/fetchPointsF.php?email_users_pts=$emailConnected"
 
         val requestPts: RequestQueue = Volley.newRequestQueue(this)
         val stringRq= JsonObjectRequest(Request.Method.GET,urlPts,null, {
@@ -174,7 +174,7 @@ class MainActivity : BaseActivity() {
 
         //@TODO implementation de la ADMOB
 
-        var brandsUrl = "https://reggaerencontre.com/fetch_brands.php"
+        var brandsUrl = "https://mobileandweb.alwaysdata.net/fetch_brands.php"
         var brandsList = ArrayList<String>()
         val requestQ: RequestQueue = Volley.newRequestQueue(this)
 
@@ -286,7 +286,7 @@ class MainActivity : BaseActivity() {
         // LES NOUVEAUX PRODUITS
 
         val productsListNews = ArrayList<EProduct>()
-        val productsUrlNews = "https://reggaerencontre.com/fetchEproducts_news.php"
+        val productsUrlNews = "https://mobileandweb.alwaysdata.net/fetchEproducts_news.php"
         val requestQNews: RequestQueue = Volley.newRequestQueue(this)
         val jsonAr = JsonArrayRequest(Request.Method.GET, productsUrlNews,null, {
                 response ->
@@ -326,7 +326,7 @@ class MainActivity : BaseActivity() {
 
         // LES PROMOTIONS
         val productListPromo = ArrayList<EProduct>()
-        val productsUrlPromo = "https://reggaerencontre.com/fetchEproducts_promo.php"
+        val productsUrlPromo = "https://mobileandweb.alwaysdata.net/fetchEproducts_promo.php"
         val requestQPromo: RequestQueue = Volley.newRequestQueue(this)
         val jsonArP = JsonArrayRequest(Request.Method.GET, productsUrlPromo,null, {
                 response ->

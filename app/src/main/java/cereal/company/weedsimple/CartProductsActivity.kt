@@ -1,11 +1,13 @@
 package cereal.company.weedsimple
 
+import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.ArrayAdapter
+import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import cereal.company.weedsimple.utils.BaseActivity
@@ -19,9 +21,10 @@ import kotlinx.android.synthetic.main.side_menu_nav.*
 class CartProductsActivity : BaseActivity() {
      //private var valeurOfPoints : Double = 0.000025
      var shippingPayed = false
-    var lowCostDelivery = false
-    var highCostDelivery = false
+    //var lowCostDelivery = false
+    //var highCostDelivery = false
      var totalTemporary=0
+    private lateinit var mProgressDialog: Dialog
 
 
 
@@ -41,12 +44,6 @@ class CartProductsActivity : BaseActivity() {
 
 
 
-
-
-
-
-
-
         long_delivery_txt.setOnClickListener {
 
             lowFeeShipping()
@@ -57,7 +54,7 @@ class CartProductsActivity : BaseActivity() {
 
         disCarte.setOnClickListener {
 
-            val deleteUrl = "https://reggaerencontre.com/decline_order.php?email=${Person.email}"
+            val deleteUrl = "https://mobileandweb.alwaysdata.net/decline_order.php?email=${Person.email}"
             val requestQ = Volley.newRequestQueue(this@CartProductsActivity)
             val stringRequest = StringRequest(Request.Method.GET, deleteUrl, {
                     response ->
@@ -85,6 +82,7 @@ class CartProductsActivity : BaseActivity() {
         acceptCarte.setOnClickListener {
         if (Person.email != "" && shippingPayed ){
             acceptOrder ()
+            showProgressDialog("voila du boudin")
         }
         else if (Person.email == "" ){
 
@@ -113,7 +111,7 @@ class CartProductsActivity : BaseActivity() {
 
 
 
-        var cartProductsUrl = "https://reggaerencontre.com/fetch_temporary_order.php?email=${Person.email}"
+        var cartProductsUrl = "https://mobileandweb.alwaysdata.net/fetch_temporary_order.php?email=${Person.email}"
         var cartProductsList = ArrayList<String>()
         var requestQ = Volley.newRequestQueue(this@CartProductsActivity)
         var jsonAR = JsonArrayRequest(Request.Method.GET, cartProductsUrl, null, { response ->
@@ -158,6 +156,7 @@ class CartProductsActivity : BaseActivity() {
             }
 
             var cartProductsAdapter = ArrayAdapter(
+
                 this@CartProductsActivity,
                 android.R.layout.simple_list_item_1,
                 cartProductsList
@@ -174,6 +173,9 @@ class CartProductsActivity : BaseActivity() {
         requestQ.add(jsonAR)
 
     }
+
+
+
  private fun lowFeeShipping(): Int {
 
       shippingPayed = true
@@ -217,10 +219,11 @@ class CartProductsActivity : BaseActivity() {
     private  fun acceptOrder ()
     {
 
-        val verifyOrderUrl = "https://reggaerencontre.com/verify_order.php?email=${Person.email}"
+        val verifyOrderUrl = "https://mobileandweb.alwaysdata.net/verify_order.php?email=${Person.email}"
         val requestQ = Volley.newRequestQueue(this@CartProductsActivity)
         val stringRequest = StringRequest(Request.Method.GET, verifyOrderUrl, {
                 response ->
+
             var expeditionRate = Person.tarifExpedition
             println("le tarif expedition: " + Person.tarifExpedition )
 

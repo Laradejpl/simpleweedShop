@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.activity_location.ville_profil_tv_layout
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.alert_remove_product.*
 import kotlinx.android.synthetic.main.alert_remove_product.view.*
+import kotlinx.android.synthetic.main.navbottom_layout.*
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -44,7 +45,18 @@ class ProfileActivity : AppCompatActivity() {
         }
 
 
-        val infoUrl = "https://reggaerencontre.com/profil_kotlin_user.php?email="+ Person.email
+        cart_iv.setOnClickListener{
+
+            var intent = Intent(this, CartProductsActivity::class.java)
+            startActivity(intent)
+        }
+        home_iv.setOnClickListener{
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        val infoUrl = "https://mobileandweb.alwaysdata.net/profil_kotlin_user.php?email="+ Person.email
 
         email_profil_tv_layout.text= Person.email
         var rq: RequestQueue = Volley.newRequestQueue(this)
@@ -95,7 +107,7 @@ class ProfileActivity : AppCompatActivity() {
                 /*Toast.makeText(applicationContext,
                     android.R.string.yes, Toast.LENGTH_SHORT).show()*/
 
-                    val deleteUserUrl = "https://reggaerencontre.com/delete_profil_kotlin_user.php?email="+ Person.email
+                    val deleteUserUrl = "https://mobileandweb.alwaysdata.net/delete_profil_kotlin_user.php?email="+ Person.email
 
                     val requestD: RequestQueue = Volley.newRequestQueue(this)
 
@@ -147,4 +159,7 @@ class ProfileActivity : AppCompatActivity() {
 
         }
     }
+
+
+
 }

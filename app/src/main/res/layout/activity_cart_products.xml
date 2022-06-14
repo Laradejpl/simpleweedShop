@@ -9,10 +9,9 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:orientation="horizontal"
-
+        android:background="@color/color_red"
         android:translationZ="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,23 +20,34 @@
 
         <ImageView
             android:id="@+id/backThome_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
+
             android:layout_marginEnd="336dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/backarrowblack" />
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/previous" />
+
+        <ImageView
+            android:layout_width="217dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="82dp"
+            android:layout_marginEnd="111dp"
+            android:src="@drawable/bonbonlogo" />
 
         <TextView
             android:id="@+id/soustotal_tempo"
-            android:layout_width="100dp"
-            android:layout_height="25dp"
+            android:layout_width="95dp"
+            android:layout_height="34dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="26dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/bg_bot_red"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/azure_background_quizz"
             android:gravity="center"
             android:paddingBottom="5dp"
             android:text="total"
@@ -53,15 +63,20 @@
         android:layout_height="125dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/white"
+        android:background="@drawable/bgbobon"
         android:gravity="center"
+        android:fontFamily="@font/buble"
+
+
         android:text="@string/votre_panier"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
 
     <View
         android:layout_width="match_parent"

@@ -59,4 +59,6 @@ open class  BaseActivity : AppCompatActivity() {
         mProgressDialog.dismiss()
     }
 
+
+
 }

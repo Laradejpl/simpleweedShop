@@ -182,7 +182,7 @@ if (!coeur){
 
         val reqavg: RequestQueue = Volley.newRequestQueue(this)
         id_product_fetchone_tv_V.text = "$selectedId"
-        val starUrl = "https://reggaerencontre.com/averagektl.php?id_produit=$selectedId"
+        val starUrl = "https://mobileandweb.alwaysdata.net/averagektl.php?id_produit=$selectedId"
         val jsonORStar = JsonObjectRequest(
             Request.Method.GET,starUrl,null,
             { response ->
@@ -199,12 +199,12 @@ if (!coeur){
         reqavg.add(jsonORStar )
 
 //FIN Requete pour  avg avis
-        val picURL = "https://reggaerencontre.com/"
+        val picURL = "https://mobileandweb.alwaysdata.net/"
 
  val rq: RequestQueue = Volley.newRequestQueue(this)
 
  id_product_fetchone_tv_V.text = "$selectedId"
- val prodUrl1 ="https://reggaerencontre.com/fetch_one_product.php?id=$selectedId"
+ val prodUrl1 ="https://mobileandweb.alwaysdata.net/fetch_one_product.php?id=$selectedId"
        // val requestQp: RequestQueue = Volley.newRequestQueue(this)
 
  val jsonOR = JsonObjectRequest(

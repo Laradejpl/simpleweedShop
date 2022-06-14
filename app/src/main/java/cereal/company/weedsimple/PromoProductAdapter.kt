@@ -54,7 +54,7 @@ class PromoProductAdapter (var context: Context,var arrayList: ArrayList<EProduc
 
             }
 
-            var picURLPromo = "https://reggaerencontre.com/"
+            var picURLPromo = "https://mobileandweb.alwaysdata.net/"
             val UrlPhotoPromo = picURLPromo + pictureName
             Picasso.with(context).load(UrlPhotoPromo).into(itemView.img_card_promo)
 

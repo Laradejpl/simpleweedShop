@@ -71,7 +71,7 @@ class EProductAdapter (var context: Context, var arrayList: ArrayList<EProduct>)
             }
 
 
-            var picURL = "https://reggaerencontre.com/"
+            var picURL = "https://mobileandweb.alwaysdata.net/"
             //picURL = picURL.replace("", "%20")
 
 

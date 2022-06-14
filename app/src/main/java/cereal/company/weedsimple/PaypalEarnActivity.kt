@@ -41,7 +41,7 @@ class PaypalEarnActivity : BaseActivity() {
             finish()
         }
 
-        val urlPoints = "https://reggaerencontre.com/fetchPointsF.php?email_users_pts=$emailConnectedPaypal"
+        val urlPoints = "https://mobileandweb.alwaysdata.net/fetchPointsF.php?email_users_pts=$emailConnectedPaypal"
 
         val requestPtss: RequestQueue = Volley.newRequestQueue(this)
         val stringRqs= JsonObjectRequest(Request.Method.GET,urlPoints,null, {
@@ -201,7 +201,7 @@ class PaypalEarnActivity : BaseActivity() {
 
     fun UpdatePoints(){
 
-        val pointUpdateURL = "https://reggaerencontre.com/updatePointFromPP.php?email_users_pts=" +
+        val pointUpdateURL = "https://mobileandweb.alwaysdata.net/updatePointFromPP.php?email_users_pts=" +
                 emailConnectedPaypal +
                 "&points=" + pointsRestant + "&carte=" + carteid
 
@@ -231,7 +231,7 @@ class PaypalEarnActivity : BaseActivity() {
 
     fun fetchAdressPayPal(){
 
-        val payPalAdressURL = "https://reggaerencontre.com/requestPayPAdress.php?email=" +
+        val payPalAdressURL = "https://mobileandweb.alwaysdata.net/requestPayPAdress.php?email=" +
                 emailConnectedPaypal
 
         val requestUPp: RequestQueue = Volley.newRequestQueue(this)
@@ -258,7 +258,7 @@ class PaypalEarnActivity : BaseActivity() {
                     view.btn_paypal_adress.setOnClickListener {
 
                         var adressPayPal = view.edt_paypal.text.toString()
-                        val adressPayPalUrl = "https://reggaerencontre.com/insertPaypalAd.php?email=" + emailConnectedPaypal  + "&Paypal_adress=" + adressPayPal
+                        val adressPayPalUrl = "https://mobileandweb.alwaysdata.net/insertPaypalAd.php?email=" + emailConnectedPaypal  + "&Paypal_adress=" + adressPayPal
                         val requestQPpal: RequestQueue = Volley.newRequestQueue(this)
                         val stringRequestPayp = StringRequest(Request.Method.GET,adressPayPalUrl, {
                                 response ->

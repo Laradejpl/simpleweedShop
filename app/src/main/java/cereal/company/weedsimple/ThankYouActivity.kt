@@ -24,7 +24,7 @@ class ThankYouActivity : AppCompatActivity() {
 
         //@TODO envoyer mail de confirmation de la commande
         val userEmailForDelivery = Person.email
-        val forEmailConfirmURL = "https://reggaerencontre.com/deliveryMailKt.php?email=" +
+        val forEmailConfirmURL = "https://mobileandweb.alwaysdata.net/deliveryMailKt.php?email=" +
                 userEmailForDelivery
         val requestDeli: RequestQueue = Volley.newRequestQueue(this)
 

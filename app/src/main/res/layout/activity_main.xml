@@ -76,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nos_s_l_ctions_de_cbd"
                 android:textStyle="bold"
+                android:fontFamily="@font/buble"
                 android:textSize="20sp"
                 android:layout_gravity="start"
                 android:layout_marginStart="40dp"
@@ -171,6 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:text="@string/best_selection"
+                    android:fontFamily="@font/buble"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -199,7 +201,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_faword"
+                        android:src="@drawable/royalsoda"
                         android:layout_gravity="center_vertical"
                         />
                     <ImageView
@@ -320,7 +322,7 @@
       android:background="@drawable/rosebg"
       android:paddingTop="20dp"
       android:paddingBottom="20dp"
-      android:fontFamily="casual"
+      android:fontFamily="@font/buble"
       android:textFontWeight="2"
       android:textStyle="bold"
       />
@@ -367,7 +369,7 @@
                 android:background="@drawable/violetbg"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
-                android:fontFamily="casual"
+                android:fontFamily="@font/buble"
                 android:textFontWeight="2"
                 android:textStyle="bold"
                 />

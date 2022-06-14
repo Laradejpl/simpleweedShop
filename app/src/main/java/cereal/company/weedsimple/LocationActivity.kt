@@ -36,7 +36,7 @@ class LocationActivity : AppCompatActivity() {
 
 
 
-         val infoUrl = "https://reggaerencontre.com/profil_kotlin_user.php?email="+ Person.email
+         val infoUrl = "https://mobileandweb.alwaysdata.net/profil_kotlin_user.php?email="+ Person.email
 
         email_profil_tv_layout.text= Person.email
         var rq: RequestQueue = Volley.newRequestQueue(this)
