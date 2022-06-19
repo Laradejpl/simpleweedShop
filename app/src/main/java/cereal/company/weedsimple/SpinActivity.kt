@@ -234,7 +234,7 @@ class SpinActivity : AppCompatActivity(), Animation.AnimationListener {
      winAnimation_lott.visibility = View.VISIBLE
  }
 
-        val pointURL = "https://reggaerencontre.com/pts_ktl.php?email_users_pts=" +
+        val pointURL = "https://mobileandweb.alwaysdata.net/pts_ktl.php?email_users_pts=" +
                 userEmailConnected +
                 "&points=" + prizes[prizeIndex]
 

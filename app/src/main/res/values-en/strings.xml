@@ -27,8 +27,8 @@
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="newletter">Subscribe to our newsletter</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="desc_spin">SPIN THE WHEEL TO TRY TO WIN FREE CBD!</string>
-    <string name="explication_spin">Achieve a score of 500.0000 points to qualify for a free cbd product</string>
+    <string name="desc_spin">SPIN THE WHEEL TO TRY TO WIN FREE STUFF!</string>
+    <string name="explication_spin">Achieve a score of 500.0000 points to qualify for a candy product</string>
     <string name="tap_on_the_yellow_button">Try your luck !</string>
     <string name="best_selection">Best selection</string>
     <string name="politiquetxt">Just Cbd policy is to never sell what we don\'t use marijuana is not our habit and our customer want the best.</string>
@@ -36,14 +36,14 @@
 
     <string-array name="planets_array">
         <item>France</item>
-        <item>Angleterre</item>
+        <item>England</item>
         <item>Deutchland</item>
         <item>Spain</item>
 
     </string-array>
-    <string name="nos_s_l_ctions_de_cbd">Our best CBD selection</string>
-    <string name="promotxt">CBD promotions</string>
-    <string name="nouveautees_cbd">CBD NEWS</string>
+    <string name="nos_s_l_ctions_de_cbd">Our best CANDYS selection</string>
+    <string name="promotxt">CANDY promotions</string>
+    <string name="nouveautees_cbd">CANDY NEWS</string>
     <string name="spin_alert">Login for a chance to win !!!</string>
     <string name="connectez_vous">Sign in</string>
     <string name="login_button">Login</string>

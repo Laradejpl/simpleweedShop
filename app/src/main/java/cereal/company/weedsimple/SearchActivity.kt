@@ -25,14 +25,11 @@ class SearchActivity : AppCompatActivity() {
 
         backarrow_fetch_product_search.setOnClickListener {
 
-            finish()
-        }
-
-        back_search.setOnClickListener {
-
             val intent = Intent(this@SearchActivity, MainActivity::class.java)
             startActivity(intent)
         }
+
+
 
 
 

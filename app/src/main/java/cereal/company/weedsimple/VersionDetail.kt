@@ -7,11 +7,9 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.palette.graphics.Palette
@@ -19,7 +17,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import cereal.company.weedsimple.Person.Companion.email
 import cereal.company.weedsimple.Sqlite.DatabaseManager
 import cereal.company.weedsimple.utils.BaseActivity
-import com.airbnb.lottie.LottieAnimationView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
@@ -280,7 +277,7 @@ if (!coeur){
          val avisDuUser =  view.edt_Avis_user.text.toString()
 
          println(Person.etoileRating)
-         val avisUrl = "https://reggaerencontre.com/avis_ktl.php?id_produit=" + idDuProduit +
+         val avisUrl = "https://mobileandweb.alwaysdata.net/avis_ktl.php?id_produit=" + idDuProduit +
                  "&email=" +
                  emailUserAvis+
                 "&pseudo=" + pseudoUserAvis + "&rating_star=" + Person.etoileRating +"&avis="+
@@ -324,7 +321,7 @@ if (!coeur){
 
      }
         //ont recupere les avis
-        val url= "https://reggaerencontre.com/fetch_avis_ktl.php?id_produit=$selectedId"
+        val url= "https://mobileandweb.alwaysdata.net/fetch_avis_ktl.php?id_produit=$selectedId"
         val list = ArrayList<AvisProduct>()
         var rQ= Volley.newRequestQueue(this)
         var jar  = JsonArrayRequest(Request.Method.GET,url,null,

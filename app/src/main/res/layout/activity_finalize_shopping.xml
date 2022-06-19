@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorLightGrey"
+    android:background="@color/pinkbg"
     tools:context=".FinalizeShoppingActivity">
 
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/white"
+        android:layout_height="50dp"
+        android:background="@color/color_red"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,26 +20,19 @@
         <ImageView
             android:id="@+id/backarrow_fetch_product"
             android:layout_width="99dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:background="@drawable/backarrowblack" />
+            android:background="@drawable/previous" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="358dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/logoshocbd" />
+            app:srcCompat="@drawable/bonbonlogo" />
 
-        <ImageView
-            android:id="@+id/backhome_search"
-            android:layout_width="101dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="20dp"
-
-            android:layout_weight="1"
-            android:background="@drawable/blanc" />
+   
     </LinearLayout>
 
 
@@ -71,128 +64,16 @@
         app:layout_constraintVertical_bias="0.545"
         app:srcCompat="@drawable/coinpaymentic" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="66dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
 
-        >
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/login_iv"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/profile" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="profile"
-                android:textSize="15dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-
-            <ImageView
-                android:id="@+id/cart_iv_wb"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/cadi" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="cart"
-                android:textSize="15dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-
-            >
-
-            <ImageView
-                android:id="@+id/fav_iv"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/fav_ic" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="favoris"
-                android:textSize="15dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-
-            >
-
-            <ImageView
-                android:id="@+id/home_iv"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_home" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Home"
-                android:textSize="15dp" />
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/Btc_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:background="@color/purple_500"
         android:padding="15dp"
         android:text="btc"
-        android:textColor="@color/yellowgreen"
+        android:textColor="@color/greengreen"
         android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/payment_tv"
         app:layout_constraintTop_toTopOf="parent"
@@ -243,6 +124,7 @@
         app:layout_constraintVertical_bias="0.359" />
 
 
-
+    <include
+        layout="@layout/navbottom_finalize"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -197,7 +197,7 @@ class MainActivity : BaseActivity() {
 
             val dialogBuilder = AlertDialog.Builder(this)
             dialogBuilder.setTitle("Message")
-            dialogBuilder.setMessage(error.message)
+            dialogBuilder.setMessage("Il s'est passé un probleme ...")
             dialogBuilder.create().show()
 
         })
@@ -366,33 +366,33 @@ class MainActivity : BaseActivity() {
 
         //LES CATEORIES
         tea_brand.setOnClickListener {
-            StartCategory("TEA")
+            StartCategory("JAPAN")
 
         }
 
         vap_brand.setOnClickListener {
 
-            StartCategory("VAP")
+            StartCategory("SODA")
         }
 
        flowers_brand.setOnClickListener {
 
-           StartCategory("FLOWERS")
+           StartCategory("Chewing-gum")
         }
 
         hash_brand.setOnClickListener {
 
-            StartCategory("HASH")
+            StartCategory("Food")
         }
 
         food_brand.setOnClickListener {
 
-            StartCategory("FOODS")
+            StartCategory("Bonbon")
         }
 
         bodyheath_brand.setOnClickListener {
 
-            StartCategory("BODY")
+            StartCategory("Vegan")
         }
 
 
@@ -539,16 +539,16 @@ class MainActivity : BaseActivity() {
         //les produits clicker
 
         marley_pict.setOnClickListener {
-          imageClikcable("marley")
+          imageClikcable("Angry birds")
         }
 
 
         cdbhead_pict.setOnClickListener {
-           imageClikcable("saur")
+           imageClikcable("Royal Soda saveur Coco")
         }
 
         tea_pict.setOnClickListener {
-            imageClikcable("high tea")
+            imageClikcable("Trolli planet")
         }
 
         oil_pict.setOnClickListener {
@@ -564,7 +564,7 @@ class MainActivity : BaseActivity() {
             imageClikcable("haze")
         }
         multitrance_cat_img.setOnClickListener {
-            imageClikcable("multitrance")
+            imageClikcable("Soda")
         }
 
     }

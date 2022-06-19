@@ -3,6 +3,7 @@ package cereal.company.weedsimple
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.widget.BaseAdapter
 import android.widget.Toast
@@ -18,6 +19,8 @@ import com.paypal.android.sdk.payments.PayPalPayment
 import com.paypal.android.sdk.payments.PayPalService
 import com.paypal.android.sdk.payments.PaymentActivity
 import kotlinx.android.synthetic.main.activity_finalize_shopping.*
+import kotlinx.android.synthetic.main.alert_add_fav.view.*
+import kotlinx.android.synthetic.main.navbottom_finalize.*
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient
@@ -49,6 +52,7 @@ class FinalizeShoppingActivity : BaseActivity() {
 
                 val intent= Intent(this@FinalizeShoppingActivity, ProfileActivity::class.java)
                 startActivity(intent)
+                Person.counter_panier = 0
 
             }else{
 
@@ -56,15 +60,12 @@ class FinalizeShoppingActivity : BaseActivity() {
 
             }
         }
-        cart_iv_wb.setOnClickListener {
 
-            val intent= Intent(this@FinalizeShoppingActivity, CartProductsActivity::class.java)
-            startActivity(intent)
-        }
-        fav_iv.setOnClickListener {
+        cart_iv_wb.setOnClickListener {
 
                 val intent= Intent(this@FinalizeShoppingActivity, FavoritProductsActivity::class.java)
                 startActivity(intent)
+                Person.counter_panier = 0
             }
         home_iv.setOnClickListener {
 
@@ -73,8 +74,12 @@ class FinalizeShoppingActivity : BaseActivity() {
             Person.counter_panier = 0
         }
         backarrow_fetch_product.setOnClickListener {
-            finish()
-            Person.counter_panier = 0
+
+          declineBasket()
+
+
+
+
         }
 
         loadBitcoinPriceFinalA()
@@ -139,7 +144,41 @@ class FinalizeShoppingActivity : BaseActivity() {
 
     }
 
+   fun declineBasket(){
+       val view = View.inflate(this@FinalizeShoppingActivity,R.layout.alert_remove_cart,null)
+       var builder = android.app.AlertDialog.Builder(this@FinalizeShoppingActivity)
+       builder.setView(view)
+       val dialog =builder.create()
+       dialog.show()
+       view.oui_btn_film_add.setOnClickListener {
 
+           val deleteUrl = "https://mobileandweb.alwaysdata.net/decline_order.php?email=${Person.email}"
+           val requestQ = Volley.newRequestQueue(this@FinalizeShoppingActivity)
+           val stringRequest = StringRequest(Request.Method.GET, deleteUrl, {
+                   response ->
+               Person.counter_panier = 0
+
+               var intent = Intent(this, CartProductsActivity::class.java)
+               startActivity(intent)
+
+           }, {
+                   error ->
+               showErrorSnackBar("erreur de traitement",true)
+
+
+
+           })
+
+           requestQ.add(stringRequest)
+       }
+
+       view.non_btn_film_add.setOnClickListener {
+
+           dialog.dismiss()
+       }
+
+
+   }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 

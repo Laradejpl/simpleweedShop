@@ -25,14 +25,14 @@
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="newletter">Abonnez-vous à notre Newletter</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="desc_spin">FAITES TOURNER LA ROUE POUR TENTER DE GAGNER DU CBD GRATUIT !</string>
-    <string name="explication_spin">Atteignez un score de 5000000 points pour avoir droit à un produit cbd gratuit</string>
+    <string name="desc_spin">FAITES TOURNER LA ROUE POUR TENTER DE GAGNER DES BONBONS GRATUIT !</string>
+    <string name="explication_spin">Atteignez un score de 5000000 points pour avoir droit à des bonbons gratuit</string>
     <string name="tap_on_the_yellow_button">Tentez votre chance !</string>
     <string name="best_selection">Meilleure sélection</string>
-    <string name="nos_s_l_ctions_de_cbd">Nos séléctions de CBD</string>
-    <string name="politiquetxt">La politique de Just Cbd est de ne jamais vendre ce que nous n\'utilisons pas de marijuana n\'est pas notre habitude et nos clients veulent le meilleur.</string>
-    <string name="promotxt">Nos promotions SUR JUST CBD</string>
-    <string name="nouveautees_cbd">NOUVEAUTÉES SUR JUST CBD</string>
+    <string name="nos_s_l_ctions_de_cbd">Nos séléctions de Friandises</string>
+    <string name="politiquetxt">La politique de CandyShop est de  vendre ce que nous avons notre habitude  de consommer et nos clients veulent le meilleur.</string>
+    <string name="promotxt">Nos promotions SUR CANDYSHOP</string>
+    <string name="nouveautees_cbd">NOUVEAUTÉES SUR CANDYSHOP</string>
     <string name="spin_alert">Connectez vous pour avoir une chance de gagner !!!</string>
     <string name="connectez_vous">Connectez-vous</string>
     <string name="login_button">Connection</string>
@@ -86,7 +86,7 @@
     <string name="avis_txt">Soyez le premier à donner votre avis !</string>
     <string name="nom_adress">Entrez votre nom</string>
     <string name="prenom_adress">Entrez votre prénom</string>
-    <string name="cbd_gratuit">Du CBD gratuit !!!</string>
+    <string name="cbd_gratuit">Des Bonbons gratuit !!!</string>
     <string name="notif_message">\"Allez-y! Des points de fidélités vous attendent.🎁🎁🪴 \"</string>
     <string name="code_postal_adress">code postal</string>
     <string name="des_r_compences_vous_attendent">Des récompences vous attendent ...</string>
