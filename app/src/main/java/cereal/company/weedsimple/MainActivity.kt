@@ -59,7 +59,7 @@ class MainActivity : BaseActivity() {
     lateinit var dotsLayout: LinearLayout
     lateinit var mpager: ViewPager
     lateinit var toolbar : androidx.appcompat.widget.Toolbar
-    var path:IntArray = intArrayOf(R.drawable.alien,R.drawable.valentune,R.drawable.dragonballtea,R.drawable.pokemon)
+    var path:IntArray = intArrayOf(R.drawable.alien,R.drawable.valentune,R.drawable.dragonballtea,R.drawable.pokemon,R.drawable.sodaroyal)
     lateinit var dots:Array<ImageView>
     lateinit var adapter: PageView
     var currentPage: Int = 0
@@ -107,6 +107,8 @@ class MainActivity : BaseActivity() {
 
 
 
+
+
         //animBobinB()
         //compteur du panieer
 
@@ -121,6 +123,9 @@ class MainActivity : BaseActivity() {
         }else{
             numberProduct_ajouT_tv.visibility = View.GONE
         }
+
+
+
 
         // LA CAGNOTTE
         kitty_tv_main.setOnClickListener {

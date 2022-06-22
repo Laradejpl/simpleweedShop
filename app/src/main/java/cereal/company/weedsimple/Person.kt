@@ -11,6 +11,7 @@ class Person {
         var nameUtilisateur =""
         var addToCartProductID = 0
         var transactionName =0
+       // var connect = 0
 
         //cours du bitcoin en euro
         var euroR = ""

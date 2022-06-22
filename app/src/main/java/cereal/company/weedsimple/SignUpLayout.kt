@@ -101,7 +101,7 @@ class SignUpLayout : AppCompatActivity() {
 
                     }else{
 
-                        Person.email = sign_up_layout_edtEmail.text.toString()
+                       // Person.email = sign_up_layout_edtEmail.text.toString()
 
 
                         //Toast.makeText(this@SignUpLayout, response, Toast.LENGTH_SHORT).show()

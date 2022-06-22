@@ -1,5 +1,6 @@
 package cereal.company.weedsimple
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
@@ -38,7 +39,8 @@ class PaypalEarnActivity : BaseActivity() {
         marquee_tv_pay.isSelected = true
         bbacArrow.setOnClickListener {
 
-            finish()
+            val intent = Intent(this@PaypalEarnActivity, MainActivity::class.java)
+            startActivity(intent)
         }
 
         val urlPoints = "https://mobileandweb.alwaysdata.net/fetchPointsF.php?email_users_pts=$emailConnectedPaypal"
