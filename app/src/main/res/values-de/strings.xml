@@ -29,7 +29,6 @@
     <string name="newletter">Abonniere unseren Newsletter</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="desc_spin">DREHEN SIE DAS RAD, UM ZU VERSUCHEN, KOSTENLOSE CBD ZU GEWINNEN!</string>
-    <string name="explication_spin">Erreichen Sie eine Punktzahl von 500.0000 Punkten, um sich für ein kostenloses CBD-Produkt zu qualifizieren</string>
     <string name="tap_on_the_yellow_button">Versuch dein Glück !</string>
     <string name="best_selection">Versuch dein Glück!</string>
     <string name="nos_s_l_ctions_de_cbd">Unsere CBD-Auswahl</string>
@@ -51,7 +50,7 @@
     <string name="cart_bottom">Korb</string>
     <string name="home_button">Startseite</string>
     <string name="enregistrez_btn">Speichern</string>
-    <string name="login_side_menu">Verbindung |</string>
+    <string name="login_side_menu">Verbindung </string>
     <string name="sign_up">" Registrieren"</string>
     <string name="validez_cart">Bestätigen</string>
     <string name="ajoutez_cart">hinzufügen</string>
@@ -98,4 +97,5 @@
     <string name="indisponiblebtc">Bitcoin-Preis ist nicht verfügbar</string>
     <string name="suprimer_votre_compte">Lösche deinen Account</string>
     <string name="supprimer_acount_msg">Möchten Sie Ihr Konto löschen?</string>
+    <string name="spinadice">Drehen Sie das Glücksrad, um Treuepunkte und Süßigkeiten zu verdienen. Bei jedem Einkauf können Sie Punkte sammeln, Sie werden niemals bei CandyShop Candy sein.</string>
 </resources>

@@ -12,20 +12,39 @@
         android:id="@+id/include"
         layout="@layout/header_menu" />
 
+    <TextView
+
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:background="@drawable/violetbg"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="25dp"
+        android:translationZ="2dp"
+        android:text="Expédition gratuite à partir de 50€"
+        app:layout_constraintBottom_toTopOf="@+id/pager"
+        app:layout_constraintEnd_toEndOf="@+id/horizontalScrollView"
+        app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+        app:layout_constraintTop_toTopOf="@+id/horizontalScrollView" />
+
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
-        android:layout_width="426dp"
-        android:layout_height="200dp"
+        android:layout_width="262dp"
+        android:layout_height="191dp"
         android:layout_below="@+id/toolbar"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="-13dp">
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
 
 
     </androidx.viewpager.widget.ViewPager>
-
-
 
     <LinearLayout
         android:id="@+id/dotsLayout"
@@ -180,7 +199,7 @@
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="300dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="30dp"
                 android:scrollbars="none">
 
@@ -193,25 +212,38 @@
 
                     <ImageView
                         android:id="@+id/marley_pict"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         android:layout_marginLeft="25dp"
                         android:background="@drawable/angrybid"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_faword"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <ImageView
+                        android:id="@+id/royalsoda"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/royalsoda"
+                        android:layout_gravity="center_vertical"
                         />
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/royalsoda"
+                        android:src="@drawable/ic_arrow_faword"
                         android:layout_gravity="center_vertical"
                         />
                     <ImageView
                         android:id="@+id/cdbhead_pict"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/troligum"
                         android:contentDescription="TODO" />
-
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -220,14 +252,14 @@
                         />
 
                     <ImageView
-                        android:id="@+id/tea_pict"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-
-                        android:background="@drawable/teacolor"
-
+                        android:id="@+id/trolli"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/trolli"
+                        android:layout_gravity="center_vertical"
                         />
+
+
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -238,11 +270,10 @@
 
                     <ImageView
                         android:id="@+id/oil_pict"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         android:layout_marginLeft="10dp"
-
-                        android:background="@drawable/oil"
+                        android:background="@drawable/tennifini"
 
                         />
 
@@ -255,50 +286,13 @@
 
                     <ImageView
                         android:id="@+id/strawberry_pict"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         android:layout_marginLeft="10dp"
 
-                        android:background="@drawable/strawberry"
+                        android:background="@drawable/finbasket"
 
                         />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_faword"
-                        android:layout_gravity="center_vertical"
-                        />
-
-                    <ImageView
-                        android:id="@+id/cookie1_pict"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/cookie"
-
-                        />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_faword"
-                        android:layout_gravity="center_vertical"
-                        />
-
-
-
-
-                    <ImageView
-                        android:id="@+id/cookie2_pict1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/cookies2"
-
-                        />
-
-
-
-
 
                 </LinearLayout>
 
@@ -347,7 +341,7 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:gravity="center"
-                android:text="Faites tourner la roue de la fortune pour gagnez des points de fidélités et du CBD , chaque achat vous permet d'avoir des points,vous serez jamais à cours zen attitude."
+                android:text="@string/spinadice"
                 />
 
 
@@ -501,6 +495,7 @@
                     android:text=" | Tel:07 52 03 76 27"
                     android:textSize="10sp"
                     android:textColor="@color/white"
+                    android:layout_marginBottom="80dp"
                     />
 
 

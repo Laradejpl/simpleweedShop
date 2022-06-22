@@ -26,7 +26,6 @@
     <string name="newletter">Abonnez-vous à notre Newletter</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="desc_spin">FAITES TOURNER LA ROUE POUR TENTER DE GAGNER DES BONBONS GRATUIT !</string>
-    <string name="explication_spin">Atteignez un score de 5000000 points pour avoir droit à des bonbons gratuit</string>
     <string name="tap_on_the_yellow_button">Tentez votre chance !</string>
     <string name="best_selection">Meilleure sélection</string>
     <string name="nos_s_l_ctions_de_cbd">Nos séléctions de Friandises</string>
@@ -96,6 +95,7 @@
     <string name="indisponiblebtc">le cours du bitcoin est indisponible</string>
     <string name="suprimer_votre_compte">suprimer votre compte</string>
     <string name="supprimer_acount_msg">voulez vous supprimer votre compte?</string>
+    <string name="spinadice">Faites tourner la roue de la fortune pour gagnez des points de fidélités et des friandises , chaque achat vous permet d\'avoir des points,vous serez jamais à de bonbon CandyShop.</string>
 
 
 </resources>

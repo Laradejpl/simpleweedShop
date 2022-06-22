@@ -504,6 +504,7 @@ class MainActivity : BaseActivity() {
 
         hamenu.setOnClickListener {
             menuSide.visibility = View.VISIBLE
+            textView6.visibility = View.GONE
 
         }
 
@@ -527,6 +528,7 @@ class MainActivity : BaseActivity() {
         closetxt.setOnClickListener {
 
             menuSide.visibility = View.GONE
+            textView6.visibility = View.VISIBLE
 
         }
 
@@ -544,25 +546,23 @@ class MainActivity : BaseActivity() {
 
 
         cdbhead_pict.setOnClickListener {
-           imageClikcable("Royal Soda saveur Coco")
+           imageClikcable("Trolli planet")
         }
 
-        tea_pict.setOnClickListener {
-            imageClikcable("Trolli planet")
+        royalsoda.setOnClickListener {
+            imageClikcable("Royal Soda saveur Coco")
         }
 
         oil_pict.setOnClickListener {
-            imageClikcable("sleep well")
+            imageClikcable("Tennis balls")
         }
         strawberry_pict.setOnClickListener {
-            imageClikcable("royal cbd")
+            imageClikcable("Basket balls Gum")
         }
-        cookie1_pict.setOnClickListener {
-            imageClikcable("haze")
+        trolli.setOnClickListener {
+            imageClikcable("Trolli sour gummi creations")
         }
-        cookie2_pict1.setOnClickListener {
-            imageClikcable("haze")
-        }
+
         multitrance_cat_img.setOnClickListener {
             imageClikcable("Soda")
         }

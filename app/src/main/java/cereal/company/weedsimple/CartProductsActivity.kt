@@ -184,10 +184,10 @@ class CartProductsActivity : BaseActivity() {
      showErrorSnackBar("Vous avez choisi votre expedition,validez votre panier.",false)
      long_delivery_txt.setBackgroundColor(Color.parseColor("#89D7FB"))
      short_delivery_txt.setBackgroundColor(Color.parseColor("#0237F8"))
-     Person.tarifExpedition = 8
+     Person.tarifExpedition = 4
      var ttpWithFees = totalTemporary + Person.tarifExpedition
-     if (ttpWithFees > totalTemporary + 8){
-         ttpWithFees -= 8
+     if (ttpWithFees > totalTemporary + 4){
+         ttpWithFees -= 4
      }
      soustotal_tempo.text = ttpWithFees.toString() + " €"
      return Person.tarifExpedition
@@ -202,11 +202,11 @@ class CartProductsActivity : BaseActivity() {
         showErrorSnackBar("Vous avez choisi votre expedition,validez votre panier.",false)
         short_delivery_txt.setBackgroundColor(Color.parseColor("#89D7FB"))
         long_delivery_txt.setBackgroundColor(Color.parseColor("#0237F8"))
-         Person.tarifExpedition =15
+         Person.tarifExpedition =5
 
         var ttpWithFees = totalTemporary + Person.tarifExpedition
-        if (ttpWithFees > totalTemporary + 15){
-            ttpWithFees -= 15
+        if (ttpWithFees > totalTemporary + 5){
+            ttpWithFees -= 5
 
         }
         soustotal_tempo.text = ttpWithFees.toString() + " €"

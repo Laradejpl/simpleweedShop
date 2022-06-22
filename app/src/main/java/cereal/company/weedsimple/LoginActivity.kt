@@ -70,7 +70,7 @@ class LoginActivity : BaseActivity() {
 
                 response ->
 
-                if (response.equals("Bienvenue au WEED SIMPLE Shop")){
+                if (response.equals("Bienvenue au CandyShop")){
                     // pour garder une trace de la personne qui s'est logger ou enregistrer
 
 

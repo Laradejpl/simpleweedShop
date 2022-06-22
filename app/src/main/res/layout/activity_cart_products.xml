@@ -141,7 +141,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:padding="5dp"
-            android:text="8€ pour l'expédition,livré en 10 jours" />
+            android:text="4€ pour l'expédition,livré en 10 jours" />
 
         <TextView
             android:id="@+id/short_delivery_txt"
@@ -152,7 +152,7 @@
             android:textStyle="bold"
             android:background="@color/blueLighty"
             android:padding="5dp"
-            android:text="15€ pour l'expédition,livré en 3 jours" />
+            android:text="5€ pour l'expédition,livré en 3 jours" />
 
 
     </LinearLayout>
